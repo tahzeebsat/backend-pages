@@ -1,0 +1,126 @@
+/* .gr-2c {
+    display: grid;
+    grid-template-columns: 280px calc(100% - 280px);
+} */
+.sat-logo-sidebar {
+    object-fit: contain;
+}
+.sidebar-dashboard {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 32px 16px;
+    overflow-y: auto;
+    border-right: 1px solid #eaecf0;
+}
+.siddashboard {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 100%;
+}
+.main-content {
+    margin-left: 280px;
+}
+.dashboard-list {
+    padding-top: 32px;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.dashboard-list-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.dashborad-icons {
+    fill: #5d6370;
+    margin-right: 12px;
+}
+
+.dashboard-list-item {
+    font-family: Lato;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #0c1529;
+}
+
+.dashboard-list-item:hover {
+    background-color: #2384c1;
+    color: #ffffff;
+    border-radius: 6px;
+}
+.dashboard-list-item:hover .dashborad-icons {
+    fill: #ffffff;
+}
+.profile-user-img {
+    height: 40px;
+    width: 40px;
+}
+.profile-user-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile-user {
+    display: flex;
+    border-top: 1px solid #eaecf0;
+    padding-top: 24px;
+    gap: 12px;
+}
+.profile-user-info span {
+    display: block;
+    word-break: break-all;
+}
+.profile-user-info span:first-of-type {
+    font-family: Lato;
+    font-size: 0.875em;
+    font-weight: 600;
+    line-height: 20px;
+    color: #344054;
+}
+
+.profile-user-info span:last-of-type {
+    font-family: Lato;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 20px;
+    color: #475467;
+}
+.pb-c24 {
+    padding-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+}
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .sat-logo-sidebar {
+        max-width: 120px;
+    }
+    .sidebar-dashboard {
+        width: 191px;
+        padding: 32px 16px;
+    }
+    .main-content {
+        margin-left: 191px;
+    }
+    body {
+        font-size: 0.875rem;
+    }
+}
