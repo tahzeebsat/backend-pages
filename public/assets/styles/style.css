@@ -67,6 +67,13 @@
     color: #ffffff;
     border-radius: 6px;
 }
+.dashboard-list-item.active,
+.dashboard-list-item.active .dashborad-icons {
+    background-color: #2384c1;
+    color: #ffffff;
+    border-radius: 6px;
+    fill: #ffffff;
+}
 .dashboard-list-item:hover .dashborad-icons {
     fill: #ffffff;
 }
@@ -155,6 +162,8 @@
 .main-section {
     width: calc(100% - 213px);
     padding: 32px 32px 32px 22px;
+    height: 100vh;
+    background-color: #fcfcfd;
 }
 .em-search {
     padding-bottom: 12px;
@@ -180,19 +189,35 @@
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
+.dul-flds .dropdown-menu {
+    inset: 8px auto auto -13px !important;
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    font-size: 0.875em;
+}
+.dul-flds .dropdown-menu .dropdown-item {
+    font-size: 0.875em;
+    color: #5d6370;
+    font-family: Lato;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+}
 .dul-flds .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border: none;
     width: 100%;
     font-family: Lato;
-    font-size: 16px;
+    font-size: 0.875em;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.01em;
     color: #667085;
     background-color: #ffffff;
-}
-.dul-flds .dropdown-toggle::after {
-    border: 0;
 }
 .dul-flds input:focus-visible,
 .dul-flds input:focus {
@@ -202,7 +227,7 @@
 .dul-flds input {
     background-color: #ffffff;
     font-family: Lato;
-    font-size: 16px;
+    font-size: 0.875em;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.01em;
@@ -210,6 +235,11 @@
     border-radius: 0px;
     border: none;
     outline: none;
+}
+.dul-flds .dropdown-item.active,
+.dropdown-item:active {
+    background-color: #2384c1;
+    color: white !important;
 }
 .input-src-order {
     display: flex;
@@ -224,6 +254,525 @@
     padding: 14px 12px;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+}
+.data-table-order {
+    padding-top: 24px;
+    width: 100%;
+    overflow: auto;
+}
+.data-table-header {
+    display: flex;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #7a7493;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ededf1;
+    min-width: 892px;
+}
+.data-table-header .max-10 {
+    flex-basis: 12%;
+    min-width: 77px;
+    padding-block: 10px;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.data-table-header .max-4 .form-check-input {
+    font-size: 1.2em;
+}
+.data-table-header .max-4 {
+    min-width: 20px;
+    flex-basis: 4%;
+    padding: 10px;
+    /* white-space: nowrap; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data-table-data {
+    display: flex;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #5d6370;
+    border-radius: 6px;
+    border: 1px solid #ededf1;
+    margin-top: 24px;
+    min-width: 892px;
+    cursor: pointer;
+}
+.data-table-data .max-10 {
+    flex-basis: 12%;
+    min-width: 77px;
+    padding-block: 10px;
+    /* white-space: nowrap; */
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.data-table-data .max-4 .form-check-input {
+    font-size: 1.2em;
+}
+.data-table-data .max-4 {
+    min-width: 20px;
+    flex-basis: 4%;
+    padding: 10px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data-table-order .collapse {
+    min-width: 892px;
+}
+.data-table-collapse {
+    margin-top: 12px;
+    background-color: #f6f6f6;
+    padding: 20px 12px;
+}
+.data-table-collapse:last-of-type {
+    margin-bottom: 12px;
+}
+.data-table-collapse {
+    display: flex;
+    gap: 20px;
+}
+.data-table-collapse .order_details {
+    padding: 14px 12px;
+    background-color: #ffffff;
+    border-radius: 4.45px;
+    width: calc(70% - 20px);
+}
+.data-table-collapse .order-specs {
+    width: 30%;
+}
+.data-table-collapse .order-specs .order-payment {
+    width: 100%;
+}
+.data-table-collapse .order-specs .ord {
+    border-radius: 4.45px;
+    background-color: #ffffff;
+    padding: 7.4px 8.9px;
+}
+.data-table-collapse .order-specs .customer-info {
+    padding: 7.4px 8.9px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    width: 100%;
+    height: calc(100% - 182px);
+}
+.data-table-collapse .order-sections {
+    padding-bottom: 8.9px;
+    border-bottom: 1px solid #a8a8a8;
+}
+.order-sections .heading-op {
+    font-family: Lato;
+    font-size: 10.38px;
+    font-weight: 400;
+    line-height: 12.46px;
+    letter-spacing: -0.014em;
+    color: #353c4d;
+    margin-bottom: 3px;
+}
+.order-sections .sub-heading-op {
+    font-family: Lato;
+    font-size: 14.83px;
+    font-weight: 700;
+    line-height: 17.79px;
+    letter-spacing: -0.014em;
+    color: #353c4d;
+}
+.link-order-specs {
+    font-family: Lato;
+    font-size: 10.38px;
+    font-weight: 400;
+    line-height: 20.76px;
+    letter-spacing: -0.014em;
+    color: #2a9fe8;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-order-specs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    width: 100%;
+    max-width: 120px;
+    height: 26px;
+    border-radius: 3px;
+    background-color: #2a9fe8;
+    border: 1px solid #2a9fe8;
+}
+.link-status-specs {
+    font-family: Lato;
+    font-size: 14.83px;
+    font-weight: 700;
+    line-height: 17.79px;
+    letter-spacing: -0.014em;
+    color: #2a9fe8;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cust-detail .list {
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+.cust-detail {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #a8a8a8;
+    margin-bottom: 12px;
+}
+.files-detail .fields {
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+.cust-detail .list .head {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    letter-spacing: -0.014em;
+    color: #353c4d;
+}
+.cust-detail .list .para {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: -0.014em;
+    color: #353c4d;
+}
+.files-detail .fields .head {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: -0.01em;
+    color: #0c1529;
+    margin-bottom: 6px;
+}
+.files-detail .fields .fil {
+    margin-bottom: 12px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #667085;
+}
+.order-number {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+.ord-title {
+    font-family: Lato;
+    font-size: 14.83px;
+    font-weight: 700;
+    line-height: 20.76px;
+    letter-spacing: -0.014em;
+    color: #363636;
+}
+.order-date {
+    font-family: Lato;
+    font-size: 11.86px;
+    font-weight: 400;
+    line-height: 14.24px;
+    letter-spacing: -0.014em;
+    color: #353c4d;
+}
+.order-print {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+.order-print img {
+    cursor: pointer;
+}
+.total-payable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total-payable .brder {
+    display: flex;
+    border: 1px solid #b1b1b1;
+    border-radius: 3px;
+    padding: 12px 14px;
+    margin-top: 16px;
+}
+.total-payable .brder span:first-of-type {
+    font-family: Lato;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 18.09px;
+    letter-spacing: -0.014em;
+    color: #363636;
+    margin-right: 8.9px;
+}
+.total-payable .brder span:last-of-type {
+    font-family: Lato;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 18.09px;
+    letter-spacing: -0.014em;
+    color: #475467;
+}
+.comment {
+    margin-top: 15px;
+}
+.comment .title {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.83px;
+    letter-spacing: -0.01em;
+    color: #344054;
+    margin-bottom: 4.45px;
+}
+.comment .coment-area {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 11.86px;
+    letter-spacing: -0.01em;
+    border: 1px solid #d0d5dd;
+    color: #667085;
+}
+.singleTabls {
+    width: 100%;
+    table-layout: auto;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    font-family: "Lato", "Roboto", sans-serif;
+    margin-top: 15px;
+}
+.singleTabls th,
+.singleTabls td {
+    font-size: 12px;
+    border: 1px solid #ddd;
+    padding: 6px 7px;
+}
+.singleTabls tbody td:first-child {
+    width: 7%;
+}
+.clabelts {
+    text-align: end;
+}
+.clabelts span {
+    font-size: 13px;
+    font-weight: 600;
+}
+.prices_car {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.prices_car li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    align-items: center;
+    line-height: 17px;
+}
+.singleTileitem {
+    margin: 0;
+    font-family: "Lato", "Roboto", sans-serif;
+    font-size: 11px;
+}
+.singleTileitem a {
+    color: #313131;
+    text-decoration: none;
+}
+.singleTileitem .port,
+.singleTileitem .addition {
+    color: #272727;
+    font-weight: 400;
+}
+.prdname {
+    font-size: 13px;
+    line-height: 20px;
+}
+.singleTileitem b {
+    color: #188ae2;
+}
+.pclabelt {
+    text-align: end;
+}
+.tabs-fst .tabs-list {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    list-style-type: none;
+    display: inline-block;
+}
+.tabs-fst .tabs-list li {
+    display: inline-block;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    margin: 10px;
+    color: #313131;
+    cursor: pointer;
+}
+.tabs-fst .tabs-list li.active {
+    border-bottom: 2px solid black;
+}
+.tabs-fst .tabs-list li:first-of-type {
+    margin-left: 0px;
+}
+.prev_order th,
+.prev_order td {
+    padding: 10px;
+}
+.prev_order th {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Lato", "Roboto", sans-serif;
+    color: #313131;
+}
+.prev_order td {
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Lato", "Roboto", sans-serif;
+}
+.coment_fields {
+    align-items: center;
+    gap: 20px;
+}
+.coment_fields .btn-cust {
+    height: 35px;
+    width: 50px;
+    background-color: #2a9fe8;
+    border: 1px solid #2a9fe8;
+    font-size: 18px;
+    font-family: "Lato";
+    line-height: normal;
+    color: white;
+}
+.tabs-scnd {
+    margin-top: 10px;
+}
+.tabs-scnd .tabs-list {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    list-style-type: none;
+    display: inline-block;
+}
+.tabs-scnd .tabs-list li {
+    display: inline-block;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    margin: 10px;
+    color: #313131;
+    cursor: pointer;
+}
+.tabs-scnd .tabs-list li.active {
+    border-bottom: 2px solid black;
+}
+.tabs-scnd .tabs-list li:first-of-type {
+    margin-left: 0px;
+}
+.notify_info label {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #344054;
+    margin-bottom: 4px;
+}
+.notify_info .form-control.h-40 {
+    height: 40px;
+}
+.notify_info .form-control {
+    border: 1px solid #d0d5dd;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #667085;
+}
+.notify_info .form-select {
+    height: 40px;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    border: 1px solid #d0d5dd;
+    color: #667085;
+    background-size: 16px 9px;
+}
+.consignee_information label {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #344054;
+    margin-bottom: 4px;
+}
+.consignee_information .form-control.h-40 {
+    height: 40px;
+}
+.consignee_information .form-control {
+    border: 1px solid #d0d5dd;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #667085;
+}
+.consignee_information .form-select {
+    height: 40px;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    border: 1px solid #d0d5dd;
+    color: #667085;
+    background-size: 16px 9px;
+}
+.submit-btn {
+    height: 36px;
+    width: 176px;
+    background-color: #2a9fe8;
+    border: 1px solid #2a9fe8;
+    border-radius: 4px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+}
+.submit-btn:hover {
+    background-color: #2a9fe8cd;
+    border: 1px solid #2a9fe8d1;
+    color: #ffffff;
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     body {
@@ -257,6 +806,9 @@
     }
     .main-section {
         width: calc(100% - 213px);
+    }
+    .dul-flds .dropdown-menu .dropdown-item {
+        line-height: 18px;
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
@@ -292,6 +844,9 @@
         font-size: 1.2em;
         margin-bottom: 25px;
     }
+    .dul-flds .dropdown-menu .dropdown-item {
+        line-height: 18px;
+    }
 }
 @media screen and (min-width: 992px) and (max-width: 1023px) {
     body {
@@ -326,6 +881,9 @@
         font-size: 1.2em;
         margin-bottom: 25px;
     }
+    .dul-flds .dropdown-menu .dropdown-item {
+        line-height: 18px;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
     body {
@@ -333,7 +891,7 @@
     }
     .dashboard-list-item {
         line-height: normal;
-        padding: 8px 0px;
+        padding: 8px 5px;
     }
     .sat-logo-sidebar {
         max-width: 95px;
@@ -354,11 +912,17 @@
         padding: 30px 12px;
         max-width: 130px;
     }
+    .main-section {
+        width: calc(100% - 130px);
+    }
     .or-heading {
         line-height: normal;
     }
     .order-title {
         font-size: 1.2em;
         margin-bottom: 25px;
+    }
+    .dul-flds .dropdown-menu .dropdown-item {
+        line-height: 18px;
     }
 }

@@ -3,7 +3,7 @@
         <img src="{{ asset('assets/images/logos/sat-logo.webp') }}" class="sat-logo-sidebar" height="55" width="165"
             alt="">
         <ul class="dashboard-list mb-auto">
-            <li class="dashboard-list-item">
+            <li class="dashboard-list-item active">
                 <svg width="24" height="24" class="dashborad-icons">
                     <use href="#dashboard_icon"></use>
                 </svg>
