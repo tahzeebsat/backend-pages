@@ -13,7 +13,8 @@
                     <p class="sub-heading-op">Paid</p>
                 </div>
                 <div class="sec-2">
-                    <a href="javascript:;" class="link-order-specs">
+                    <a  class="link-order-specs" data-bs-toggle="modal"
+                        data-bs-target="#change_payment">
                         Change Payment Status
                     </a>
                 </div>
@@ -23,7 +24,8 @@
             <div class="order-sections d-flex justify-content-between align-items-center border-0">
                 <div class="sec-1">
                     <p class="heading-op mb-0">Status:</p>
-                    <a href="javascript:;" class="link-status-specs">preparing</a>
+                    <a href="javascript:;" class="link-status-specs" data-bs-toggle="modal"
+                    data-bs-target="#manage_status">preparing</a>
                 </div>
                 <div class="sec-2">
                     <button class="btn-order-specs">

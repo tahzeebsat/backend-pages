@@ -149,6 +149,7 @@
     line-height: 24px;
     letter-spacing: -0.01em;
     color: #5d6370;
+    cursor: pointer;
     padding-block: 4px;
 }
 .selection-listing {
@@ -773,6 +774,47 @@
     background-color: #2a9fe8cd;
     border: 1px solid #2a9fe8d1;
     color: #ffffff;
+}
+#change_payment .modal-dialog {
+    max-width: 300px;
+}
+#change_payment .modal-dialog .clos-btn {
+    cursor: pointer;
+}
+#manage_status .modal-dialog {
+    max-width: 300px;
+}
+#manage_status .modal-dialog .clos-btn {
+    cursor: pointer;
+}
+.modal-title-text {
+    font-family: "Lato";
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    font-size: 14px;
+    color: #344054;
+    margin-bottom: 0px;
+}
+.modal-title-sub {
+    font-family: "Lato";
+    line-height: normal;
+    letter-spacing: -0.01em;
+    font-size: 12px;
+    color: #344054;
+    margin-bottom: 0px;
+    margin-left: 4px;
+}
+.btn-apply {
+    background-color: #2384c1;
+    border: 1px solid #2384c1;
+    font-size: 12px;
+    color: white;
+}
+.btn-apply:hover,
+.btn-apply:active {
+    background-color: #2384c1d7;
+    border: 1px solid #2384c1;
+    color: white;
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     body {

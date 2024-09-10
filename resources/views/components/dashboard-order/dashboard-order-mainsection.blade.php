@@ -59,10 +59,10 @@
             {{-- collapseable menu --}}
             <div class="collapse" id="dynamic_id_{{ $loop->iteration }}">
                 <div class="data-table-collapse">
-                    @component('components.collapse-order-detail')
+                    @component('components.dashboard-order.collapse-order-detail')
                        cllapse order specs
                     @endcomponent
-                    @component('components.collapse-order-specs')
+                    @component('components.dashboard-order.collapse-order-specs')
                        cllapse order specs
                     @endcomponent
                 </div>

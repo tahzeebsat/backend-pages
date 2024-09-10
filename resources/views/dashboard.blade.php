@@ -11,18 +11,18 @@
 </head>
 
 <body>
-    @component('components.main-sidebar')
+    @component('components.common.main-sidebar')
         Main Sidebar
     @endcomponent
     <div class="main-content">
-        @component('components.order-rightbar')
+        @component('components.dashboard-order.order-rightbar')
             Order Right Bar Details
         @endcomponent
-        @component('components.dashboard-mainsection')
+        @component('components.dashboard-order.dashboard-order-mainsection')
             Order Right Bar Details
         @endcomponent
     </div>
-    @component('components.svgs-Icons')
+    @component('components.common.svgs-Icons')
         Svgs for project
     @endcomponent
     </div>
