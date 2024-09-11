@@ -49,18 +49,22 @@
             <ul class="fields">
                 <li class="head">Accepted file types: pdf, doc, docx</li>
                 <li class="fil">
+                    <label for="" class="mb-1">Certificates</label>
                     <input type="file" placeholder="Certificates to upload" name="" id="">
                 </li>
                 <li class="head">Accepted file types: pdf, doc, docx</li>
                 <li class="fil">
+                    <label for="" class="mb-1">Export</label>
                     <input type="file" placeholder="Export certificate" name="" id="">
                 </li>
                 <li class="head">Accepted file types: pdf, doc, docx</li>
                 <li class="fil">
+                    <label for="" class="mb-1">Bill</label>
                     <input type="file" placeholder="Bill of Landing" name="" id="">
                 </li>
                 <li class="head">Accepted file types: pdf, doc, docx</li>
                 <li class="fil">
+                    <label for="" class="mb-1">Invoice</label>
                     <input placeholder="Invoice" type="file" name="" id="">
                 </li>
             </ul>

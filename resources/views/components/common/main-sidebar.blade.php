@@ -1,36 +1,45 @@
-<aside class="sidebar-dashboard">
     <div class="siddashboard">
-        <img src="{{ asset('assets/images/logos/sat-logo.webp') }}" class="sat-logo-sidebar" height="55" width="165"
-            alt="">
+        <a href="/" class="hide-div">
+            <img src="{{ asset('assets/images/logos/sat-logo.webp') }}" class="hide-m" height="55" width="165"
+                alt="">
+        </a>
         <ul class="dashboard-list mb-auto">
-            <li class="dashboard-list-item active">
-                <svg width="24" height="24" class="dashborad-icons">
+            <li class="dashboard-list-item">
+                <svg width="24" height="24" class="dashborad-icons hide-div">
                     <use href="#dashboard_icon"></use>
                 </svg>
+                <img src="{{ asset('assets/images/icons/m-dashboard.svg') }}" class="me-2 hide-m" height="16" width="16"
+                    alt="">
                 <span>
                     Dashboard
                 </span>
             </li>
-            <li class="dashboard-list-item">
-                <svg width="24" height="24" class="dashborad-icons">
+            <li class="dashboard-list-item active">
+                <svg width="24" height="24" class="dashborad-icons hide-div">
                     <use href="#order_icon"></use>
                 </svg>
+                <img src="{{ asset('assets/images/icons/order-m.svg') }}" class="me-2 hide-m" height="16" width="16"
+                    alt="">
                 <span>
                     Order
                 </span>
             </li>
             <li class="dashboard-list-item">
-                <svg width="24" height="24" class="dashborad-icons">
+                <svg width="24" height="24" class="dashborad-icons hide-div">
                     <use href="#bankT_icon"></use>
                 </svg>
+                <img src="{{ asset('assets/images/icons/bank-m.svg') }}" class="me-2 hide-m" height="16" width="16"
+                    alt="">
                 <span>
                     Bank Transfer
                 </span>
             </li>
             <li class="dashboard-list-item">
-                <svg width="24" height="24" class="dashborad-icons">
+                <svg width="24" height="24" class="dashborad-icons hide-div">
                     <use href="#reserve_icon"></use>
                 </svg>
+                <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16" width="16"
+                    alt="">
                 <span>
                     Reserve Car
                 </span>
@@ -38,17 +47,21 @@
         </ul>
         <ul class="dashboard-list pt-0 pb-c24">
             <li class="dashboard-list-item">
-                <svg width="24" height="24" class="dashborad-icons">
+                <svg width="24" height="24" class="dashborad-icons hide-div">
                     <use href="#setting_icon"></use>
                 </svg>
+                <img src="{{ asset('assets/images/icons/settings-m.svg') }}" class="me-2 hide-m" height="16" width="16"
+                    alt="">
                 <span>
                     Settings
                 </span>
             </li>
             <li class="dashboard-list-item">
-                <svg width="24" height="24" class="dashborad-icons">
+                <svg width="24" height="24" class="dashborad-icons hide-div">
                     <use href="#logout_icon"></use>
                 </svg>
+                <img src="{{ asset('assets/images/icons/logout-m.svg') }}" class="me-2 hide-m" height="16" width="16"
+                    alt="">
                 <span>
                     Logout
                 </span>
@@ -65,4 +78,3 @@
             </div>
         </div>
     </div>
-</aside>

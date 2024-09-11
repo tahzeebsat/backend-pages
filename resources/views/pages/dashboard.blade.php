@@ -11,9 +11,11 @@
 </head>
 
 <body>
-    @component('components.common.main-sidebar')
-        Main Sidebar
-    @endcomponent
+    <aside class="sidebar-dashboard">
+        @component('components.common.main-sidebar')
+            Main Sidebar
+        @endcomponent
+    </aside>
     <div class="main-content">
         @component('components.dashboard-order.order-rightbar')
             Order Right Bar Details

@@ -1,27 +1,25 @@
 @php
-    $dummyData = [[], [], [], [], []];
+    $OrderData = [[], [], [], [], []];
 @endphp
 <div class="main-section">
-    <div class="em-search">
-        <div class="dul-flds">
-            <div class="dropdown">
-                <button class="dropdown-toggle" type="button" id="drp_search_list" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Search Email
-                </button>
-                <ul class="dropdown-menu" id="select_search">
-                    <li class="dropdown-item">Email</li>
-                    <li class="dropdown-item">Order Number</li>
-                    <li class="dropdown-item">Name</li>
-                    <li class="dropdown-item">Phone Number</li>
-                </ul>
-            </div>
-            <div class="search-input-field-order">
-                <div class="input-src-order">
-                    <img src="{{ asset('assets/images/icons/search-lg.svg') }}" height="20" width="20"
-                        alt="">
-                    <input type="text" placeholder="Search Order Number" class="search-order-number">
-                </div>
+    <div class="dul-flds">
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" id="drp_search_list" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Search Email
+            </button>
+            <ul class="dropdown-menu" id="select_search">
+                <li class="dropdown-item">Email</li>
+                <li class="dropdown-item">Order Number</li>
+                <li class="dropdown-item">Name</li>
+                <li class="dropdown-item">Phone Number</li>
+            </ul>
+        </div>
+        <div class="search-input-field-order">
+            <div class="input-src-order">
+                <img src="{{ asset('assets/images/icons/search-lg.svg') }}" height="20" width="20"
+                    alt="">
+                <input type="text" placeholder="Search Order Number" class="search-order-number">
             </div>
         </div>
     </div>
@@ -40,7 +38,7 @@
             <div class="max-10">Last Updated</div>
             <div class="max-10">Pay</div>
         </div>
-        @foreach ($dummyData as $item)
+        @foreach ($OrderData as $item)
             <div class="data-table-data mk">
                 <div class="max-4">
                     <input class="form-check-input mt-0" type="checkbox" value="">
@@ -48,8 +46,8 @@
                 <div class="max-10" data-bs-toggle="collapse" data-bs-target="#dynamic_id_{{ $loop->iteration }}">
                     18925774</div>
                 <div class="max-10">Salman Afzal</div>
-                <div class="max-10">$ 8087</div>
-                <div class="max-10 text-center">angola</div>
+                <div class="max-10 justify-content-center">$ 8087</div>
+                <div class="max-10 justify-content-center">angola</div>
                 <div class="max-10">Ready to Shipped</div>
                 <div class="max-10">customer</div>
                 <div class="max-10">06 Sep 2024, 5:49 AM </div>
@@ -60,10 +58,10 @@
             <div class="collapse" id="dynamic_id_{{ $loop->iteration }}">
                 <div class="data-table-collapse">
                     @component('components.dashboard-order.collapse-order-detail')
-                       cllapse order specs
+                        cllapse order specs
                     @endcomponent
                     @component('components.dashboard-order.collapse-order-specs')
-                       cllapse order specs
+                        cllapse order specs
                     @endcomponent
                 </div>
             </div>
@@ -71,3 +69,7 @@
 
     </div>
 </div>
+@component('components.common.modals.dashboard-modals')
+    modal for change payment
+    modal for Manage Status
+@endcomponent
