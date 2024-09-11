@@ -16,16 +16,18 @@
             Main Sidebar
         @endcomponent
     </aside>
-
     <div class="main-content">
-        @component('components.dashboard.dashboard-maincontent')
-            dashboard content
+        @component('components.dashboard-order.order-rightbar')
+            Order Right Bar Details
+        @endcomponent
+        @component('components.dashboard-order.dashboard-order-mainsection')
+            Order Right Bar Details
         @endcomponent
     </div>
-
     @component('components.common.svgs-Icons')
         Svgs for project
     @endcomponent
+    </div>
     <script src="{{ asset('assets/js/bootstrapver5/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery/jquery.js') }}"></script>
     <script>

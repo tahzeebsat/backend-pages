@@ -166,6 +166,12 @@
     height: 100vh;
     background-color: #fcfcfd;
 }
+.main-section-dashboard {
+    width: 100%;
+    padding: 32px 32px 32px 22px;
+    height: 100vh;
+    background-color: #fcfcfd;
+}
 .search-order-number {
     width: 100%;
     max-width: 231px;
@@ -986,6 +992,136 @@
 .list-offcanva li.active {
     background-color: #8080801f;
 }
+/* dashboard */
+.page-title-cmn {
+    border-bottom: 1px solid #ced0d4;
+    padding-bottom: 12px;
+}
+.page-title-cmn .pagepara {
+    font-family: Lato;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.016em;
+    text-align: left;
+    color: #101828;
+}
+.search-dash {
+    display: flex;
+    padding-bottom: 20px;
+    margin-top: 32px;
+    border-bottom: 1px solid #eaecf0;
+}
+.search-dash .tile-srch {
+    font-family: Lato;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.014em;
+    color: #0c1529;
+}
+.search-dash .tile-para {
+    font-family: Lato;
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.012em;
+    color: #5d6370;
+}
+.title-para-search {
+    width: 70%;
+}
+.dropdowns-elemets {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 30%;
+}
+.dropdowns-elemets .dropdown {
+    max-width: 164px;
+    width: 100%;
+}
+.dropdowns-elemets .dropdown-item {
+    font-size: 0.875em;
+    color: #5d6370;
+    font-family: Lato;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+}
+.dropdowns-elemets .dropdown button {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #d0d5dd;
+    font-family: Lato;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #667085;
+    padding: 8px 12px;
+}
+.dropdowns-elemets .dropdown .mn {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #f9fafb;
+}
+.dropdowns-elemets .dropdown .yr {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #ffffff;
+}
+.dropdowns-elemets .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sale-numbers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    row-gap: 10px;
+}
+.sale-numbers .sale-numbers-item {
+    min-width: 130px;
+    display: flex;
+    gap: 8px;
+    margin-right: 73px;
+}
+.sale-numbers .sale-numbers-item:last-of-type {
+    margin-right: 0px;
+}
+.sale-numbers .sale-numbers-item span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #2384c1;
+    border: 1px solid #2384c1;
+    margin-top: 4px;
+}
+.sale-numbers .sale-numbers-item h3 {
+    font-family: Lato;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #5d6370;
+}
+.sale-numbers .sale-numbers-item p {
+    font-family: Lato;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.016em;
+    color: #0c1529;
+}
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     body {
         font-size: 0.875rem;
@@ -1096,6 +1232,16 @@
     .dul-flds .dropdown-menu .dropdown-item {
         line-height: 18px;
     }
+    .title-para-search {
+        width: 50%;
+    }
+    .dropdowns-elemets {
+        width: 50%;
+    }
+    .dropdowns-elemets .dropdown button {
+        height: 38px;
+        padding: 8px 12px;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
     body {
@@ -1136,6 +1282,16 @@
     }
     .dul-flds .dropdown-menu .dropdown-item {
         line-height: 18px;
+    }
+    .title-para-search {
+        width: 50%;
+    }
+    .dropdowns-elemets {
+        width: 50%;
+    }
+    .dropdowns-elemets .dropdown button {
+        height: 38px;
+        padding: 8px 12px;
     }
 }
 @media screen and (max-width: 767px) {

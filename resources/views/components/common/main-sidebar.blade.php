@@ -1,6 +1,6 @@
     <div class="siddashboard">
         <a href="/" class="hide-div">
-            <img src="{{ asset('assets/images/logos/sat-logo.webp') }}" class="hide-m" height="55" width="165"
+            <img src="{{ asset('assets/images/logos/sat-logo.webp') }}" class="sat-logo-sidebar " height="55" width="165"
                 alt="">
         </a>
         <ul class="dashboard-list mb-auto">
