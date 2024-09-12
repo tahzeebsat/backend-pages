@@ -42,6 +42,7 @@
             </div>
         </div>
     </div>
+
     <div class="sale-numbers">
         @foreach ($Data as $item)
             <div class="sale-numbers-item">
@@ -52,5 +53,55 @@
                 </div>
             </div>
         @endforeach
+    </div>
+
+    <div class="progress-card-section">
+        <div class="row g-3">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="progress-card shadow-sm">
+                    <h3>Unread Mails</h3>
+                    <p>$1,280</p>
+                    <div class="count-progress">
+                        <svg width="20" height="20" class="rise">
+                            <use href="#dashboard_arrow"></use>
+                        </svg>
+                        <div class="progress-det">
+                            <span class="me-2 rise">15%</span>
+                            <span>last mth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="progress-card shadow-sm">
+                    <h3>Today's Inquires</h3>
+                    <p>14</p>
+                    <div class="count-progress">
+                        <svg width="20" height="20" class="downfall">
+                            <use href="#dashboard_arrow"></use>
+                        </svg>
+                        <div class="progress-det">
+                            <span class="me-2 downfall">10%</span>
+                            <span>last mth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="progress-card shadow-sm">
+                    <h3>Today's Auction</h3>
+                    <p>25</p>
+                    <div class="count-progress">
+                        <svg width="20" height="20" class="rise">
+                            <use href="#dashboard_arrow"></use>
+                        </svg>
+                        <div class="progress-det">
+                            <span class="me-2 rise">20%</span>
+                            <span>last mth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
