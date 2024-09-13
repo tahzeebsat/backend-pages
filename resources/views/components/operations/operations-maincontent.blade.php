@@ -2,10 +2,17 @@
     $Data = [[], [], [], [], [], [], [], [], [], []];
 @endphp
 <div class="main-section-dashboard">
-    <div class="page-title-cmn">
+    <div class="page-title-cmn d-flex justify-content-between">
         <h1 class="pagepara">
-            Booked Car By Bank
+            Operations
         </h1>
+    </div>
+    <div class="pt-3">
+        <label for="" class="cmn-text">Stock ID</label>
+        <div class="search-field-reserve shadow-sm">
+            <img src="{{ asset('assets/images/icons/search-lg.svg') }}" height="20" width="20" alt="">
+            <input type="text" placeholder="Search Stock ID">
+        </div>
     </div>
     <div class="data-table-order">
         <div class="data-table-header">
@@ -67,12 +74,8 @@
                             <label for="">Email <span class="text-danger">*</span></label>
                             <input type="email" class="form-control h-40" placeholder="email">
                         </div>
-                        <div class="col-lg-12">
-                            <label for="">Address <span class="text-danger">*</span></label>
-                            <textarea class="form-control" placeholder="Address"></textarea>
-                        </div>
                         <div class="col-lg-6">
-                            <label for="">Destination Country <span class="text-danger">*</span></label>
+                            <label for="">Status <span class="text-danger">*</span></label>
                             <select class="form-select h-40">
                                 <option value="">1</option>
                                 <option value="">2</option>
@@ -80,14 +83,14 @@
                             </select>
                         </div>
                         <div class="col-lg-6">
-                            <label for="">Destination Port <span class="text-danger">*</span></label>
+                            <label for="">Payment Type <span class="text-danger">*</span></label>
                             <select class="form-select h-40">
                                 <option value="">1</option>
                                 <option value="">2</option>
                                 <option value="">3</option>
                             </select>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
                             <label for="">Currency <span class="text-danger">*</span></label>
                             <select class="form-select h-40">
                                 <option value="">1</option>
@@ -95,17 +98,9 @@
                                 <option value="">3</option>
                             </select>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
                             <label for="">Total Car Amount <span class="text-danger">*</span></label>
                             <input type="number" class="form-control h-40" placeholder="Car Amount">
-                        </div>
-                        <div class="col-lg-4">
-                            <label for="">Status <span class="text-danger">*</span></label>
-                            <select class="form-select h-40">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                            </select>
                         </div>
                         <div class="col-lg-12">
                             <label for="">Comment</label>

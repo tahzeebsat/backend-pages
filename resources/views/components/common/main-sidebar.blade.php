@@ -4,7 +4,7 @@
                 width="165" alt="">
         </a>
         <ul class="dashboard-list mb-auto">
-            <li class="dashboard-list-item" onclick="window.location.href='/dashboard'">
+            <li class="dashboard-list-item" onclick="window.location.href='/'">
                 <svg width="24" height="24" class="dashborad-icons hide-div">
                     <use href="#dashboard_icon"></use>
                 </svg>
@@ -45,6 +45,26 @@
                     Reserve Car
                 </span>
             </li>
+            <li class="dashboard-list-item" data-bs-toggle="collapse" data-bs-target="#collapse_operations"
+                aria-expanded="false" aria-controls="collapse_operations"
+                onclick="window.location.href='/operation-dashboard'">
+                <svg width="24" height="24" class="dashborad-icons hide-div">
+                    <use href="#reserve_icon"></use>
+                </svg>
+                <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
+                    width="16" alt="">
+                <span>
+                    Operations
+                </span>
+            </li>
+            <div class="collapse" id="collapse_operations">
+                <ul>
+                    <li>Operations</li>
+                    <li>Manual Shipping List</li>
+                    <li>Sold Cars Info</li>
+                </ul>
+            </div>
+
         </ul>
         <ul class="dashboard-list pt-0 pb-c24">
             <li class="dashboard-list-item" onclick="window.location.href='/settings'">

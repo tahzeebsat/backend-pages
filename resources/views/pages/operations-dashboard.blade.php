@@ -18,9 +18,10 @@
     </aside>
 
     <div class="main-content">
-        @component('components.reservecar.reservecar-maincontent')
-            reserve content
-        @endcomponent </div>
+        @component('components.operations.operations-maincontent')
+            Operations content
+        @endcomponent
+    </div>
 
     @component('components.common.svgs-Icons')
         Svgs for project
