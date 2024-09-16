@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('assets/styles/bootstrapver5/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/root.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/style.css') }}">
-    <title>Dashboard</title>
+    <title> bank transfer</title>
 </head>
 
 <body>

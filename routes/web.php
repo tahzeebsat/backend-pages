@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/manual-shipping-list', function () {
+    return view('pages.dashboard-manual-shippinglist');
+});
 Route::get('/mobile-order-dashboard', function () {
     return view('pages.mobile.order-dashboard');
 });
@@ -19,4 +22,7 @@ Route::get('/order-dashboard', function () {
 });
 Route::get('/', function () {
     return view('pages.dashboard');
+});
+Route::get('/sold-cars', function () {
+    return view('pages.sold-cars-dashboard');
 });

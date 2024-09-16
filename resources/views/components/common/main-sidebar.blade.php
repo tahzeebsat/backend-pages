@@ -46,22 +46,26 @@
                 </span>
             </li>
             <li class="dashboard-list-item" data-bs-toggle="collapse" data-bs-target="#collapse_operations"
-                aria-expanded="false" aria-controls="collapse_operations"
-                onclick="window.location.href='/operation-dashboard'">
+                aria-expanded="false" aria-controls="collapse_operations">
                 <svg width="24" height="24" class="dashborad-icons hide-div">
-                    <use href="#reserve_icon"></use>
+                    <use href="#dashboard_operations"></use>
                 </svg>
                 <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
                     width="16" alt="">
-                <span>
-                    Operations
+                <span class="d-flex justify-content-between align-items-center w-100">
+                    <span>
+                        Operations
+                    </span>
+                    <svg width="20" height="20" class="chev-arrow-bar">
+                        <use href="#dashboard_op_arrow"></use>
+                    </svg>
                 </span>
             </li>
-            <div class="collapse" id="collapse_operations">
+            <div class="collapse drop-list-op" id="collapse_operations">
                 <ul>
-                    <li>Operations</li>
-                    <li>Manual Shipping List</li>
-                    <li>Sold Cars Info</li>
+                    <li onclick="window.location.href='/operation-dashboard'">Operations</li>
+                    <li onclick="window.location.href='/manual-shipping-list'">Manual Shipping List</li>
+                    <li onclick="window.location.href='/sold-cars'">Sold Cars Info</li>
                 </ul>
             </div>
 

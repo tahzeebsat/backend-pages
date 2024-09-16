@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="{{ asset('assets/styles/bootstrapver5/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/root.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/style.css') }}">
-    <title>reserve</title>
+    <title>Manual Shipping List
+    </title>
 </head>
 
 <body>
@@ -18,9 +19,10 @@
     </aside>
 
     <div class="main-content">
-        @component('components.reservecar.reservecar-maincontent')
-            reserve content
-        @endcomponent </div>
+        @component('components.manual-shipping-list.dashboard-shippinglistmaincontent')
+            Manual Shipping List content
+        @endcomponent
+    </div>
 
     @component('components.common.svgs-Icons')
         Svgs for project

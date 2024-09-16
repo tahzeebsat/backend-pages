@@ -1,118 +1,119 @@
-@php
-    $Data = [[], [], [], [], [], [], [], [], [], []];
-@endphp
 <div class="main-section-dashboard">
     <div class="page-title-cmn d-flex justify-content-between">
         <h1 class="pagepara">
             Operations
         </h1>
     </div>
-    <div class="pt-3">
-        <label for="" class="cmn-text">Stock ID</label>
+    <div class="py-3">
         <div class="search-field-reserve shadow-sm">
             <img src="{{ asset('assets/images/icons/search-lg.svg') }}" height="20" width="20" alt="">
             <input type="text" placeholder="Search Stock ID">
         </div>
     </div>
-    <div class="data-table-order">
-        <div class="data-table-header">
-            <div class="max-10">ID</div>
-            <div class="max-10">Car</div>
-            <div class="max-10">User</div>
-            <div class="max-10">Car Amount</div>
-            <div class="max-10">Phone</div>
-            <div class="max-10">Country</div>
-            <div class="max-10">Created at </div>
-            <div class="max-10 text-end pe-3">Action</div>
-        </div>
-        @foreach ($Data as $item)
-            <div class="data-table-data mk">
-                <div class="max-10s">{{ $loop->iteration }}</div>
-                <div class="max-10s">Suzuki</div>
-                <div class="max-10s">Admin</div>
-                <div class="max-10s">USD 2666.67 </div>
-                <div class="max-10s">+92 327 4537698 </div>
-                <div class="max-10s">Pakistan</div>
-                <div class="max-10s">2024-06-21</div>
-                <div class="max-10s justify-content-end pe-3">
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" id="dropdown_actions" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img src="{{ asset('assets/images/icons/list-unordered.svg') }}" alt="icon"
-                                height="24" width="24">
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown_actions">
-                            <li data-bs-toggle="modal" data-bs-target="#edit_order_modal">&#x270E;</li>
-                        </ul>
+    <div class="card-items mb-3" id="operations_sec_cards">
+        <div class="row g-2">
+            <div class="col-lg-12">
+                <div class="item-card shadow-sm">
+                    <h2><u> Car Detail</u></h2>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="https://satjapan.com/photos/land_cruiser_prado/2024-04-24/0.61274200_1713957972.jpg"
+                                width="100%" height="170" class="contain" alt="">
+                        </div>
+                        <div class="col-lg-9">
+                            <h2>2022 Toyota Land Cruiser Prado</h2>
+                            <div class="d-flex gap-4 flex-wrap">
+                                <p><strong>Year:</strong> <span> 2022-00</span></p>
+                                <p><strong>Engine:</strong> <span> 2700 cc</span></p>
+                                <p><strong>Mileage:</strong> <span> 14139 km</span></p>
+                                <p><strong>Transmission:</strong> <span> AT</span></p>
+                            </div>
+                            <p><strong>Car Price:</strong> <span>4210000</span></p>
+                            <p><strong>Car Sold:</strong> <span>No</span></p>
+                            <p><strong>Car Reserved:</strong> <span>Yes</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        @endforeach
-    </div>
-</div>
-
-<div class="modal fade cmn-modls-ordr" id="edit_order_modal">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h5 class="modal-title-text">Booked Car By Bank Detail</h5>
-                    <span class="clos-btn cursor-pointer" data-bs-dismiss="modal" aria-label="Close">×</span>
+            <div class="col-lg-4">
+                <div class="item-card shadow-sm">
+                    <h2><u> Chasis No</u></h2>
+                    <h3>Chasis No</h3>
+                    <input type="text" class="form-control" placeholder="Chasis No">
                 </div>
-                <hr>
-                <div class="form-data">
-                    <div class="row g-3">
-                        <div class="col-lg-4 col-md-6">
-                            <label for="">Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control h-40" placeholder="Name">
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <label for="">Phone <span class="text-danger">*</span></label>
-                            <input type="number" class="form-control h-40" placeholder="Phone">
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <label for="">Email <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control h-40" placeholder="email">
-                        </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item-card shadow-sm">
+                    <h2><u> Mileage</u></h2>
+                    <h3>Mileage (km)</h3>
+                    <input type="text" class="form-control" placeholder="Mileage">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item-card shadow-sm">
+                    <h2><u> Car Active</u></h2>
+                    <h3>Car Active Status</h3>
+                    <select class="form-select">
+                        <option value="">Yes</option>
+                        <option value="">0</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="item-card shadow-sm">
+                    <h2><u> Price</u></h2>
+                    <h3>Currency</h3>
+                    <select class="form-select">
+                        <option value="">VND</option>
+                        <option value="">0</option>
+                    </select>
+                    <h3 class="mt-2">
+                        Price
+                    </h3>
+                    <input type="text" class="form-control" placeholder="Price" value="0">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="item-card shadow-sm">
+                    <h2><u> Shipping Cost</u></h2>
+                    <div class="row g-2">
                         <div class="col-lg-6">
-                            <label for="">Status <span class="text-danger">*</span></label>
-                            <select class="form-select h-40">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
+                            <h3>Country</h3>
+                            <select class="form-select">
+                                <option value="">Select a Country</option>
+                                <option value="">0</option>
                             </select>
                         </div>
                         <div class="col-lg-6">
-                            <label for="">Payment Type <span class="text-danger">*</span></label>
-                            <select class="form-select h-40">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
+                            <h3>Shipping Port</h3>
+                            <select class="form-select">
+                                <option value="">Select a City</option>
+                                <option value="">0</option>
                             </select>
                         </div>
                         <div class="col-lg-6">
-                            <label for="">Currency <span class="text-danger">*</span></label>
-                            <select class="form-select h-40">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
+                            <h3>Currency</h3>
+                            <select class="form-select">
+                                <option value="">JPY</option>
+                                <option value="">0</option>
                             </select>
                         </div>
                         <div class="col-lg-6">
-                            <label for="">Total Car Amount <span class="text-danger">*</span></label>
-                            <input type="number" class="form-control h-40" placeholder="Car Amount">
-                        </div>
-                        <div class="col-lg-12">
-                            <label for="">Comment</label>
-                            <textarea class="form-control" placeholder="Comment" rows="4"></textarea>
-                        </div>
-                        <div class="col-lg-12 mt-2">
-                            <hr>
-                        </div>
-                        <div class="col-12 text-end mt-0">
-                            <button class="btn btn-apply">Save</button>
+                            <h3>Shipping Cost</h3>
+                            <input type="text" class="form-control" placeholder="Shipping Cost" value="0">
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="item-card shadow-sm">
+                    <h2><u>Fetch Images</u></h2>
+                    <button class="btn-fetch">Fetch Images</button>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="item-card shadow-lg d-flex justify-content-end">
+                    <button class="btn-fetch">Update All</button>
                 </div>
             </div>
         </div>
