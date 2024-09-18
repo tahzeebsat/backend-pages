@@ -8,6 +8,13 @@ img.contain {
 .cursor-pointer {
     cursor: pointer;
 }
+.no--cursor {
+    cursor: default !important;
+}
+.mop {
+    color: #000000;
+    font-size: 14px;
+}
 .sat-logo-sidebar {
     height: auto;
     object-fit: contain;
@@ -322,6 +329,9 @@ img.contain {
     margin-top: 24px;
     min-width: 892px;
     cursor: pointer;
+}
+.data-table-data:last-of-type {
+    margin-bottom: 12px;
 }
 .data-table-data .max-10 {
     flex-basis: 12%;
@@ -1277,8 +1287,7 @@ img.contain {
     display: flex;
     color: #ffffff;
     height: 44px;
-    max-width: 177px;
-    width: 100%;
+    width: max-content;
     border-radius: 4px;
     border: 1px solid #2a9fe8;
     background-color: #2a9fe8;
@@ -1286,6 +1295,7 @@ img.contain {
     justify-content: center;
     text-decoration: none;
     cursor: pointer;
+    padding: 10px;
 }
 .manual-reserve-btn span {
     font-size: 20px;
@@ -1374,6 +1384,41 @@ img.contain {
     background-color: #37ce8a;
     color: white;
     border-radius: 4px;
+}
+.card-booking {
+    width: 100%;
+    padding: 6px 12px;
+    background-color: #f9fafb;
+    border-radius: 3px;
+    margin-block: 12px;
+}
+.gen-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 8px;
+}
+.gen-item span:first-of-type {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #5d6370;
+}
+.gen-item span:last-of-type {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #0c1529;
+}
+.op-specs {
+    display: flex;
+    row-gap: 0px;
+    column-gap: 20px;
+    flex-wrap: wrap;
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     body {
@@ -1677,5 +1722,99 @@ img.contain {
         -ms-overflow-style: none;
         scrollbar-width: none;
         overflow-x: auto;
+    }
+    .search-dash {
+        flex-wrap: wrap;
+        padding-bottom: 16px;
+        margin-top: 12px;
+        gap: 16px;
+    }
+    .title-para-search {
+        width: 100%;
+    }
+    .dropdowns-elemets {
+        justify-content: start;
+        width: 100%;
+    }
+    .dropdowns-elemets .dropdown {
+        max-width: 50%;
+        width: 100%;
+    }
+    .search-dash .tile-srch {
+        font-size: 0.875em;
+        line-height: 20px;
+    }
+    .search-dash .tile-para {
+        font-size: 0.75em;
+        line-height: 18px;
+    }
+    .dropdowns-elemets .dropdown button {
+        height: 40px;
+        font-size: 0.75em;
+        font-weight: 500;
+        line-height: 16px;
+        padding: 8px 10px;
+    }
+    .dropdowns-elemets .dropdown-item {
+        font-size: 0.75em;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    .sale-numbers .sale-numbers-item h3 {
+        font-size: 0.875em;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .sale-numbers .sale-numbers-item p {
+        font-size: 1.25em;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    .sale-numbers .sale-numbers-item {
+        min-width: 100px;
+        display: flex;
+        gap: 8px;
+        margin-right: 0px;
+    }
+    .sale-numbers {
+        margin-top: 24px;
+        column-gap: 40px;
+        margin-top: 16px;
+    }
+    .progress-card {
+        padding: 12px 16px;
+    }
+    .progress-card h3 {
+        font-size: 1em;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+    .progress-card p {
+        font-size: 1.5em;
+        line-height: 32px;
+        margin-bottom: 12px;
+    }
+    .progress-card .progress-det span {
+        font-size: 0.875em;
+        line-height: 20px;
+    }
+    .search-field-reserve input {
+        font-size: 0.75em;
+        font-weight: 500;
+        line-height: 16px;
+    }
+    .search-field-reserve {
+        padding: 11px 10px;
+    }
+    .manual-reserve-btn {
+        font-size: 14px;
+        font-weight: 500;
+        height: 32px;
+    }
+    .drop-list-op ul li {
+        font-size: 0.75em;
+    }
+    .cmn-modls-ordr .modal-dialog {
+        max-width: 400px;
     }
 }

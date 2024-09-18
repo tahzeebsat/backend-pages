@@ -14,14 +14,9 @@
 @endphp
 
 <body>
-    <nav class="container-fluid" id="main_bar">
-        <div class="d-flex justify-content-between">
-            <img src="{{ asset('assets/images/icons/m-menu.svg') }}" alt="menu-icon" data-bs-toggle="offcanvas"
-                href="#sidebar_mobile" role="button">
-            <h1>Orders Details</h1>
-            <span></span>
-        </div>
-    </nav>
+    @component('components.common.mobile-headings', ['title' => 'Orders Details'])
+        Heading
+    @endcomponent
 
     <section class="container-fluid" id="search_mobile">
         <div class="dul-flds">

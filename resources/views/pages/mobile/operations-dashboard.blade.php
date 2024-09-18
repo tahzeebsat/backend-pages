@@ -1,26 +1,42 @@
-<div class="main-section-dashboard">
-    <div class="page-title-cmn d-flex justify-content-between">
-        <h1 class="pagepara">
-            Operations
-        </h1>
-    </div>
-    <div class="py-3">
-        <div class="search-field-reserve shadow-sm">
-            <img src="{{ asset('assets/images/icons/search-lg.svg') }}" height="20" width="20" alt="">
-            <input type="text" placeholder="Search Stock ID">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('assets/styles/bootstrapver5/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/root.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/style.css') }}">
+    <title>Mobile Dashboard</title>
+</head>
+@php
+    $Data = [[], [], [], [], []];
+@endphp
+
+<body>
+    @component('components.common.mobile-headings', ['title' => 'Operations'])
+        Heading
+    @endcomponent
+    {{-- SEARCH FIELD --}}
+    <div class="container-fluid">
+        <div class="py-3">
+            <div class="search-field-reserve shadow-sm">
+                <input type="text" placeholder="Search Stock ID">
+                <img src="{{ asset('assets/images/icons/search-lg.svg') }}" height="20" width="20"
+                    alt="">
+            </div>
         </div>
     </div>
-    <div class="card-items mb-3" id="operations_sec_cards">
+    <div class="container-fluid" id="operations_sec_cards">
         <div class="row g-2">
             <div class="col-lg-12">
-                <div class="item-card shadow-sm">
+                <div class="item-card shadow-sm border-1 border">
                     <h2><u> Car Detail</u></h2>
                     <div class="row">
                         <div class="col-lg-3">
-                            <img src="https://satjapan.com/photos/land_cruiser_prado/2024-04-24/0.61274200_1713957972.jpg"
-                                width="100%" height="170" class="contain" alt="">
+                            <img src="https://satjapan.com/photos/land_cruiser_prado/2024-04-24/0.61274200_1713957972.jpg" width="100%" height="170" class="contain" alt="">
                         </div>
-                        <div class="col-lg-9">
+                        <div class="col-lg-9 mt-3">
                             <h2>2022 Toyota Land Cruiser Prado</h2>
                             <div class="op-specs">
                                 <p><strong>Year:</strong> <span> 2022-00</span></p>
@@ -36,21 +52,21 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="item-card shadow-sm">
+                <div class="item-card shadow-sm border-1 border">
                     <h2><u> Chasis No</u></h2>
                     <h3>Chasis No</h3>
                     <input type="text" class="form-control" placeholder="Chasis No">
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="item-card shadow-sm">
+                <div class="item-card shadow-sm border-1 border">
                     <h2><u> Mileage</u></h2>
                     <h3>Mileage (km)</h3>
                     <input type="text" class="form-control" placeholder="Mileage">
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="item-card shadow-sm">
+                <div class="item-card shadow-sm border-1 border">
                     <h2><u> Car Active</u></h2>
                     <h3>Car Active Status</h3>
                     <select class="form-select">
@@ -60,7 +76,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="item-card shadow-sm">
+                <div class="item-card shadow-sm border-1 border">
                     <h2><u> Price</u></h2>
                     <h3>Currency</h3>
                     <select class="form-select">
@@ -74,7 +90,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="item-card shadow-sm">
+                <div class="item-card shadow-sm border-1 border">
                     <h2><u> Shipping Cost</u></h2>
                     <div class="row g-2">
                         <div class="col-lg-6">
@@ -106,16 +122,28 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="item-card shadow-sm">
+                <div class="item-card shadow-sm border-1 border">
                     <h2><u>Fetch Images</u></h2>
                     <button class="btn-fetch">Fetch Images</button>
                 </div>
             </div>
             <div class="col-lg-12">
-                <div class="item-card shadow-lg d-flex justify-content-end">
+                <div class="item-card d-flex justify-content-center border-1 border">
                     <button class="btn-fetch">Update All</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    @component('components.common.mobile-sidebar')
+        mobile sidebar
+    @endcomponent
+    @component('components.common.svgs-Icons')
+        Svgs for project
+    @endcomponent
+
+    <script src="{{ asset('assets/js/bootstrapver5/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery/jquery.js') }}"></script>
+</body>
+
+</html>

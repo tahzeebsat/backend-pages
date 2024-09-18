@@ -19,7 +19,7 @@
             <div class="max-10 text-end pe-3">Action</div>
         </div>
         @foreach ($Data as $item)
-            <div class="data-table-data mk">
+            <div class="data-table-data mk no--cursor">
                 <div class="max-10s">{{ $loop->iteration }}</div>
                 <div class="max-10s">Suzuki</div>
                 <div class="max-10s">Admin</div>
@@ -28,16 +28,7 @@
                 <div class="max-10s">Pakistan</div>
                 <div class="max-10s">2024-06-21</div>
                 <div class="max-10s justify-content-end pe-3">
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" id="dropdown_actions" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img src="{{ asset('assets/images/icons/list-unordered.svg') }}" alt="icon"
-                                height="24" width="24">
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown_actions">
-                            <li data-bs-toggle="modal" data-bs-target="#edit_order_modal">&#x270E;</li>
-                        </ul>
-                    </div>
+                    <span data-bs-toggle="modal" data-bs-target="#edit_order_modal" class="cursor-pointer mop">&#x270E;</span>
                 </div>
             </div>
         @endforeach

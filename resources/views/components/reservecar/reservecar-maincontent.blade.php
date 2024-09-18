@@ -35,16 +35,7 @@
                 <div class="max-10s">Pakistan</div>
                 <div class="max-10s">2024-06-21</div>
                 <div class="max-10s justify-content-end pe-3">
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" id="dropdown_actions" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img src="{{ asset('assets/images/icons/list-unordered.svg') }}" alt="icon"
-                                height="24" width="24">
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown_actions">
-                            <li data-bs-toggle="modal" data-bs-target="#edit_order_modal">&#x270E;</li>
-                        </ul>
-                    </div>
+                    <span data-bs-toggle="modal" data-bs-target="#edit_order_modal" class="cursor-pointer mop">&#x270E;</span>
                 </div>
             </div>
         @endforeach
@@ -56,7 +47,7 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h5 class="modal-title-text">Booked Car By Bank Detail</h5>
+                    <h5 class="modal-title-text">Reserve Car Detail</h5>
                     <span class="clos-btn cursor-pointer" data-bs-dismiss="modal" aria-label="Close">×</span>
                 </div>
                 <hr>
