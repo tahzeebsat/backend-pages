@@ -5,61 +5,71 @@
         </a>
         <ul class="dashboard-list mb-auto">
             <li class="dashboard-list-item" onclick="window.location.href='/'">
-                <svg width="24" height="24" class="dashborad-icons hide-div">
-                    <use href="#dashboard_icon"></use>
-                </svg>
-                <img src="{{ asset('assets/images/icons/m-dashboard.svg') }}" class="me-2 hide-m" height="16"
-                    width="16" alt="">
-                <span>
-                    Dashboard
-                </span>
+                <a href="">
+                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                        <use href="#dashboard_icon"></use>
+                    </svg>
+                    <img src="{{ asset('assets/images/icons/m-dashboard.svg') }}" class="me-2 hide-m" height="16"
+                        width="16" alt="">
+                    <span>
+                        Dashboard
+                    </span>
+                </a>
             </li>
             {{-- active --}}
             <li class="dashboard-list-item" onclick="window.location.href='/order-dashboard'">
-                <svg width="24" height="24" class="dashborad-icons hide-div">
-                    <use href="#order_icon"></use>
-                </svg>
-                <img src="{{ asset('assets/images/icons/order-m.svg') }}" class="me-2 hide-m" height="16"
-                    width="16" alt="">
-                <span>
-                    Order
-                </span>
+                <a href="">
+                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                        <use href="#order_icon"></use>
+                    </svg>
+                    <img src="{{ asset('assets/images/icons/order-m.svg') }}" class="me-2 hide-m" height="16"
+                        width="16" alt="">
+                    <span>
+                        Order
+                    </span>
+                </a>
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/bank-transfer'">
-                <svg width="24" height="24" class="dashborad-icons hide-div">
-                    <use href="#bankT_icon"></use>
-                </svg>
-                <img src="{{ asset('assets/images/icons/bank-m.svg') }}" class="me-2 hide-m" height="16"
-                    width="16" alt="">
-                <span>
-                    Bank Transfer
-                </span>
+                <a href="">
+                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                        <use href="#bankT_icon"></use>
+                    </svg>
+                    <img src="{{ asset('assets/images/icons/bank-m.svg') }}" class="me-2 hide-m" height="16"
+                        width="16" alt="">
+                    <span>
+                        Bank Transfer
+                    </span>
+                </a>
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/reserve-car'">
-                <svg width="24" height="24" class="dashborad-icons hide-div">
-                    <use href="#reserve_icon"></use>
-                </svg>
-                <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
-                    width="16" alt="">
-                <span>
-                    Reserve Car
-                </span>
+                <a href="">
+                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                        <use href="#reserve_icon"></use>
+                    </svg>
+                    <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
+                        width="16" alt="">
+                    <span>
+                        Reserve Car
+                    </span>
+                </a>
             </li>
             <li class="dashboard-list-item" data-bs-toggle="collapse" data-bs-target="#collapse_operations"
                 aria-expanded="false" aria-controls="collapse_operations">
-                <svg width="24" height="24" class="dashborad-icons hide-div">
-                    <use href="#dashboard_operations"></use>
-                </svg>
-                <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
-                    width="16" alt="">
-                <span class="d-flex justify-content-between align-items-center w-100">
-                    <span>
-                        Operations
-                    </span>
-                    <svg width="20" height="20" class="chev-arrow-bar">
-                        <use href="#dashboard_op_arrow"></use>
+                <a href="">
+                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                        <use href="#dashboard_operations"></use>
                     </svg>
-                </span>
+                    <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
+                        width="16" alt="">
+                    <span class="d-flex justify-content-between align-items-center w-100">
+                        <span>
+                            Operations
+                        </span>
+                        <svg width="20" height="20" class="chev-arrow-bar">
+                            <use href="#dashboard_op_arrow"></use>
+                        </svg>
+                    </span>
+                </a>
             </li>
             <div class="collapse drop-list-op" id="collapse_operations">
                 <ul>
@@ -72,24 +82,28 @@
         </ul>
         <ul class="dashboard-list pt-0 pb-c24">
             <li class="dashboard-list-item" onclick="window.location.href='/settings'">
-                <svg width="24" height="24" class="dashborad-icons hide-div">
-                    <use href="#setting_icon"></use>
-                </svg>
-                <img src="{{ asset('assets/images/icons/settings-m.svg') }}" class="me-2 hide-m" height="16"
-                    width="16" alt="">
-                <span>
-                    Settings
-                </span>
+                <a href="">
+                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                        <use href="#setting_icon"></use>
+                    </svg>
+                    <img src="{{ asset('assets/images/icons/settings-m.svg') }}" class="me-2 hide-m" height="16"
+                        width="16" alt="">
+                    <span>
+                        Settings
+                    </span>
+                </a>
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/logout'">
-                <svg width="24" height="24" class="dashborad-icons hide-div">
-                    <use href="#logout_icon"></use>
-                </svg>
-                <img src="{{ asset('assets/images/icons/logout-m.svg') }}" class="me-2 hide-m" height="16"
-                    width="16" alt="">
-                <span>
-                    Logout
-                </span>
+                <a href="">
+                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                        <use href="#logout_icon"></use>
+                    </svg>
+                    <img src="{{ asset('assets/images/icons/logout-m.svg') }}" class="me-2 hide-m" height="16"
+                        width="16" alt="">
+                    <span>
+                        Logout
+                    </span>
+                </a>
             </li>
         </ul>
         <div class="profile-user">

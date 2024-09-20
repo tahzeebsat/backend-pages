@@ -69,17 +69,17 @@
      </div>
      <div class="tabs-fst">
          <ul class="tabs-list">
-             <li class="tabs-list-items active">Comments</li>
-             <li class="tabs-list-items">Previous Orders</li>
+             <li class="tabs-list-items active comnt_{{$Index}}" onclick="firsttabsHandle({{$Index}},'comnt_{{$Index}}','Comments')">Comments</li>
+             <li class="tabs-list-items prev_{{$Index}}" onclick="firsttabsHandle({{$Index}},'prev_{{$Index}}','Previous')">Previous Orders</li>
          </ul>
      </div>
      {{-- comment --}}
-     <div class="comment d-flex coment_fields">
+     <div class="comment d-flex coment_fields coment_fields{{$Index}}">
          <textarea class="form-control coment-area w-100" placeholder="Notify Address" rows="4"></textarea>
          <button class="btn btn-cust">&#10003;</button>
      </div>
      {{-- previous order --}}
-     <div class="d-none prev_order">
+     <div class="d-none prev_order prev_order{{$Index}}">
          <table width="100%">
              <thead>
                  <tr>
@@ -108,12 +108,12 @@
      {{-- scond tab --}}
      <div class="tabs-scnd">
          <ul class="tabs-list">
-             <li class="scnd-list-items active">Consignee Information</li>
-             <li class="scnd-list-items">Notify Information</li>
+             <li class="scnd-list-items active consign_{{$Index}}" onclick="secondtabsHandle({{$Index}},'consign_{{$Index}}','Consignee')">Consignee Information</li>
+             <li class="scnd-list-items notif_{{$Index}}" onclick="secondtabsHandle({{$Index}},'notif_{{$Index}}','Notify')">Notify Information</li>
          </ul>
      </div>
      {{-- Consignee Information --}}
-     <div class="consignee_information">
+     <div class="consignee_information consignee_information{{$Index}}">
          <div class="row g-3">
              <div class="col-4">
                  <label>Consignee Name</label>
@@ -157,7 +157,7 @@
          </div>
      </div>
      {{-- Notify Information --}}
-     <div class="notify_info d-none">
+     <div class="notify_info notify_info{{$Index}} d-none">
          <div class="row g-3">
              <div class="col-4">
                  <label>Notify Name</label>

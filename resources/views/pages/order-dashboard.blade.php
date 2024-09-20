@@ -36,31 +36,33 @@
             $("#drp_search_list").text(hrefValue.replace(/\s*\([^)]*\)\s*/, ""));
         });
         // for first tabs
-        $('.tabs-list-items').click(function() {
-            $('.tabs-list-items').removeClass('active');
-            $(this).addClass('active');
+        function firsttabsHandle(index, name, text) {
+            $(`.tabs-list-items.comnt_${index}, .tabs-list-items.prev_${index}`).removeClass('active');
 
-            if ($(this).text() === 'Comments') {
-                $('.coment_fields').removeClass('d-none');
-                $('.prev_order').addClass('d-none');
-            } else if ($(this).text() === 'Previous Orders') {
-                $('.coment_fields').addClass('d-none');
-                $('.prev_order').removeClass('d-none');
-            }
-        });
-        // for second tabs
-        $('.scnd-list-items').click(function() {
-            $('.scnd-list-items').removeClass('active');
-            $(this).addClass('active');
+            $(`.tabs-list-items.${name}`).addClass('active');
 
-            if ($(this).text() === 'Consignee Information') {
-                $('.consignee_information').removeClass('d-none');
-                $('.notify_info').addClass('d-none');
-            } else if ($(this).text() === 'Notify Information') {
-                $('.consignee_information').addClass('d-none');
-                $('.notify_info').removeClass('d-none');
+            if (text === 'Comments') {
+                $(`.coment_fields${index}`).removeClass('d-none');
+                $(`.prev_order${index}`).addClass('d-none');
+            } else {
+                $(`.coment_fields${index}`).addClass('d-none');
+                $(`.prev_order${index}`).removeClass('d-none');
             }
-        });
+        }
+        function secondtabsHandle(index, name, text) {
+            $(`.scnd-list-items.consign_${index}, .scnd-list-items.notif_${index}`).removeClass('active');
+
+            $(`.scnd-list-items.${name}`).addClass('active');
+
+            if (text === 'Consignee') {
+                $(`.consignee_information${index}`).removeClass('d-none');
+                $(`.notify_info${index}`).addClass('d-none');
+            } else {
+                $(`.consignee_information${index}`).addClass('d-none');
+                $(`.notify_info${index}`).removeClass('d-none');
+            }
+        }
+
     </script>
 </body>
 
