@@ -1356,6 +1356,10 @@ img.contain {
     margin-bottom: 4px;
     cursor: pointer;
 }
+.drop-list-op ul li a {
+    text-decoration: none;
+    color: #353c4d;
+}
 #operations_sec_cards .item-card {
     background-color: white;
     padding: 16px;
