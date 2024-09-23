@@ -3,18 +3,13 @@
 @endphp
 <div class="main-section">
     <div class="dul-flds">
-        <div class="dropdown">
-            <button class="dropdown-toggle" type="button" id="drp_search_list" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Search Email
-            </button>
-            <ul class="dropdown-menu" id="select_search">
-                <li class="dropdown-item">Email</li>
-                <li class="dropdown-item">Order Number</li>
-                <li class="dropdown-item">Name</li>
-                <li class="dropdown-item">Phone Number</li>
-            </ul>
-        </div>
+        <select name="" class="form-select" id="">
+            <option value="">Abc</option>
+            <option value="">Abc</option>
+            <option value="">Abc</option>
+            <option value="">Abc</option>
+            <option value="">Abc</option>
+        </select>
         <div class="search-input-field-order">
             <div class="input-src-order">
                 <img src="{{ asset('assets/images/icons/search-lg.svg') }}" height="20" width="20"

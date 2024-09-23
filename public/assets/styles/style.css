@@ -55,7 +55,9 @@ img.contain {
 .dashboard-list-item span {
     white-space: nowrap;
 }
-
+.dashboard-list-item:hover a span {
+    color: white;
+}
 .dashborad-icons {
     fill: #5d6370;
     margin-right: 12px;
@@ -165,7 +167,7 @@ img.contain {
     color: #0c1529;
     padding-block: 8px;
 }
-.or-child {
+.or-child a {
     text-decoration: none;
     color: #5d6370;
 }
@@ -190,7 +192,6 @@ img.contain {
 .main-section {
     width: calc(100% - 213px);
     padding: 32px 32px 32px 22px;
-    height: 100vh;
     background-color: #fcfcfd;
 }
 .main-section-dashboard {
@@ -209,6 +210,30 @@ img.contain {
     justify-content: end;
     padding-bottom: 12px;
     border-bottom: 1px solid #ced0d4;
+}
+.dul-flds select {
+    max-width: 231px;
+    width: 100%;
+    border: 1px solid #d0d5dd;
+    height: 44px;
+    padding: 10px 14px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 0.875em;
+    color: #5d6370;
+    font-family: Lato;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    background-color: #fcfcfd;
+}
+.dul-flds select:focus {
+    box-shadow: none;
+}
+.dul-flds select:focus-visible {
+    outline: none;
 }
 .dul-flds .dropdown {
     max-width: 231px;

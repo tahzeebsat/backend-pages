@@ -5,7 +5,7 @@
         </a>
         <ul class="dashboard-list mb-auto">
             <li class="dashboard-list-item" onclick="window.location.href='/'">
-                <a href="">
+                <a>
                     <svg width="24" height="24" class="dashborad-icons hide-div">
                         <use href="#dashboard_icon"></use>
                     </svg>
@@ -18,7 +18,7 @@
             </li>
             {{-- active --}}
             <li class="dashboard-list-item" onclick="window.location.href='/order-dashboard'">
-                <a href="">
+                <a>
                     <svg width="24" height="24" class="dashborad-icons hide-div">
                         <use href="#order_icon"></use>
                     </svg>
@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/bank-transfer'">
-                <a href="">
+                <a>
                     <svg width="24" height="24" class="dashborad-icons hide-div">
                         <use href="#bankT_icon"></use>
                     </svg>
@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/reserve-car'">
-                <a href="">
+                <a>
                     <svg width="24" height="24" class="dashborad-icons hide-div">
                         <use href="#reserve_icon"></use>
                     </svg>
@@ -55,19 +55,21 @@
             </li>
             <li class="dashboard-list-item" data-bs-toggle="collapse" data-bs-target="#collapse_operations"
                 aria-expanded="false" aria-controls="collapse_operations">
-                <a href="">
-                    <svg width="24" height="24" class="dashborad-icons hide-div">
-                        <use href="#dashboard_operations"></use>
-                    </svg>
-                    <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
-                        width="16" alt="">
-                    <span class="d-flex justify-content-between align-items-center w-100">
-                        <span>
-                            Operations
-                        </span>
-                        <svg width="20" height="20" class="chev-arrow-bar">
-                            <use href="#dashboard_op_arrow"></use>
+                <a class="d-flex jutify-content-between align-items-center w-100">
+                    <div class="d-flex align-items-center flex-grow-1">
+                        <svg width="24" height="24" class="dashborad-icons hide-div">
+                            <use href="#dashboard_operations"></use>
                         </svg>
+                        <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
+                            width="16" alt="">
+                        <span class="d-flex justify-content-between align-items-center w-100">
+                            <span>
+                                Operations
+                            </span>
+                    </div>
+                    <svg width="20" height="20" class="chev-arrow-bar">
+                        <use href="#dashboard_op_arrow"></use>
+                    </svg>
                     </span>
                 </a>
             </li>
@@ -82,7 +84,7 @@
         </ul>
         <ul class="dashboard-list pt-0 pb-c24">
             <li class="dashboard-list-item" onclick="window.location.href='/settings'">
-                <a href="">
+                <a>
                     <svg width="24" height="24" class="dashborad-icons hide-div">
                         <use href="#setting_icon"></use>
                     </svg>
@@ -94,7 +96,7 @@
                 </a>
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/logout'">
-                <a href="">
+                <a>
                     <svg width="24" height="24" class="dashborad-icons hide-div">
                         <use href="#logout_icon"></use>
                     </svg>
