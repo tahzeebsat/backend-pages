@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 /* Box sizing rules */
+:root {
+    --font-size-12s: 0.75rem;
+}
+.fs-12 {
+    font-size: var(--font-size-12);
+}
 *,
 *::before,
 *::after {
@@ -83,4 +89,30 @@ select {
 }
 .form-check-input:checked[type="checkbox"] {
     --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+.btn-primary {
+    color: #ffff;
+    border-radius: 3px;
+    background: #2a9fe8;
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    border: 1px solid #2a9fe8;
+}
+.btn-primary:hover {
+    color: #ffff;
+    background: #2a9fe8;
+    border: 1px solid #2a9fe8;
+}
+.btn-info {
+    color: #ffff;
+    border-radius: 3px;
+    background: #2384c1;
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    border: 1px solid #2384c1;
+}
+.btn-info:hover {
+    color: #ffff;
+    background: #2384c1;
+    border: 1px solid #2384c1;
 }

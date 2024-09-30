@@ -75,9 +75,9 @@
             </li>
             <div class="collapse drop-list-op" id="collapse_operations">
                 <ul>
-                    <li onclick="window.location.href='/operation-dashboard'"><a href=""> Operations </a></li>
-                    <li onclick="window.location.href='/manual-shipping-list'"><a href=""> Manual Shipping List </a></li>
-                    <li onclick="window.location.href='/sold-cars'"><a href=""> Sold Cars Info </a></li>
+                    <li onclick="window.location.href='/operation-dashboard'"><a > Operations </a></li>
+                    <li onclick="window.location.href='/manual-shipping-list'"><a > Manual Shipping List </a></li>
+                    <li onclick="window.location.href='/sold-cars'"><a > Sold Cars Info </a></li>
                 </ul>
             </div>
 
