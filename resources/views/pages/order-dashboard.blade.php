@@ -16,10 +16,13 @@
             Main Sidebar
         @endcomponent
     </aside>
+
     <div class="main-content">
-        @component('components.dashboard-order.order-rightbar')
-            Order Right Bar Details
-        @endcomponent
+        <div class="order-sidebar-soh">
+            @component('components.dashboard-order.order-rightbar')
+                Order Right Bar Details
+            @endcomponent
+        </div>
         @component('components.dashboard-order.dashboard-order-mainsection')
             Order Right Bar Details
         @endcomponent
@@ -49,6 +52,7 @@
                 $(`.prev_order${index}`).removeClass('d-none');
             }
         }
+
         function secondtabsHandle(index, name, text) {
             $(`.scnd-list-items.consign_${index}, .scnd-list-items.notif_${index}`).removeClass('active');
 
@@ -62,7 +66,6 @@
                 $(`.notify_info${index}`).removeClass('d-none');
             }
         }
-
     </script>
 </body>
 

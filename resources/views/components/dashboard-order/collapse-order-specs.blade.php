@@ -50,22 +50,22 @@
                 <li class="head">Accepted file types: pdf, doc, docx</li>
                 <li class="fil">
                     <label for="" class="mb-1">Certificates</label>
-                    <input type="file" placeholder="Certificates to upload" name="" id="">
+                    <input type="file" placeholder="Certificates to upload" class="w-100"  name="" id="">
                 </li>
                 <li class="head">Accepted file types: pdf, doc, docx</li>
                 <li class="fil">
                     <label for="" class="mb-1">Export</label>
-                    <input type="file" placeholder="Export certificate" name="" id="">
+                    <input type="file" placeholder="Export certificate" class="w-100"  name="" id="">
                 </li>
                 <li class="head">Accepted file types: pdf, doc, docx</li>
                 <li class="fil">
                     <label for="" class="mb-1">Bill</label>
-                    <input type="file" placeholder="Bill of Landing" name="" id="">
+                    <input type="file" placeholder="Bill of Landing" class="w-100"  name="" id="">
                 </li>
                 <li class="head">Accepted file types: pdf, doc, docx</li>
                 <li class="fil">
                     <label for="" class="mb-1">Invoice</label>
-                    <input placeholder="Invoice" type="file" name="" id="">
+                    <input placeholder="Invoice" type="file" class="w-100"  name="" id="">
                 </li>
             </ul>
         </div>

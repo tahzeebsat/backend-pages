@@ -12,33 +12,71 @@
         </div>
     </div>
     <div class="d-flex justify-content-end pt-3">
-        <button class="manual-reserve-btn" data-bs-toggle="modal" data-bs-target="#manual_order_modal">Manual Reserve Car  <span>&#43;</span></button>
+        <button class="manual-reserve-btn" data-bs-toggle="modal" data-bs-target="#manual_order_modal">Manual Reserve
+            Car <span>&#43;</span></button>
     </div>
     <div class="data-table-order">
-        <div class="data-table-header">
-            <div class="max-10">ID</div>
-            <div class="max-10">Car</div>
-            <div class="max-10">User</div>
-            <div class="max-10">Car Amount</div>
-            <div class="max-10">Phone</div>
-            <div class="max-10">Country</div>
-            <div class="max-10">Created at </div>
-            <div class="max-10 text-end pe-3">Action</div>
-        </div>
-        @foreach ($Data as $item)
-            <div class="data-table-data mk">
-                <div class="max-10s">{{ $loop->iteration }}</div>
-                <div class="max-10s">Suzuki</div>
-                <div class="max-10s">Admin</div>
-                <div class="max-10s">USD 2666.67 </div>
-                <div class="max-10s">+92 327 4537698 </div>
-                <div class="max-10s">Pakistan</div>
-                <div class="max-10s">2024-06-21</div>
-                <div class="max-10s justify-content-end pe-3">
-                    <span data-bs-toggle="modal" data-bs-target="#edit_order_modal" class="cursor-pointer mop">&#x270E;</span>
-                </div>
-            </div>
-        @endforeach
+        <table class="w-100 data-table-cus">
+            <thead>
+                <tr>
+                    <th class="heading-table">
+                        ID
+                    </th>
+                    <th class="heading-table">
+                        Car
+                    </th>
+                    <th class="heading-table">
+                        User
+                    </th>
+                    <th class="heading-table">
+                        Car Amount
+                    </th>
+                    <th class="heading-table">
+                        Phone
+                    </th>
+                    <th class="heading-table">
+                        Country
+                    </th>
+                    <th class="heading-table">
+                        Created at
+                    </th>
+                    <th class="heading-table">
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($Data as $item)
+                    <tr class="{{ $loop->iteration % 2 === 0 ? 'bg-table' : '' }}">
+                        <td class="title-table py-3">
+                            {{ $loop->iteration }}
+                        </td>
+                        <td class="title-table py-3">
+                            Suzuki
+                        </td>
+                        <td class="title-table py-3">
+                            Admin
+                        </td>
+                        <td class="title-table py-3">
+                            USD 2666.67
+                        </td>
+                        <td class="title-table py-3">
+                            +92 327 4537698
+                        </td>
+                        <td class="title-table py-3">
+                            customer
+                        </td>
+                        <td class="title-table py-3">
+                            2024-06-21
+                        </td>
+                        <td class="title-table py-3">
+                            <span data-bs-toggle="modal" data-bs-target="#edit_order_modal"
+                                class="cursor-pointer mop">&#x270E;</span>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 </div>
 

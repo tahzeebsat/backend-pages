@@ -16,29 +16,65 @@
         </div>
     </div>
     <div class="data-table-order">
-        <div class="data-table-header">
-            <div class="max-10">ID</div>
-            <div class="max-10">stock</div>
-            <div class="max-10">Name</div>
-            <div class="max-10">Make</div>
-            <div class="max-10">Model</div>
-            <div class="max-10">Country</div>
-            <div class="max-10">City</div>
-            <div class="max-10 text-end pe-3">Shipping Cost</div>
-        </div>
-        @foreach ($Data as $item)
-            <div class="data-table-data mk" style="cursor:default">
-                <div class="max-10s">{{ $loop->iteration }}</div>
-                <div class="max-10s">Suzuki</div>
-                <div class="max-10s">Admin</div>
-                <div class="max-10s">USD 2666.67 </div>
-                <div class="max-10s">+92 327 4537698 </div>
-                <div class="max-10s">Pakistan</div>
-                <div class="max-10s">2024-06-21</div>
-                <div class="max-10s justify-content-end pe-3">
-                  123124
-                </div>
-            </div>
-        @endforeach
+        <table class="w-100 data-table-cus">
+            <thead>
+                <tr>
+                    <th class="heading-table">
+                        ID
+                    </th>
+                    <th class="heading-table">
+                        Car
+                    </th>
+                    <th class="heading-table">
+                        User
+                    </th>
+                    <th class="heading-table">
+                        Car Amount
+                    </th>
+                    <th class="heading-table">
+                        Phone
+                    </th>
+                    <th class="heading-table">
+                        Country
+                    </th>
+                    <th class="heading-table">
+                        Created at
+                    </th>
+                    <th class="heading-table">
+                        Shipping Cost
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($Data as $item)
+                    <tr class="{{ $loop->iteration % 2 === 0 ? 'bg-table' : '' }}">
+                        <td class="title-table py-3">
+                            {{ $loop->iteration }}
+                        </td>
+                        <td class="title-table py-3">
+                            Suzuki
+                        </td>
+                        <td class="title-table py-3">
+                            Admin
+                        </td>
+                        <td class="title-table py-3">
+                            USD 2666.67
+                        </td>
+                        <td class="title-table py-3">
+                            +92 327 4537698
+                        </td>
+                        <td class="title-table py-3">
+                            customer
+                        </td>
+                        <td class="title-table py-3">
+                            2024-06-21
+                        </td>
+                        <td class="title-table py-3">
+                            2666.67
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 </div>
