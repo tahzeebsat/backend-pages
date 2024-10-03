@@ -172,7 +172,7 @@ img.contain {
 
 .order-title {
     font-family: Lato;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 700;
     line-height: 32px;
     letter-spacing: -0.016em;
@@ -336,6 +336,7 @@ img.contain {
     border-radius: 0px;
     border: none;
     outline: none;
+    width: 100%;
 }
 
 .dul-flds .dropdown-item.active,
@@ -954,7 +955,7 @@ img.contain {
     margin-bottom: 4px;
 }
 
- .form-control{
+.form-control {
     height: 40px;
 }
 
@@ -979,11 +980,13 @@ img.contain {
     color: #667085;
     background-size: 16px 9px;
 }
-.form-control:focus{
-    box-shadow: none;  
-    border: 1px solid #d0d5dd;  
-    outline: none;  
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #d0d5dd;
+    outline: none;
 }
+
 .submit-btn {
     height: 36px;
     width: 176px;
@@ -2098,7 +2101,7 @@ table.dataTable>tbody>tr.child span.dtr-title {
     .search-input-field-order {
         max-width: 500px;
         width: 100%;
-        height: 40px;
+        height: 44px;
         padding: 8px 11px;
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
@@ -2307,13 +2310,25 @@ table.dataTable>tbody>tr.child span.dtr-title {
     .order-sidebar-soh {
         display: none;
     }
-
-    .main-section-dashboard {
+    .ord-sm-none{
         display: none;
+    }
+    .main-section-dashboard {
         padding: 32px 22px 32px 22px;
     }
+    .showotab {
+        display: block;
+    }
+    .main-section {
+        width: 100%;
+        padding: 32px 20px 32px 20px;
+    }
 }
-
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .ord-sm-none{
+        display: block;
+    }
+}
 label {
     font-family: Lato;
     font-size: 14px;
