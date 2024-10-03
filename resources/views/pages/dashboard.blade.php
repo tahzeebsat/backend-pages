@@ -11,7 +11,12 @@
 </head>
 
 <body>
-    <aside class="sidebar-dashboard">
+    <div class="d-block d-sm-block d-md-none">
+        @component('components.common.mobile-headings', ['title' => 'Dashboard'])
+            Heading
+        @endcomponent
+    </div>
+    <aside class="sidebar-dashboard  d-md-block d-sm-none d-none">
         @component('components.common.main-sidebar')
             Main Sidebar
         @endcomponent
@@ -25,6 +30,9 @@
 
     @component('components.common.svgs-Icons')
         Svgs for project
+    @endcomponent
+    @component('components.common.mobile-sidebar')
+        mobile sidebar
     @endcomponent
     <script src="{{ asset('assets/js/bootstrapver5/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery/jquery.js') }}"></script>
