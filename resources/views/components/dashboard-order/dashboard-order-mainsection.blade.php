@@ -49,6 +49,7 @@
             </ul>
         </div>
     </section>
+    <div class="d-none d-md-block d-sm-none">
     <div class="data-table-order">
         <table class="w-100 data-table-cus">
             <thead>
@@ -142,7 +143,10 @@
             </tbody>
         </table>
     </div>
+    </div>
 </div>
+
+
 @component('components.common.modals.dashboard-modals')
     modal for change payment
     modal for Manage Status

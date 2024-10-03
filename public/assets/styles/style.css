@@ -2,6 +2,13 @@
     display: grid;
     grid-template-columns: 280px calc(100% - 280px);
 } */
+
+aside::-webkit-scrollbar {
+    width: 8px;
+}
+aside {
+    scrollbar-width: thin;
+}
 img.contain {
     object-fit: contain;
 }
@@ -687,7 +694,8 @@ img.contain {
     cursor: pointer;
 }
 
-.total-payable {}
+.total-payable {
+}
 
 .total-payable .brder {
     display: flex;
@@ -1715,7 +1723,7 @@ img.contain {
     flex-wrap: wrap;
 }
 
-.data-table-order>div:nth-child(odd) {
+.data-table-order > div:nth-child(odd) {
     background-color: #ededed;
 }
 
@@ -1776,7 +1784,7 @@ table.dataTable.display tbody td {
     border-top: 1px solid transparent !important;
 }
 
-table.dataTable>tbody>tr.child span.dtr-title {
+table.dataTable > tbody > tr.child span.dtr-title {
     display: none;
     display: inline-block;
     min-width: 120px !important;
@@ -1797,7 +1805,8 @@ table.dataTable>tbody>tr.child span.dtr-title {
     }
 
     .sidebar-dashboard {
-        width: 200px;
+        padding: 32px 7px;
+        width: 230px;
     }
 
     .dashboard-list {
@@ -1809,7 +1818,7 @@ table.dataTable>tbody>tr.child span.dtr-title {
     }
 
     .main-content {
-        margin-left: 200px;
+        margin-left: 230px;
     }
 
     .order-detail {
@@ -1849,7 +1858,8 @@ table.dataTable>tbody>tr.child span.dtr-title {
     }
 
     .sidebar-dashboard {
-        width: 200px;
+        padding: 32px 7px;
+        width: 220px;
     }
 
     .dashboard-list {
@@ -1861,7 +1871,7 @@ table.dataTable>tbody>tr.child span.dtr-title {
     }
 
     .main-content {
-        margin-left: 200px;
+        margin-left: 220px;
     }
 
     .order-detail {
@@ -1901,7 +1911,8 @@ table.dataTable>tbody>tr.child span.dtr-title {
     }
 
     .sidebar-dashboard {
-        width: 200px;
+        padding: 32px 7px;
+        width: 220px;
     }
 
     .dashboard-list {
@@ -1913,7 +1924,7 @@ table.dataTable>tbody>tr.child span.dtr-title {
     }
 
     .main-content {
-        margin-left: 200px;
+        margin-left: 220px;
     }
 
     .order-detail {
@@ -2310,7 +2321,7 @@ table.dataTable>tbody>tr.child span.dtr-title {
     .order-sidebar-soh {
         display: none;
     }
-    .ord-sm-none{
+    .ord-sm-none {
         display: none;
     }
     .main-section-dashboard {
@@ -2325,7 +2336,7 @@ table.dataTable>tbody>tr.child span.dtr-title {
     }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-    .ord-sm-none{
+    .ord-sm-none {
         display: block;
     }
 }

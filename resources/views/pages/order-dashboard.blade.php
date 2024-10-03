@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <aside class="sidebar-dashboard">
+    <aside class="sidebar-dashboard d-md-block d-sm-none d-none">
         @component('components.common.main-sidebar')
             Main Sidebar
         @endcomponent
@@ -23,9 +23,11 @@
                 Order Right Bar Details
             @endcomponent
         </div>
+
         @component('components.dashboard-order.dashboard-order-mainsection')
             Order Right Bar Details
         @endcomponent
+
     </div>
     @component('components.common.svgs-Icons')
         Svgs for project
