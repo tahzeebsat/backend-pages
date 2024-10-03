@@ -174,9 +174,8 @@ img.contain {
     padding: 40px 22px;
     max-width: 213px;
     width: 100%;
-    border-right: 1px solid #eaecf0;
+    /* border-right: 1px solid #eaecf0; */
 }
-
 .order-title {
     font-family: Lato;
     font-size: 1.3em;
@@ -237,8 +236,9 @@ img.contain {
 .main-section-dashboard {
     width: 100%;
     padding: 32px 32px 32px 22px;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #fcfcfd;
+        border-left: 1px solid #eaecf0;
 }
 
 .search-order-number {
