@@ -6,11 +6,10 @@
         <ul class="dashboard-list mb-auto">
             <li class="dashboard-list-item" onclick="window.location.href='/'">
                 <a>
-                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                    <svg width="24" height="24" class="dashborad-icons">
                         <use href="#dashboard_icon"></use>
                     </svg>
-                    <img src="{{ asset('assets/images/icons/m-dashboard.svg') }}" class="me-2 hide-m" height="16"
-                        width="16" alt="">
+
                     <span>
                         Dashboard
                     </span>
@@ -19,11 +18,10 @@
             {{-- active --}}
             <li class="dashboard-list-item" onclick="window.location.href='/order-dashboard'">
                 <a>
-                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                    <svg width="24" height="24" class="dashborad-icons">
                         <use href="#order_icon"></use>
                     </svg>
-                    <img src="{{ asset('assets/images/icons/order-m.svg') }}" class="me-2 hide-m" height="16"
-                        width="16" alt="">
+
                     <span>
                         Order
                     </span>
@@ -31,11 +29,10 @@
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/bank-transfer'">
                 <a>
-                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                    <svg width="24" height="24" class="dashborad-icons">
                         <use href="#bankT_icon"></use>
                     </svg>
-                    <img src="{{ asset('assets/images/icons/bank-m.svg') }}" class="me-2 hide-m" height="16"
-                        width="16" alt="">
+
                     <span>
                         Bank Transfer
                     </span>
@@ -43,11 +40,10 @@
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/reserve-car'">
                 <a>
-                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                    <svg width="24" height="24" class="dashborad-icons">
                         <use href="#reserve_icon"></use>
                     </svg>
-                    <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
-                        width="16" alt="">
+
                     <span>
                         Reserve Car
                     </span>
@@ -57,11 +53,10 @@
                 aria-expanded="false" aria-controls="collapse_operations">
                 <a class="d-flex jutify-content-between align-items-center w-100">
                     <div class="d-flex align-items-center flex-grow-1">
-                        <svg width="24" height="24" class="dashborad-icons hide-div">
+                        <svg width="24" height="24" class="dashborad-icons">
                             <use href="#dashboard_operations"></use>
                         </svg>
-                        <img src="{{ asset('assets/images/icons/reserve-m.svg') }}" class="me-2 hide-m" height="16"
-                            width="16" alt="">
+                       
                         <span class="d-flex justify-content-between align-items-center w-100">
                             <span>
                                 Operations
@@ -75,9 +70,9 @@
             </li>
             <div class="collapse drop-list-op" id="collapse_operations">
                 <ul>
-                    <li onclick="window.location.href='/operation-dashboard'"><a > Operations </a></li>
-                    <li onclick="window.location.href='/manual-shipping-list'"><a > Manual Shipping List </a></li>
-                    <li onclick="window.location.href='/sold-cars'"><a > Sold Cars Info </a></li>
+                    <li onclick="window.location.href='/operation-dashboard'"><a> Operations </a></li>
+                    <li onclick="window.location.href='/manual-shipping-list'"><a> Manual Shipping List </a></li>
+                    <li onclick="window.location.href='/sold-cars'"><a> Sold Cars Info </a></li>
                 </ul>
             </div>
 
@@ -85,11 +80,10 @@
         <ul class="dashboard-list pt-0 pb-c24">
             <li class="dashboard-list-item" onclick="window.location.href='/settings'">
                 <a>
-                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                    <svg width="24" height="24" class="dashborad-icons">
                         <use href="#setting_icon"></use>
                     </svg>
-                    <img src="{{ asset('assets/images/icons/settings-m.svg') }}" class="me-2 hide-m" height="16"
-                        width="16" alt="">
+
                     <span>
                         Settings
                     </span>
@@ -97,11 +91,10 @@
             </li>
             <li class="dashboard-list-item" onclick="window.location.href='/logout'">
                 <a>
-                    <svg width="24" height="24" class="dashborad-icons hide-div">
+                    <svg width="24" height="24" class="dashborad-icons">
                         <use href="#logout_icon"></use>
                     </svg>
-                    <img src="{{ asset('assets/images/icons/logout-m.svg') }}" class="me-2 hide-m" height="16"
-                        width="16" alt="">
+
                     <span>
                         Logout
                     </span>

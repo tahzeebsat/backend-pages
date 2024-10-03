@@ -3,7 +3,7 @@
         <div class="offcanvas-header justify-content-between">
             <span></span>
             <h5 class="offcanvas-title">Menu</h5>
-            <img src="{{ asset('assets/images/icons/close-model.svg') }}" alt="close-icon"
+            <img src="{{ asset('assets/images/icons/close-icon-dark.svg') }}" alt="close-icon"
                 data-bs-dismiss="offcanvas">
         </div>
         <div class="offcanvas-body pt-0">
