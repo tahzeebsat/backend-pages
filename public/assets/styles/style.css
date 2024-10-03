@@ -662,6 +662,7 @@ img.contain {
 
 .order-number {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 17px;
 }
@@ -686,6 +687,7 @@ img.contain {
 
 .order-print {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 17px;
 }
@@ -2112,7 +2114,7 @@ table.dataTable > tbody > tr.child span.dtr-title {
     .search-input-field-order {
         max-width: 500px;
         width: 100%;
-        height: 44px;
+        height: 40px;
         padding: 8px 11px;
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
@@ -2333,6 +2335,29 @@ table.dataTable > tbody > tr.child span.dtr-title {
     .main-section {
         width: 100%;
         padding: 32px 20px 32px 20px;
+    }
+    .dul-flds select {
+        height: 40px;
+    }
+    .data-table-collapse .order_details {
+        padding: 0px;
+        background-color: transparent;
+        border-radius: none;
+        border: none;
+    }
+    .data-table-collapse {
+        margin-top: 12px;
+        background-color: transparent;
+    }
+    .order-number {
+        gap: 10px;
+    }
+    .order-print {
+        justify-content: end;
+    }
+    .product-order-details {
+        overflow: auto;
+        width: 100%;
     }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {

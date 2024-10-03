@@ -49,6 +49,7 @@
             </ul>
         </div>
     </section>
+    {{-- desktop view --}}
     <div class="d-none d-md-block d-sm-none">
     <div class="data-table-order">
         <table class="w-100 data-table-cus">
@@ -144,6 +145,54 @@
         </table>
     </div>
     </div>
+    {{-- mobile view --}}
+    <section class="container-fluid ord-de-par d-block d-sm-block d-md-none">
+        <h2>Orders Details</h2>
+        <p>Measure your advertising ROI and track and report website traffic.</p>
+    </section>
+    <section class="container-fluid cards-details-items d-block d-sm-block d-md-none">
+        @foreach ($OrderData as $item)
+            <div class="card-detail">
+                <div class="flx-card-d">
+                    <span class="d-head">Order#</span>
+                    <span class="d-para">123867645</span>
+                </div>
+                <div class="flx-card-d">
+                    <span class="d-head">User</span>
+                    <span class="d-para">Sat-13242</span>
+                </div>
+                <div class="flx-card-d">
+                    <span class="d-head">Status</span>
+                    <span class="d-para">Ready to Shipped</span>
+                </div>
+                <div class="flx-card-d mb-2">
+                    <span class="d-head">Receipt</span>
+                    <span class="d-para" style="cursor: pointer" onclick="$(this).find('img').toggleClass('rotate-ico')"
+                        data-bs-toggle="collapse" data-bs-target="#collapse_receipt{{ $loop->iteration }}22"><img
+                            src="{{ asset('assets/images/icons/arrow-down.svg') }}"
+                            style="transition: transform 0.3s ease"></span>
+                </div>
+                <div class="collapse col_rec" id="collapse_receipt{{ $loop->iteration }}22">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 custom-sm-12">
+                            <div class="data-table-collapse">
+                                @component('components.dashboard-order.collapse-order-detail', ['Index' => $loop->iteration])
+                                    cllapse order specs
+                                @endcomponent
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 custom-sm-12">
+                            <div class="data-table-collapse">
+                                @component('components.dashboard-order.collapse-order-specs')
+                                    cllapse order specs
+                                @endcomponent
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </section>
 </div>
 
 

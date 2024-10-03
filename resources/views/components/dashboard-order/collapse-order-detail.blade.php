@@ -115,33 +115,33 @@
      {{-- Consignee Information --}}
      <div class="consignee_information consignee_information{{$Index}}">
          <div class="row g-3">
-             <div class="col-4">
+             <div class="col-12 col-sm-4 col-md-4">
                  <label>Consignee Name</label>
                  <input type="text" class="form-control h-40" placeholder="Name">
              </div>
-             <div class="col-4">
+             <div class="col-12 col-sm-4 col-md-4">
                  <label>Consignee Country</label>
                  <select class="form-select">
                      <option value="">Country</option>
                      <option value="">2</option>
                  </select>
              </div>
-             <div class="col-4">
+             <div class="col-12 col-sm-4 col-md-4">
                  <label>Consignee State</label>
                  <input type="text" class="form-control h-40" placeholder="State">
              </div>
-             <div class="col-4">
+             <div class="col-12 col-sm-4 col-md-4">
                  <label>Consignee City</label>
                  <select class="form-select">
                      <option value="">City</option>
                      <option value="">2</option>
                  </select>
              </div>
-             <div class="col-4">
+             <div class="col-12 col-sm-4 col-md-4">
                  <label>Consignee Email</label>
                  <input type="email" class="form-control h-40" placeholder="Email">
              </div>
-             <div class="col-4">
+             <div class="col-12 col-sm-4 col-md-4">
                  <label>Consignee Phone</label>
                  <input type="number" class="form-control h-40" placeholder="Phone">
              </div>

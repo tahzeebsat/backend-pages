@@ -72,7 +72,7 @@
             </ul>
         </div>
     </section>
-
+    {{-- mobile view --}}
     <section class="container-fluid ord-de-par">
         <h2>Orders Details</h2>
         <p>Measure your advertising ROI and track and report website traffic.</p>
