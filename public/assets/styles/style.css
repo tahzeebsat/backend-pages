@@ -85,6 +85,7 @@ img.contain {
 .dashboard-list-item a {
     text-decoration: none;
     color: #dcdae2;
+    flex-grow: 1;
 }
 
 .dashboard-list-item {
@@ -241,7 +242,7 @@ img.contain {
     padding: 32px 32px 32px 22px;
     /* height: 100vh; */
     background-color: #fcfcfd;
-        border-left: 1px solid #eaecf0;
+    border-left: 1px solid #eaecf0;
 }
 
 .search-order-number {
@@ -1802,7 +1803,302 @@ table.dataTable > tbody > tr.child span.dtr-title {
 .showotab {
     display: none;
 }
-
+.mtabs-container {
+    white-space: nowrap;
+    display: flex;
+}
+.tabs-selections {
+    text-decoration: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    display: inline-block;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: auto;
+}
+.tabs-selections li {
+    padding-block: 12px;
+    display: inline-block;
+    padding-inline: 28px;
+    font-family: "Lato", sans-serif;
+    font-size: 0.875em;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #858a94;
+    cursor: pointer;
+}
+.tabs-selections li span {
+    border-radius: 4px;
+    padding: 4px 5px;
+    background-color: #aeb1b8;
+    color: #ffffff;
+    margin-left: 8px;
+}
+.tabs-selections li.active {
+    border-bottom: 3px solid #2384c1;
+    color: #2384c1;
+}
+.tabs-selections li.active span {
+    background-color: #2384c1;
+}
+.installment-div {
+    margin-top: 12px;
+    padding: 24px 10px;
+    background: #f6f6f6;
+}
+.title-install {
+    color: #363636;
+    font-family: "Lato", sans-serif;
+    font-size: 1.125em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: -0.216px;
+}
+.subtitle-install {
+    color: #353c4d;
+    font-family: "Lato", sans-serif;
+    font-size: 1.125em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.216px;
+}
+.ord-title-install {
+    color: #0c1529;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.751px;
+    letter-spacing: -0.288px;
+    margin-bottom: 16px;
+}
+.specs-installment {
+    padding: 11px 24px;
+    flex-grow: 1;
+}
+.specs-installment h3 {
+    color: #1c6a9b;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.751px;
+    letter-spacing: -0.288px;
+}
+.new-cars-specs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 7px;
+    row-gap: 12px;
+    margin-top: 9px;
+}
+.specs-item-new {
+    margin-right: 26px;
+    width: max-content;
+}
+.specs-item-new .title {
+    color: #858a94;
+    font-weight: 400;
+}
+.specs-item-new .cmn-stl {
+    font-family: "Lato", sans-serif;
+    font-size: 10.909px;
+    font-style: normal;
+    line-height: 15.758px;
+    letter-spacing: -0.131px;
+}
+.specs-item-new .spec {
+    color: #0c1529;
+    font-weight: 700;
+}
+.select-year-install {
+    color: #667085;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    border: 1px solid #d0d5dd;
+    border-radius: 3px;
+    margin-top: 12px;
+    max-width: 140px;
+}
+.table-install-list-div {
+    margin-top: 12px;
+    max-width: 100%;
+    overflow: auto;
+}
+.table-install-list th {
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #0c1529;
+    padding-block: 6px;
+}
+.install-list-input {
+    color: #667085;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.12px;
+    border-radius: 3px;
+    border: 1px solid #d0d5dd;
+    padding: 10px 12px;
+    height: 48px;
+    min-width: 100px;
+    width: 100%;
+}
+.input-date-install input {
+    border: 0px;
+    flex-grow: 1;
+}
+.input-date-install button {
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    border-radius: 1.375px;
+    background: #2384c1;
+    border: 1px solid #2384c1;
+    padding: 6px 4px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    min-width: 57px;
+    letter-spacing: -0.1px;
+}
+.input-date-install {
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #d0d5dd;
+    padding: 10px 12px;
+    color: #667085;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.12px;
+    min-width: 100px;
+}
+.status-install {
+    border-radius: 3px;
+    border: 1px solid #d0d5dd;
+    height: 48px;
+    min-width: 100px;
+}
+.send-order-btn {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: #ced0d4;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+}
+.mark-order-btn {
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    background-color: #2384c1;
+    border: 1px solid #2384c1;
+}
+.send-order-btn[disabled] {
+    border: 1px solid #ced0d4;
+    color: #ced0d4;
+}
+.mark-order-btn[disabled] {
+    background: #ced0d4;
+    border: 1px solid #ced0d4;
+}
+.upload-field {
+    border-radius: 3px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    display: flex;
+    height: 36px;
+    margin-bottom: 0.625rem;
+}
+.upload-field input {
+    border: none;
+    outline: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    flex-grow: 1;
+    color: #667085;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    padding-left: 14px;
+}
+.upload-field button {
+    padding: 14px 8px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e6e8ec;
+    color: #344054;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+}
+.title-ord-cancel {
+    color: #344054;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    margin-bottom: 6px;
+}
+.order_canceled .form-control {
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    min-height: 104px;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #667085;
+}
+.custom-width-div {
+    width: 30%;
+}
+#create_order_car .modal-dialog {
+    max-width: 1000px;
+}
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     body {
         font-size: 0.875rem;
@@ -1986,6 +2282,9 @@ table.dataTable > tbody > tr.child span.dtr-title {
     .showotab {
         display: block;
     }
+    .custom-width-div {
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -2068,6 +2367,9 @@ table.dataTable > tbody > tr.child span.dtr-title {
 
     .showotab {
         display: block;
+    }
+    .custom-width-div {
+        width: 50%;
     }
 }
 

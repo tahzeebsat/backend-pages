@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Moiz motors start
+Route::get('/moiz-motors-dashboard', function () {
+    return view('pages.moiz-dashboard');
+});
+Route::get('/moiz-motors-orders', function () {
+    return view('pages.moiz-orders');
+});
+// Moiz motors end
 Route::get('/manual-shipping-list', function () {
     return view('pages.dashboard-manual-shippinglist');
 });
