@@ -104,9 +104,9 @@
                                                 <span class="subtitle-install">Order# 123456789</span>
                                             </div>
                                             <div class="d-flex gap-3">
-                                                <img src="https://development.satjapan.info/assets_backend/images/icons/mail-o-p.svg"
+                                                <img src="{{ asset('assets/images/icons/mail-o-p.svg') }}"
                                                     class="cursor-pointer" height="24" width="24" alt="">
-                                                <img src="https://development.satjapan.info/assets_backend/images/icons/printer-o-l.svg"
+                                                <img src="{{ asset('assets/images/icons/printer-o-l.svg') }}"
                                                     class="cursor-pointer" height="24" width="24" alt="">
                                             </div>
                                         </div>
@@ -178,11 +178,11 @@
                                             <div class="custom-width-div">
                                                 <div class="upload-field">
                                                     <input type="text" disabled placeholder="Invoice"
-                                                        id="fild">
+                                                        id="pinvoice_field{{ $loop->iteration.'po' }}">
                                                     <button
-                                                        onclick="$('#pending_invoice_field').click()">Upload</button>
+                                                        onclick="handleUpload('pending_invoice_field{{ $loop->iteration.'po' }}','pinvoice_field{{ $loop->iteration.'po' }}')">Upload</button>
                                                 </div>
-                                                <input type="file" hidden id="pending_invoice_field">
+                                                <input type="file" hidden id="pending_invoice_field{{ $loop->iteration.'po' }}">
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value=""
@@ -211,53 +211,68 @@
         </div>
     </div>
     {{-- mobile view --}}
-    <section class="container-fluid ord-de-par d-block d-sm-block d-md-none">
-        <h2>Orders Details</h2>
-        <p>Measure your advertising ROI and track and report website traffic.</p>
-    </section>
     <section class="container-fluid cards-details-items d-block d-sm-block d-md-none">
-        @foreach ($OrderData as $item)
-            <div class="card-detail">
-                <div class="flx-card-d">
-                    <span class="d-head">Order#</span>
-                    <span class="d-para">123867645</span>
-                </div>
-                <div class="flx-card-d">
-                    <span class="d-head">User</span>
-                    <span class="d-para">Sat-13242</span>
-                </div>
-                <div class="flx-card-d">
-                    <span class="d-head">Status</span>
-                    <span class="d-para">Ready to Shipped</span>
-                </div>
-                <div class="flx-card-d mb-2">
-                    <span class="d-head">Receipt</span>
-                    <span class="d-para" style="cursor: pointer"
-                        onclick="$(this).find('img').toggleClass('rotate-ico')" data-bs-toggle="collapse"
-                        data-bs-target="#collapse_receipt{{ $loop->iteration }}22"><img
-                            src="{{ asset('assets/images/icons/arrow-down.svg') }}"
-                            style="transition: transform 0.3s ease"></span>
-                </div>
-                <div class="collapse col_rec" id="collapse_receipt{{ $loop->iteration }}22">
-                    <div class="row">
-                        <div class="col-md-8 col-sm-12 custom-sm-12">
-                            <div class="data-table-collapse">
-                                @component('components.dashboard-order.collapse-order-detail', ['Index' => $loop->iteration])
-                                    cllapse order specs
-                                @endcomponent
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-12 custom-sm-12">
-                            <div class="data-table-collapse">
-                                @component('components.dashboard-order.collapse-order-specs')
-                                    cllapse order specs
-                                @endcomponent
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        @endforeach
+        {{-- total orders --}}
+        <div class="total_orders tab-content">
+            @foreach ($OrderData as $item)
+                @component('components.order-tabs-selection.mobile-common-card', [
+                    'iteration' => $loop->iteration . 'mto',
+                    'type' => 'Amount Duration',
+                    'value' => '10,Month',
+                ])
+                    Cards
+                @endcomponent
+            @endforeach
+        </div>
+        {{-- completed order --}}
+        <div class="completed_order tab-content">
+            @foreach ($OrderData as $item)
+                @component('components.order-tabs-selection.mobile-common-card', [
+                    'iteration' => $loop->iteration . 'mco',
+                    'type' => 'Status',
+                    'value' => 'Completed Order',
+                ])
+                    Cards
+                @endcomponent
+            @endforeach
+        </div>
+        {{-- active order --}}
+        <div class="active_order tab-content">
+            @foreach ($OrderData as $item)
+                @component('components.order-tabs-selection.mobile-common-card', [
+                    'iteration' => $loop->iteration . 'mao',
+                    'type' => 'Status',
+                    'value' => 'Active',
+                ])
+                    Cards
+                @endcomponent
+            @endforeach
+        </div>
+        {{-- pending order --}}
+        <div class="pending_order tab-content">
+            @foreach ($OrderData as $item)
+                @component('components.order-tabs-selection.mobile-common-card', [
+                    'iteration' => $loop->iteration . 'mpo',
+                    'type' => 'Status',
+                    'value' => 'Pending',
+                ])
+                    Cards
+                @endcomponent
+            @endforeach
+        </div>
+        {{-- order_canceled --}}
+        <div class="order_canceled tab-content">
+            @foreach ($OrderData as $item)
+                @component('components.order-tabs-selection.mobile-common-card', [
+                    'iteration' => $loop->iteration . 'moc',
+                    'class' => 'bg-card-cancelled',
+                    'type' => 'Status',
+                    'value' => 'Cancelled',
+                ])
+                    Cards
+                @endcomponent
+            @endforeach
+        </div>
     </section>
 </div>
 {{-- create order car --}}
@@ -268,7 +283,8 @@
             <div class="modal-body">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h5 class="modal-title-text fw-bold">Create Order Car</h5>
-                    <span class="clos-btn" data-bs-dismiss="modal" aria-label="Close">×</span>
+                    <span class="clos-btn cursor-pointer" data-bs-dismiss="modal" aria-label="Close"
+                        id="close_hirer">×</span>
                 </div>
                 <hr>
                 <div class="row mb-3">
@@ -363,10 +379,69 @@
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <button class="btn btn-primary py-2 px-4 w-100" style="max-width: 150px">Save</button>
+                        <button class="btn btn-primary py-2 px-4 w-100" style="max-width: 150px"
+                            onclick="printContent()">Save</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{{-- Edit order car --}}
+<div class="modal fade" id="edit_order_car" tabindex="-1" aria-labelledby="edit_order_carLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="modal-title-text fw-bold">Please fill in the following information </h5>
+                    <span class="clos-btn cursor-pointer" data-bs-dismiss="modal" aria-label="Close"
+                        id="close_hirer">×</span>
+                </div>
+                <hr>
+                <div class="row g-3">
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <label>Month</label>
+                        <input type="text" class="form-control" placeholder="December">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <label>Amount Due:</label>
+                        <input type="number" class="form-control" placeholder="1,000">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <label>Due Date <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" placeholder="1,000">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <label>Amount Paid:<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" placeholder="9,000">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <label>Upload Receipt<span class="text-danger">*</span></label>
+                        <div class="upload-field mb-0" style="height: 40px;border-radius:5px;">
+                            <input type="text" class="bg-transparent" disabled="" placeholder="Invoice"
+                                id="fild_edit">
+                            <button type="button"
+                                onclick="handleUpload('upload_receipt_edit', 'fild_edit')">Upload</button>
+                        </div>
+                        <input type="file" hidden="" id="upload_receipt_edit">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <label>Status<span class="text-danger">*</span></label>
+                        <select class="form-select">
+                            <option value="">Paid</option>
+                            <option value="">UnPaid</option>
+                        </select>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <button class="btn btn-primary w-100" style="max-width:128px">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@component('components.prints.hirer')
+    Print
+@endcomponent

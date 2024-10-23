@@ -62,16 +62,28 @@
                 $('#fild').val('No file selected');
             }
         });
-        
-        function handleUpload(hiddenField, input) {
-        document.getElementById(hiddenField).click();
 
-        document.getElementById(hiddenField).addEventListener('change', function() {
-        var file = this.files[0];
-        if (file) {
-            document.getElementById(input).value = file.name;
+        function handleUpload(hiddenField, input) {
+            document.getElementById(hiddenField).click();
+
+            document.getElementById(hiddenField).addEventListener('change', function() {
+                var file = this.files[0];
+                if (file) {
+                    document.getElementById(input).value = file.name;
+                }
+            });
         }
-        });
+    </script>
+    <script>
+        function printContent() {
+            $('#close_hirer').click()
+            var content = document.getElementById('print_receipt').innerHTML;
+            debugger
+            var printWindow = window.open('', '', 'height=500,width=800');
+            printWindow.document.write(content);
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
         }
     </script>
 </body>

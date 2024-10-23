@@ -103,6 +103,11 @@ select {
     background: #2a9fe8;
     border: 1px solid #2a9fe8;
 }
+.btn-primary:active {
+    color: #ffff;
+    background: #2a9fe8 !important;
+    border: 1px solid #2a9fe8 !important;
+}
 .btn-info {
     color: #ffff;
     border-radius: 3px;
