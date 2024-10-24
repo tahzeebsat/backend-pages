@@ -67,5 +67,7 @@
   {{-- buttons --}}
   <div class="my-4 d-flex gap-4 justify-content-center">
       <button class="mark-order-btn" disabled>Mark Order as Complete</button>
-      <button class="send-order-btn" disabled>Send Email</button>
+      <button class="send-order-btn d-flex align-items-center justify-content-center gap-2" disabled="">
+        Send Email <img src="{{asset('assets/images/icons/mail-check-line.webp')}}" height="16" width="16" alt="mail">
+    </button>
   </div>

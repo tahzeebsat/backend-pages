@@ -28,13 +28,6 @@
         <span class="d-head">{{ $type }}</span>
         <span class="d-para">{{ $value }}</span>
     </div>
-    <div class="flx-card-d" data-bs-toggle="modal" data-bs-target="#edit_order_car">
-        <span class="d-head">Edit</span>
-        <span class="d-para">
-            <img src="{{ asset('assets/images/icons/edit-line.svg') }}" class="sat-logo-sidebar" height="20"
-                width="20" alt="pencil">
-        </span>
-    </div>
     <div class="flx-card-d mb-2">
         <span class="d-head">Receipt</span>
         <span class="d-para" style="cursor: pointer" onclick="$(this).find('img').toggleClass('rotate-ico')"
@@ -70,7 +63,7 @@
                     <p class="spec cmn-stl">$3,000</p>
                 </div>
             </div>
-            <div class="d-flex pb-3">
+            <div class="d-flex pb-3 car-det-sp">
                 <img src="https://satjapan.com/photos/land_cruiser_wagon/2024-08-05/URJ202-4178769/4129/0.40002000_1722865742.jpg"
                     width="137" height="81" class="img-fluid" alt="car image">
                 <div class="specs-installment">
@@ -115,23 +108,6 @@
             </div>
             <div class="my-4 d-flex justify-content-center">
                 <button class="mark-order-btn" disabled="">Active</button>
-            </div>
-        </div>
-        <div class="order_canceled tab-content mt-3" style="display: block;">
-            <h3 class="title-ord-cancel">Comment</h3>
-            <textarea rows="5" cols="5" placeholder="Type" class="form-control"></textarea>
-        </div>
-        <div class="total_orders tab-content" style="display: block;">
-            <select class="form-select select-year-install">
-                <option value="">2025</option>
-                <option value="">2024</option>
-                <option value="">2023</option>
-                <option value="">2022</option>
-            </select>
-       
-            <div class="my-4 d-flex gap-4 justify-content-center">
-                <button class="mark-order-btn" disabled="">Mark Order as Complete</button>
-                <button class="send-order-btn" disabled="">Send Email</button>
             </div>
         </div>
     </div>

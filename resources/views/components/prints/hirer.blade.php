@@ -12,7 +12,6 @@
                 print-color-adjust: exact;
                 margin: 0px;
                 padding: 0px;
-                font: inherit;
                 box-sizing: border-box;
             }
             /* .print-body {

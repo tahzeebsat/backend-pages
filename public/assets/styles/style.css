@@ -2128,6 +2128,67 @@ table.dataTable > tbody > tr.child span.dtr-title {
 #edit_order_car .modal-dialog {
     max-width: 800px;
 }
+.accordians-selection {
+    margin-top: 16px;
+}
+.accordians-selection .accordion-item {
+    margin-bottom: 10px;
+    border-bottom: 0px;
+}
+.accordians-selection .edit-header[aria-expanded="false"]  .accordion-button{
+    background-color: #2384c1;
+    color: white;
+    box-shadow: none;
+}
+.accordians-selection .accordion-button:focus {
+    border-color: inherit;
+    box-shadow: none;
+}
+.accordians-selection .accordion-button {
+    border: 1px solid #d0d5dd;
+    padding: 8px 10px;
+    color: #0c1529;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    border-radius: 3px;
+}
+.accordians-selection .accordion-button::after {
+    content: none;
+}
+.accordians-selection .edit-header[aria-expanded="true"] img {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+.accordians-selection .edit-header[aria-expanded="false"] img {
+    transform: rotate(360deg);
+    transition: transform 0.3s ease;
+}
+.accordians-selection .accordion-body {
+    padding: 12px 10px;
+    background-color: #e8eef1;
+}
+.accordians-selection .accordion-body .item-selections-install {
+    display: flex;
+    align-items: center;
+}
+.accordians-selection .accordion-body .table-heading-card {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #0c1529;
+    min-width: 100px;
+    margin-bottom: 6px;
+}
+.sat-logo-sidebar.position-absolute {
+    top: 25%;
+    right: 7%;
+    z-index: 10;
+}
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     body {
         font-size: 0.875rem;
@@ -2725,6 +2786,26 @@ table.dataTable > tbody > tr.child span.dtr-title {
         border-radius: 3px;
         margin-top: 0px;
         max-width: 140px;
+    }
+    .status-install {
+        max-width: 80px;
+        height: 36px;
+    }
+    .upload-field {
+        width: 100%;
+        height: 36px;
+    }
+}
+@media screen and (max-width: 445px) {
+    .accordians-selection .accordion-body .item-selections-install {
+        flex-wrap: wrap;
+    }
+    .car-det-sp {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .car-det-sp img {
+        margin-bottom: 6px;
     }
 }
 label {

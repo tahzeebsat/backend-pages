@@ -57,6 +57,9 @@
                         <th class="heading-table show-install-td d-none order_canceled_td">
                             Order Canceled
                         </th>
+                        <th class="heading-table">
+                            Action
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,8 +68,7 @@
                             <td class="title-table">
                                 Salman Afzal
                             </td>
-                            <td class="title-table" data-bs-toggle="collapse"
-                                data-bs-target="#dynamic_id_{{ $loop->iteration }}">
+                            <td class="title-table">
                                 18925774
                             </td>
                             <td class="title-table">
@@ -93,6 +95,10 @@
                             <td class="title-table show-install-td d-none order_canceled_td">
                                 cancelled order
                             </td>
+                            <td class="title-table" data-bs-toggle="collapse"
+                            data-bs-target="#dynamic_id_{{ $loop->iteration }}">
+                                <img src="{{ asset('assets/images/icons/open-close.webp') }}" height="16" width="16" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td colspan="100%">
@@ -112,6 +118,21 @@
                                         </div>
                                         {{-- specs cars --}}
                                         <div class="mt-4">
+                                            <h2 class="ord-title-install mb-2">Buyer Information</h2>
+                                            <div class="new-cars-specs mb-3">
+                                                <div class="specs-item-new">
+                                                    <h2 class="title cmn-stl">Buyer Name</h2>
+                                                    <p class="spec cmn-stl">Uzair Majeed</p>
+                                                </div>
+                                                <div class="specs-item-new">
+                                                    <h2 class="title cmn-stl">Amount Due</h2>
+                                                    <p class="spec cmn-stl">$7,000</p>
+                                                </div>
+                                                <div class="specs-item-new">
+                                                    <h2 class="title cmn-stl">Amount Paid</h2>
+                                                    <p class="spec cmn-stl">$3,000</p>
+                                                </div>
+                                            </div>
                                             <h2 class="ord-title-install">Order Details</h2>
                                             <div class="d-flex pb-3 border-bottom">
                                                 <img src="https://satjapan.com/photos/land_cruiser_wagon/2024-08-05/URJ202-4178769/4129/0.40002000_1722865742.jpg"
@@ -135,20 +156,6 @@
                                                             <div class="specs-item-new">
                                                                 <h2 class="title cmn-stl">Transmission</h2>
                                                                 <p class="spec cmn-stl">MT</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="new-cars-specs">
-                                                            <div class="specs-item-new">
-                                                                <h2 class="title cmn-stl">Buyer Name</h2>
-                                                                <p class="spec cmn-stl">Uzair Majeed</p>
-                                                            </div>
-                                                            <div class="specs-item-new">
-                                                                <h2 class="title cmn-stl">Amount Due</h2>
-                                                                <p class="spec cmn-stl">$7,000</p>
-                                                            </div>
-                                                            <div class="specs-item-new">
-                                                                <h2 class="title cmn-stl">Amount Paid</h2>
-                                                                <p class="spec cmn-stl">$3,000</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -199,6 +206,9 @@
                                         <div class="order_canceled tab-content mt-3" style="display: none">
                                             <h3 class="title-ord-cancel">Comment</h3>
                                             <textarea rows="5" cols="5" placeholder="Type" class="form-control"></textarea>
+                                            <div class="d-flex justify-content-center mt-2">
+                                                <button class="btn btn-primary w-100 lh-normal" style="max-width: 100px;font-size:14px">Submit</button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -215,7 +225,7 @@
         {{-- total orders --}}
         <div class="total_orders tab-content">
             @foreach ($OrderData as $item)
-                @component('components.order-tabs-selection.mobile-common-card', [
+                @component('components.order-tabs-selection.order-card-list.total', [
                     'iteration' => $loop->iteration . 'mto',
                     'type' => 'Amount Duration',
                     'value' => '10,Month',
@@ -227,7 +237,7 @@
         {{-- completed order --}}
         <div class="completed_order tab-content">
             @foreach ($OrderData as $item)
-                @component('components.order-tabs-selection.mobile-common-card', [
+                @component('components.order-tabs-selection.order-card-list.completed', [
                     'iteration' => $loop->iteration . 'mco',
                     'type' => 'Status',
                     'value' => 'Completed Order',
@@ -239,7 +249,7 @@
         {{-- active order --}}
         <div class="active_order tab-content">
             @foreach ($OrderData as $item)
-                @component('components.order-tabs-selection.mobile-common-card', [
+                @component('components.order-tabs-selection.order-card-list.active', [
                     'iteration' => $loop->iteration . 'mao',
                     'type' => 'Status',
                     'value' => 'Active',
@@ -251,7 +261,7 @@
         {{-- pending order --}}
         <div class="pending_order tab-content">
             @foreach ($OrderData as $item)
-                @component('components.order-tabs-selection.mobile-common-card', [
+                @component('components.order-tabs-selection.order-card-list.pending', [
                     'iteration' => $loop->iteration . 'mpo',
                     'type' => 'Status',
                     'value' => 'Pending',
@@ -263,7 +273,7 @@
         {{-- order_canceled --}}
         <div class="order_canceled tab-content">
             @foreach ($OrderData as $item)
-                @component('components.order-tabs-selection.mobile-common-card', [
+                @component('components.order-tabs-selection.order-card-list.cancelled', [
                     'iteration' => $loop->iteration . 'moc',
                     'class' => 'bg-card-cancelled',
                     'type' => 'Status',
@@ -278,7 +288,7 @@
 {{-- create order car --}}
 <div class="modal fade" id="create_order_car" tabindex="-1" aria-labelledby="create_order_carLabel"
     aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="d-flex justify-content-between align-items-center mb-4">
@@ -390,7 +400,7 @@
 {{-- Edit order car --}}
 <div class="modal fade" id="edit_order_car" tabindex="-1" aria-labelledby="edit_order_carLabel"
     aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="d-flex justify-content-between align-items-center mb-4">
