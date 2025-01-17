@@ -37,6 +37,9 @@ Route::get('/mobile-bank-transfer', function () {
 Route::get('/operation-dashboard', function () {
     return view('pages.operations-dashboard');
 });
+Route::get('/inspection-report', function () {
+    return view('pages.inspection.inspection-report');
+});
 Route::get('/bank-transfer', function () {
     return view('pages.bank-transfer-dashboard');
 });
