@@ -94,7 +94,7 @@ select {
     color: #ffff;
     border-radius: 3px;
     background: #2a9fe8;
-    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2); */
     font-weight: 500;
     border: 1px solid #2a9fe8;
 }
@@ -103,16 +103,11 @@ select {
     background: #2a9fe8;
     border: 1px solid #2a9fe8;
 }
-.btn-primary:active {
-    color: #ffff;
-    background: #2a9fe8 !important;
-    border: 1px solid #2a9fe8 !important;
-}
 .btn-info {
     color: #ffff;
     border-radius: 3px;
     background: #2384c1;
-    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2); */
     font-weight: 500;
     border: 1px solid #2384c1;
 }
@@ -120,4 +115,34 @@ select {
     color: #ffff;
     background: #2384c1;
     border: 1px solid #2384c1;
+}
+.btn-success {
+    color: #ffff;
+    border-radius: 3px;
+    background: #198754;
+    /* box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2); */
+    font-weight: 500;
+    border: 1px solid #198754;
+}
+.btn-success:hover {
+    color: #ffff;
+    background: #198754;
+    border: 1px solid #198754;
+}
+.btn-danger {
+    color: #ffff;
+    border-radius: 3px;
+    background: #dc3545;
+    /* box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2); */
+    font-weight: 500;
+    border: 1px solid #dc3545;
+}
+.btn-danger:hover {
+    color: #ffff;
+    background: #dc3545;
+    border: 1px solid #dc3545;
+}
+.badge {
+    --bs-badge-font-size: 1em;
+    font-size: var(--bs-badge-font-size);
 }

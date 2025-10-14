@@ -1375,18 +1375,32 @@ img.contain {
 }
 
 .sale-numbers {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 24px;
-    row-gap: 10px;
+    flex-wrap: wrap; */
+    margin-bottom: 24px;
+    /* row-gap: 10px; */
+    background-color: #ffffff;
+    border: 1px solid #bcc3ce82;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .sale-numbers .sale-numbers-item {
-    min-width: 130px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 8px;
     gap: 8px;
-    margin-right: 73px;
+}
+.sale-numbers-item .count-tainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .sale-numbers .sale-numbers-item:last-of-type {
@@ -1406,27 +1420,28 @@ img.contain {
 .sale-numbers .sale-numbers-item h3 {
     font-family: Lato;
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.01em;
-    color: #5d6370;
+    color: #667085;
 }
 
 .sale-numbers .sale-numbers-item p {
     font-family: Lato;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 700;
-    line-height: 32px;
+    line-height: 24px;
     letter-spacing: -0.016em;
-    color: #0c1529;
+    color: #344054;
 }
 
 .progress-card-section {
     margin-top: 32px;
+    margin-bottom: 24px;
 }
 
 .progress-card {
-    padding: 24px;
+    padding: 20px 12px;
     border: 1px solid #eaecf0;
     border-radius: 8px;
     background-color: #ffffff;
@@ -1446,22 +1461,22 @@ img.contain {
 
 .progress-card h3 {
     font-family: Lato;
-    font-size: 1.25em;
-    font-weight: 700;
-    line-height: 28px;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 24px;
     letter-spacing: -0.014em;
-    color: #0c1529;
-    margin-bottom: 24px;
+    color: #667085;
+    margin-bottom: 12px;
 }
 
 .progress-card p {
     font-family: Lato;
-    font-size: 1.875em;
+    font-size: 1em;
     font-weight: 700;
-    line-height: 36px;
+    line-height: 24px;
     letter-spacing: -0.018em;
     color: #0c1529;
-    margin-bottom: 16px;
+    margin-bottom: 6px;
 }
 
 .progress-card .count-progress {
@@ -1759,15 +1774,20 @@ img.contain {
 }
 
 #dataTable td {
-    padding: 25px;
+    /* padding: 25px; */
 }
 
 #dataTable th {
     border-bottom: 1px solid transparent;
 }
-
+#resendEmail {
+    font-size: 0.875em;
+}
+#sendreminder {
+    font-size: 0.875em;
+}
 #dataTable th {
-    padding: 25px;
+    /* padding: 25px; */
 }
 
 #dataTable tr {
@@ -1799,396 +1819,11 @@ table.dataTable > tbody > tr.child span.dtr-title {
     min-width: 120px !important;
     font-weight: bold;
 }
-/* new moiz motors */
+
 .showotab {
     display: none;
 }
-.mtabs-container {
-    white-space: nowrap;
-    display: flex;
-}
-.tabs-selections {
-    text-decoration: none;
-    margin-bottom: 0px;
-    padding-left: 0px;
-    display: inline-block;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow: auto;
-}
-.tabs-selections li {
-    padding-block: 12px;
-    display: inline-block;
-    padding-inline: 28px;
-    font-family: "Lato", sans-serif;
-    font-size: 0.875em;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: -0.01em;
-    color: #858a94;
-    cursor: pointer;
-}
-.tabs-selections li span {
-    border-radius: 4px;
-    padding: 4px 5px;
-    background-color: #aeb1b8;
-    color: #ffffff;
-    margin-left: 8px;
-}
-.tabs-selections li.active {
-    border-bottom: 3px solid #2384c1;
-    color: #2384c1;
-}
-.tabs-selections li.active span {
-    background-color: #2384c1;
-}
-.installment-div {
-    margin-top: 12px;
-    padding: 24px 10px;
-    background: #f6f6f6;
-}
-.title-install {
-    color: #363636;
-    font-family: "Lato", sans-serif;
-    font-size: 1.125em;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 26px;
-    letter-spacing: -0.216px;
-}
-.subtitle-install {
-    color: #353c4d;
-    font-family: "Lato", sans-serif;
-    font-size: 1.125em;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: -0.216px;
-}
-.ord-title-install {
-    color: #0c1529;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 19.751px;
-    letter-spacing: -0.288px;
-    margin-bottom: 16px;
-}
-.specs-installment {
-    padding: 11px 24px;
-    flex-grow: 1;
-}
-.specs-installment h3 {
-    color: #1c6a9b;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 19.751px;
-    letter-spacing: -0.288px;
-}
-.new-cars-specs {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 7px;
-    row-gap: 12px;
-    margin-top: 9px;
-}
-.specs-item-new {
-    margin-right: 26px;
-    width: max-content;
-}
-.specs-item-new .title {
-    color: #858a94;
-    font-weight: 400;
-}
-.specs-item-new .cmn-stl {
-    font-family: "Lato", sans-serif;
-    font-size: 10.909px;
-    font-style: normal;
-    line-height: 15.758px;
-    letter-spacing: -0.131px;
-}
-.specs-item-new .spec {
-    color: #0c1529;
-    font-weight: 700;
-}
-.select-year-install {
-    color: #667085;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.16px;
-    border: 1px solid #d0d5dd;
-    border-radius: 3px;
-    margin-top: 12px;
-    max-width: 140px;
-}
-.table-install-list-div {
-    margin-top: 12px;
-    max-width: 100%;
-    overflow: auto;
-}
-.table-install-list th {
-    font-family: "Lato", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.01em;
-    color: #0c1529;
-    padding-block: 6px;
-}
-.install-list-input {
-    color: #667085;
-    font-family: "Lato", sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.12px;
-    border-radius: 3px;
-    border: 1px solid #d0d5dd;
-    padding: 10px 12px;
-    height: 48px;
-    min-width: 100px;
-    width: 100%;
-}
-.input-date-install input {
-    border: 0px;
-    flex-grow: 1;
-}
-.input-date-install button {
-    color: #fff;
-    font-family: "Lato", sans-serif;
-    border-radius: 1.375px;
-    background: #2384c1;
-    border: 1px solid #2384c1;
-    padding: 6px 4px;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    min-width: 57px;
-    letter-spacing: -0.1px;
-}
-.input-date-install {
-    display: flex;
-    border-radius: 3px;
-    border: 1px solid #d0d5dd;
-    padding: 10px 12px;
-    color: #667085;
-    font-family: "Lato", sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.12px;
-    min-width: 100px;
-}
-.status-install {
-    border-radius: 3px;
-    border: 1px solid #d0d5dd;
-    height: 48px;
-    min-width: 100px;
-}
-.send-order-btn {
-    background-color: white;
-    padding: 8px 12px;
-    border-radius: 3px;
-    color: #ced0d4;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-}
-.mark-order-btn {
-    color: #fff;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-    padding: 8px 12px;
-    border-radius: 3px;
-    background-color: #2384c1;
-    border: 1px solid #2384c1;
-}
-.send-order-btn[disabled] {
-    border: 1px solid #ced0d4;
-    color: #ced0d4;
-}
-.mark-order-btn[disabled] {
-    background: #ced0d4;
-    border: 1px solid #ced0d4;
-}
-.upload-field {
-    border-radius: 3px;
-    border: 1px solid #d0d5dd;
-    background: #fff;
-    display: flex;
-    height: 36px;
-    margin-bottom: 0.625rem;
-}
-.upload-field input {
-    border: none;
-    outline: none;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    flex-grow: 1;
-    color: #667085;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-    padding-left: 14px;
-}
-.upload-field button {
-    padding: 14px 8px;
-    border: none;
-    outline: none;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #e6e8ec;
-    color: #344054;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-}
-.title-ord-cancel {
-    color: #344054;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-    margin-bottom: 6px;
-}
-.order_canceled .form-control {
-    border: 1px solid #d0d5dd;
-    border-radius: 6px;
-    min-height: 104px;
-    font-family: "Lato", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.01em;
-    color: #667085;
-}
-.custom-width-div {
-    width: 30%;
-}
-#create_order_car .modal-dialog {
-    max-width: 1000px;
-}
-.mobile-email-send {
-    font-family: "Lato", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.4px;
-    letter-spacing: -0.01em;
-    border: 1px solid #2384c1;
-    color: #2384c1;
-    border-radius: 2px;
-    margin-right: 10px;
-    padding: 6px 4px;
-    background-color: #ffffff;
-}
-.bg-card-cancelled {
-    background-color: #fef2f2;
-}
-.common-file {
-    border: 1px solid #d0d5dd;
-    font-family: "Lato", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.01em;
-    color: #667085;
-    width: 100%;
-}
-#edit_order_car .modal-dialog {
-    max-width: 800px;
-}
-.accordians-selection {
-    margin-top: 16px;
-}
-.accordians-selection .accordion-item {
-    margin-bottom: 10px;
-    border-bottom: 0px;
-}
-.accordians-selection .edit-header[aria-expanded="false"]  .accordion-button{
-    background-color: #2384c1;
-    color: white;
-    box-shadow: none;
-}
-.accordians-selection .accordion-button:focus {
-    border-color: inherit;
-    box-shadow: none;
-}
-.accordians-selection .accordion-button {
-    border: 1px solid #d0d5dd;
-    padding: 8px 10px;
-    color: #0c1529;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.01em;
-    border-radius: 3px;
-}
-.accordians-selection .accordion-button::after {
-    content: none;
-}
-.accordians-selection .edit-header[aria-expanded="true"] img {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
-}
-.accordians-selection .edit-header[aria-expanded="false"] img {
-    transform: rotate(360deg);
-    transition: transform 0.3s ease;
-}
-.accordians-selection .accordion-body {
-    padding: 12px 10px;
-    background-color: #e8eef1;
-}
-.accordians-selection .accordion-body .item-selections-install {
-    display: flex;
-    align-items: center;
-}
-.accordians-selection .accordion-body .table-heading-card {
-    font-family: Lato;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.01em;
-    color: #0c1529;
-    min-width: 100px;
-    margin-bottom: 6px;
-}
-.sat-logo-sidebar.position-absolute {
-    top: 25%;
-    right: 7%;
-    z-index: 10;
-}
+
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     body {
         font-size: 0.875rem;
@@ -2372,9 +2007,6 @@ table.dataTable > tbody > tr.child span.dtr-title {
     .showotab {
         display: block;
     }
-    .custom-width-div {
-        width: 50%;
-    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -2457,9 +2089,6 @@ table.dataTable > tbody > tr.child span.dtr-title {
 
     .showotab {
         display: block;
-    }
-    .custom-width-div {
-        width: 50%;
     }
 }
 
@@ -2757,55 +2386,13 @@ table.dataTable > tbody > tr.child span.dtr-title {
         overflow: auto;
         width: 100%;
     }
+    .progress-card-section {
+        margin-top: 0;
+    }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .ord-sm-none {
         display: block;
-    }
-    .title-install {
-        font-size: 0.875rem;
-        font-weight: 700;
-    }
-    .subtitle-install {
-        font-size: 0.75rem;
-    }
-    .ord-title-install {
-        font-size: 14px;
-        margin-bottom: 14px;
-    }
-    .specs-installment {
-        padding: 0px 0px 0px 8px;
-    }
-    .new-cars-specs {
-        row-gap: 4px;
-    }
-    .custom-width-div {
-        width: 100%;
-    }
-    .select-year-install {
-        border-radius: 3px;
-        margin-top: 0px;
-        max-width: 140px;
-    }
-    .status-install {
-        max-width: 80px;
-        height: 36px;
-    }
-    .upload-field {
-        width: 100%;
-        height: 36px;
-    }
-}
-@media screen and (max-width: 445px) {
-    .accordians-selection .accordion-body .item-selections-install {
-        flex-wrap: wrap;
-    }
-    .car-det-sp {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .car-det-sp img {
-        margin-bottom: 6px;
     }
 }
 label {
