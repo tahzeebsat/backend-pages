@@ -18,7 +18,7 @@
     </aside>
 
     <div class="main-content">
-        <div class="order-sidebar-soh">
+        <div class="order-sidebar-soh d-none">
             @component('components.dashboard-order.order-rightbar')
                 Order Right Bar Details
             @endcomponent
@@ -31,6 +31,9 @@
     </div>
     @component('components.common.svgs-Icons')
         Svgs for project
+    @endcomponent
+    @component('components.common.mobile-sidebar')
+        mobile sidebar
     @endcomponent
     </div>
     <script src="{{ asset('assets/js/bootstrapver5/js/bootstrap.bundle.min.js') }}"></script>
