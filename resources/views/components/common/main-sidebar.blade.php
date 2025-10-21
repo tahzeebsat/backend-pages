@@ -27,6 +27,17 @@
                     </span>
                 </a>
             </li>
+            <li class="dashboard-list-item" onclick="window.location.href='/new-car-price-quotes'">
+                <a>
+                    <svg width="24" height="24" class="dashborad-icons">
+                        <use href="#order_icon"></use>
+                    </svg>
+
+                    <span>
+                        New Cars Price Quotes
+                    </span>
+                </a>
+            </li>
             <li class="dashboard-list-item" onclick="window.location.href='/bank-transfer'">
                 <a>
                     <svg width="24" height="24" class="dashborad-icons">
@@ -56,7 +67,7 @@
                         <svg width="24" height="24" class="dashborad-icons">
                             <use href="#dashboard_operations"></use>
                         </svg>
-                       
+
                         <span class="d-flex justify-content-between align-items-center w-100">
                             <span>
                                 Operations

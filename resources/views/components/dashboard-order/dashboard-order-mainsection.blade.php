@@ -1,9 +1,9 @@
 @php
     $OrderData = [[], [], [], [], []];
 @endphp
-<div class="main-section w-100">
+<div class="main-section w-100 vh-100">
     {{-- desktop view --}}
-    <div class="d-md-block d-none">
+    <div class="d-none d-md-block d-sm-none">
         <div class="heading-section-order">
             <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
                 <h2 class="cmn-heading-title">
@@ -88,9 +88,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    {{-- desktop view --}}
-    <div class="d-none d-md-block d-sm-none">
         <div class="data-table-order">
             <table class="w-100 data-table-cus">
                 <thead>
@@ -327,12 +324,17 @@
             <div class="main-list">
                 <span class="active">All (717) <img src="{{ asset('assets/images/icons/close-slide.svg') }}"
                         width="16" height="16" loading="lazy" alt=""></span>
-                <span>Status <img src="{{ asset('assets/images/icons/arrow-down-slide.svg') }}" width="16"
-                        height="16" loading="lazy" alt=""></span>
-                <span>Missing Document <img src="{{ asset('assets/images/icons/arrow-down-slide.svg') }}"
-                        width="16" height="16" loading="lazy" alt=""></span>
-                <span>Country <img src="{{ asset('assets/images/icons/arrow-down-slide.svg') }}" width="16"
-                        height="16" loading="lazy" alt=""></span>
+                <span data-bs-toggle="offcanvas" data-bs-target="#status_filter" aria-controls="status_filter">Status
+                    <img src="{{ asset('assets/images/icons/arrow-down-slide.svg') }}" width="16" height="16"
+                        loading="lazy" alt=""></span>
+                <span data-bs-toggle="offcanvas" data-bs-target="#missing_document"
+                    aria-controls="missing_document">Missing Document <img
+                        src="{{ asset('assets/images/icons/arrow-down-slide.svg') }}" width="16" height="16"
+                        loading="lazy" alt=""></span>
+                <span data-bs-toggle="offcanvas" data-bs-target="#countries_list"
+                    aria-controls="countries_list">Country <img
+                        src="{{ asset('assets/images/icons/arrow-down-slide.svg') }}" width="16" height="16"
+                        loading="lazy" alt=""></span>
             </div>
         </div>
         <div class="order-listing-mobile">
@@ -536,8 +538,47 @@
                                     <span>rtestmail@mail.comm33</span>
                                 </div>
                                 <div class="d-flex align-item-center justify-content-between gap-2 mb-2">
-                                    <button class="cta primary w-100">Update Customer Info</button>
+                                    <button class="cta primary w-100" data-bs-toggle="collapse"
+                                        data-bs-target="#customer_update" aria-expanded="false"
+                                        aria-controls="customer_update">Update Customer Info</button>
                                 </div>
+                                <div class="collapse" id="customer_update">
+                                    <div class="card card-body">
+                                        <h2 class="fs-6 lh-base mb-2 fw-bold">Update Customer Info</h2>
+                                        <div class="mb-2 pb-1">
+                                            <label for="Name">Name</label>
+                                            <input type="text" class="form-control" placeholder="William son">
+                                        </div>
+                                        <div class="mb-2 pb-1">
+                                            <label for="Email">Email</label>
+                                            <input type="email" class="form-control"
+                                                placeholder="example@gmail.com">
+                                        </div>
+                                        <div class="mb-2 pb-1">
+                                            <label for="Phone">Phone</label>
+                                            <input type="number" class="form-control" placeholder="+92">
+                                        </div>
+                                        <div class="mb-2 pb-1">
+                                            <button class="cta primary w-100">Update Info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapsefifth" aria-expanded="false"
+                            aria-controls="flush-collapsefifth">
+                            Shipping Documents
+                        </button>
+                    </h2>
+                    <div id="flush-collapsefifth" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div style="font-size: 14px">
                                 <div class="d-flex align-item-center justify-content-between gap-2 mb-2">
                                     <span style="color:#94A3B8">Accepted file types: pdf, doc, docx</span>
                                 </div>
@@ -1115,7 +1156,7 @@
             <label for="Car Amount*">Car Amount*</label>
             <input type="number" class="form-control" placeholder="654654">
         </div>
-         <div class="mb-2 pb-1">
+        <div class="mb-2 pb-1">
             <label for="Payment Status*">Payment Status*</label>
             <select name="Payment Status*" class="form-select">
                 <option value="">Paid</option>
@@ -1125,6 +1166,85 @@
         <div class="mb-2 pb-1">
             <label for="Stock ID*">Stock ID*</label>
             <input type="number" class="form-control" placeholder="sat-5466541">
+        </div>
+        <div class="mb-2 pb-1">
+            <div class="addon-service-container">
+                <div class="addonbtn" data-bs-toggle="collapse" data-bs-target="#add_on_services"
+                    aria-expanded="false" aria-controls="add_on_services">
+                    <div class="ds">
+                        <span>Add-on Service</span>
+                        <span>+</span>
+                    </div>
+                    <div class="ds">
+                        <span>Pre-export Inspection</span>
+                    </div>
+                </div>
+                <div class="collapse mt-2" id="add_on_services">
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <ul class="services">
+                                <li class="service-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="Pre-export Inspection" checked>
+                                        <label class="form-check-label" for="Pre-export Inspection">
+                                            Pre-export Inspection
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="service-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="Insurance Service">
+                                        <label class="form-check-label" for="Insurance Service">
+                                            Insurance Service
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="service-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="Non-stolen Vehicle Check">
+                                        <label class="form-check-label" for="Non-stolen Vehicle Check">
+                                            Non-stolen Vehicle Check
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="service-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="Marine Insurance Service">
+                                        <label class="form-check-label" for="Marine Insurance Service">
+                                            Marine Insurance Service
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="service-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="Car Carrier Service">
+                                        <label class="form-check-label" for="Car Carrier Service">
+                                            Car Carrier Service
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="service-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="Custom Clearance Service">
+                                        <label class="form-check-label" for="Custom Clearance Service">
+                                            Custom Clearance Service
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button class="cta primary w-100">Add Services</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="mb-2 pb-1">
             <label for="Pre-export Inspection Fee">Pre-export Inspection Fee</label>
@@ -1137,6 +1257,52 @@
         <div class="mb-2 pb-1">
             <button class="cta primary w-100">Download Invoice</button>
         </div>
+    </div>
+</div>
+{{-- status filter --}}
+<div class="offcanvas offcanvas-bottom top-rounded" tabindex="-1" id="status_filter"
+    aria-labelledby="status_filterLabel">
+    <div class="offcanvas-header justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pt-0">
+        <ul>
+            <li>Partially</li>
+            <li>Full</li>
+            <li>Padd</li>
+            <li>Order Number</li>
+            <li>Email</li>
+            <li>Name</li>
+            <li>Phone Number</li>
+        </ul>
+    </div>
+</div>
+{{-- Missing Document --}}
+<div class="offcanvas offcanvas-bottom top-rounded" tabindex="-1" id="missing_document"
+    aria-labelledby="missing_documentLabel">
+    <div class="offcanvas-header justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pt-0">
+        <ul>
+            <li>Preparing</li>
+            <li>Shipped</li>
+        </ul>
+    </div>
+</div>
+{{-- countries list --}}
+<div class="offcanvas offcanvas-bottom top-rounded" tabindex="-1" id="countries_list"
+    aria-labelledby="countries_listLabel">
+    <div class="offcanvas-header justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pt-0">
+        <ul>
+            <li>Pakistan</li>
+            <li>UK</li>
+            <li>USA</li>
+            <li>Australia</li>
+        </ul>
     </div>
 </div>
 {{-- print --}}
