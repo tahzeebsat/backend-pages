@@ -2402,7 +2402,79 @@ table.dataTable > tbody > tr.child span.dtr-title {
     background-color: #27b973 !important;
 }
 .badge.bg-warning {
-    background-color: #E28E05 !important;
+    background-color: #e28e05 !important;
+}
+/* tabs auction */
+.custom-tabs.variant3 {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 4px 8px;
+    border: 1px solid #e9ecef;
+    width: max-content;
+}
+.tabs--auctions {
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.custom-tabs.variant3 .nav-link {
+    border: none !important;
+    border-radius: 20px;
+    padding: 6px 16px;
+    margin: 2px;
+    background: transparent;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.5px;
+}
+.custom-tabs.variant3 .nav-link:hover,
+.custom-tabs.variant3 .nav-link:focus {
+    background: #fff;
+    color: #495057;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.custom-tabs.variant3 .nav-link.active {
+    background: #007bff;
+    color: white;
+}
+
+.auction-table {
+}
+.auction-table tr th,
+.auction-table table tr td {
+    padding: 10px;
+    white-space: nowrap;
+    font-size: 1em;
+    color: black;
+}
+.bid-time .chip {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 16px;
+    color: #fff;
+}
+
+.chip--pending {
+    background: #f0ad4e;
+}
+.chip--accepted {
+    background: #5cb85c;
+}
+.chip--rejected {
+    background: #d02d2d;
+}
+
+@media (max-width: 768px) {
+    .custom-tabs.variant3 .nav-link {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
     body {
@@ -3053,3 +3125,4 @@ label {
     color: #344054;
     margin-bottom: 4px;
 }
+/* tbale */

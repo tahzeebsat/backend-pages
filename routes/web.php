@@ -37,6 +37,15 @@ Route::get('/', function () {
 Route::get('/sold-cars', function () {
     return view('pages.sold-cars-dashboard');
 });
+Route::get('/auction', function () {
+    return view('pages.auction-dashboard');
+});
+Route::get('/auction/deadline-passed', function () {
+    return view('pages.auction-deadline-passed');
+});
+Route::get('/auction/auction-bids', function () {
+    return view('pages.auction-bids');
+});
 
 
 
