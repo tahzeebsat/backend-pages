@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    @php
+        $Data = [1, 2, 3, 4, 5];
+    @endphp
     <aside class="sidebar-dashboard d-md-block d-sm-none d-none">
         @component('components.common.main-sidebar')
             Main Sidebar
@@ -42,15 +45,15 @@
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a onclick="window.location.href='/auction'" href="" class="nav-link"
-                                        id="completed-tab" data-bs-toggle="tab">
+                                    <a onclick="window.location.href='/auction/auction-completed'" href=""
+                                        class="nav-link" id="completed-tab" data-bs-toggle="tab">
                                         Completed
                                     </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a onclick="window.location.href='/auction/auction-bids'" href=""
                                         class="nav-link active" id="auctionbids-tab" data-bs-toggle="tab">
-                                        Auction Bids
+                                        All Bids
                                     </a>
                                 </li>
                             </ul>
@@ -59,31 +62,68 @@
                 </div>
                 <div class="col-12 mt-4">
                     <div class="card p-3">
-                        <h2 class="cmn-heading-title mb-3">Filters</h2>
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <label for="">Car Name</label>
-                                <input type="text" class="form-control" placeholder="Car Name">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="">Stock ID</label>
-                                <input type="text" class="form-control" placeholder="Stock ID">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="">Make</label>
-                                <input type="text" class="form-control" placeholder="Make">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="">Model</label>
-                                <input type="text" class="form-control" placeholder="Model">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="">User Name</label>
-                                <input type="text" class="form-control" placeholder="User Name">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="">Email</label>
-                                <input type="email" class="form-control" placeholder="Email">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <h2 class="cmn-heading-title">Filters</h2>
+                            <small class="show-filter cursor-pointer" data-bs-toggle="collapse"
+                                data-bs-target="#show_filters">Show Filters<svg width="20" height="20"
+                                    class="chev-arrow-bar ms-1">
+                                    <use href="#dashboard_op_arrow"></use>
+                                </svg></small>
+                        </div>
+                        <div class="collapse sub-table-container" id="show_filters">
+                            <div class="row g-3">
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <label for="">Stock ID</label>
+                                    <input type="text" class="form-control" placeholder="Stock ID">
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <label for="">Make</label>
+                                    <select class="form-select">
+                                        <option value="">Honda</option>
+                                        <option value="">Suzuki</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <label for="">Model</label>
+                                    <select class="form-select">
+                                        <option value="">Camery</option>
+                                        <option value="">Alto</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <label for="">Have Bids</label>
+                                    <select class="form-select">
+                                        <option value="">All</option>
+                                        <option value="">Yes</option>
+                                        <option value="">No</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <label for="">Deadline</label>
+                                    <input type="date" class="form-control" placeholder="Deadline">
+                                </div>
+
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <label for="">Status</label>
+                                    <select class="form-select">
+                                        <option value="" selected>Pending</option>
+                                        <option value="">Rejected</option>
+                                        <option value="">Accepted</option>
+                                        <option value="">Completed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="d-flex align-items-end h-100">
+                                        <button
+                                            class="btn btn-apply proofBtn d-flex align-items-center justify-content-center gap-2 py-2"
+                                            style="height: 40px"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="16" height="16" fill="currentColor"
+                                                class="bi bi-search" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                            </svg> Search</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -92,7 +132,7 @@
                     <div class="card p-3">
                         <div class="auction-container">
                             <div class="table-header">
-                                <h2 class="cmn-heading-title">Deadline Passed</h2>
+                                <h2 class="cmn-heading-title">All Bids</h2>
                             </div>
 
                             <div class="table-responsive">
@@ -102,6 +142,7 @@
                                             <th>User Name</th>
                                             <th>Car Name</th>
                                             <th>Stock ID</th>
+                                            <th>Bid Amount</th>
                                             <th>Fee Deposited</th>
                                             <th>Deposit Fee Status</th>
                                             <th>Actions</th>
@@ -109,25 +150,49 @@
                                     </thead>
                                     <tbody>
                                         <!-- Row 1 -->
-                                        <tr>
-                                            <td>John Smith <br> <small>john.smith@email.com</small></td>
-                                            <td>Toyota Camry 2020 </td>
-                                            <td>TC2020-001 </tdclass=>
-                                            <td>$500</td>
-                                            <td class="bid-time"><span class="chip chip--rejected">Rejected</span></td>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-2 justify-content-start">
-                                                    <button class="btn expand-btn text-black" data-bs-toggle="modal" data-bs-target="#show_auction_bids">
-                                                        &#128065;
-                                                    </button>
-                                                    <select name="" id="" class="form-select">
-                                                        <option value="">Pending Fee</option>
-                                                        <option value="">Accepted Fee</option>
-                                                        <option value="">Rejected Fee</option>
-                                                    </select>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        @foreach ($Data as $item)
+                                            @php
+                                                if ($item == 1) {
+                                                    $statusText = 'Pending';
+                                                    $statusClass = 'chip--pending';
+                                                } elseif ($item == 2) {
+                                                    $statusText = 'Completed';
+                                                    $statusClass = 'chip--accepted';
+                                                } else {
+                                                    $statusText = 'Rejected';
+                                                    $statusClass = 'chip--rejected';
+                                                }
+                                            @endphp
+
+                                            <tr>
+                                                <td>John Smith <br> <small>john.smith@email.com</small></td>
+                                                <td>Toyota Camry 2020</td>
+                                                <td>TC2020-001</td>
+                                                <td>$500</td>
+                                                <td>$500</td>
+
+                                                <td class="bid-time">
+                                                    <span class="chip {{ $statusClass }}">{{ $statusText }}</span>
+                                                    <br>
+                                                    <a href="" data-bs-toggle="modal"
+                                                        data-bs-target="#show_auction_bids"><small>View
+                                                            Proof</small></a>
+                                                </td>
+
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2 justify-content-start">
+                                                        <select class="form-select">
+                                                            <option value="1" {{ $item == 1 ? 'selected' : '' }}>
+                                                                Pending Fee</option>
+                                                            <option value="2" {{ $item == 2 ? 'selected' : '' }}>
+                                                                Accepted Fee</option>
+                                                            <option value="3" {{ $item > 2 ? 'selected' : '' }}>
+                                                                Rejected Fee</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -148,48 +213,34 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    ...
+                    <div class="d-flex align-items-center justify-content-between border-bottom pb-1">
+                        <h6 class="mb-0">Payment Proof</h6>
+                        <span class="clos-btn cursor-pointer" data-bs-dismiss="modal" aria-label="Close">×</span>
+                    </div>
+                    <div class="mt-2">
+                        <label for="">Receipt </label>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="https://www.freshbooks.com/wp-content/uploads/2022/01/proof-of-payment.jpg"
+                                class="img-fluid rounded" width="300" height="300" alt="proof">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Status </label>
+                        <select name="" id="" class="form-select">
+                            <option value="">Approved</option>
+                            <option value="">Pending</option>
+                            <option value="">Rejected</option>
+                        </select>
+                    </div>
+                    <div class="col-12 text-end mt-2 payment_status_dropdown" bis_skin_checked="1">
+                        <button class="btn btn-apply proofBtn">Save</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="{{ asset('assets/js/bootstrapver5/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery/jquery.js') }}"></script>
-    <script>
-        $("#select_search").on("click", "li", function(event) {
-            var hrefValue = $(this).text();
-            $("#drp_search_list").text(hrefValue.replace(/\s*\([^)]*\)\s*/, ""));
-        });
-        // for first tabs
-        function firsttabsHandle(index, name, text) {
-            $(`.tabs-list-items.comnt_${index}, .tabs-list-items.prev_${index}`).removeClass('active');
-
-            $(`.tabs-list-items.${name}`).addClass('active');
-
-            if (text === 'Comments') {
-                $(`.coment_fields${index}`).removeClass('d-none');
-                $(`.prev_order${index}`).addClass('d-none');
-            } else {
-                $(`.coment_fields${index}`).addClass('d-none');
-                $(`.prev_order${index}`).removeClass('d-none');
-            }
-        }
-
-        function secondtabsHandle(index, name, text) {
-            $(`.scnd-list-items.consign_${index}, .scnd-list-items.notif_${index}`).removeClass('active');
-
-            $(`.scnd-list-items.${name}`).addClass('active');
-
-            if (text === 'Consignee') {
-                $(`.consignee_information${index}`).removeClass('d-none');
-                $(`.notify_info${index}`).addClass('d-none');
-            } else {
-                $(`.consignee_information${index}`).addClass('d-none');
-                $(`.notify_info${index}`).removeClass('d-none');
-            }
-        }
-    </script>
 </body>
 
 </html>

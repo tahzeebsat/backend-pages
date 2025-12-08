@@ -46,6 +46,9 @@ Route::get('/auction/deadline-passed', function () {
 Route::get('/auction/auction-bids', function () {
     return view('pages.auction-bids');
 });
+Route::get('/auction/auction-completed', function () {
+    return view('pages.completed-auction');
+});
 
 
 

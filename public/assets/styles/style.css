@@ -2406,11 +2406,7 @@ table.dataTable > tbody > tr.child span.dtr-title {
 }
 /* tabs auction */
 .custom-tabs.variant3 {
-    background: #f8f9fa;
-    border-radius: 12px;
-    padding: 4px 8px;
-    border: 1px solid #e9ecef;
-    width: max-content;
+    border: 0px;
 }
 .tabs--auctions {
     overflow-y: hidden;
@@ -2418,38 +2414,39 @@ table.dataTable > tbody > tr.child span.dtr-title {
     scrollbar-width: none;
 }
 .custom-tabs.variant3 .nav-link {
-    border: none !important;
-    border-radius: 20px;
+    border-radius: 4px;
     padding: 6px 16px;
     margin: 2px;
     background: transparent;
-    color: #6c757d;
+    color: #131313;
     font-weight: 600;
     font-size: 1em;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.5px;
+    border: 1px solid #afafaf;
+    cursor: pointer;
 }
 .custom-tabs.variant3 .nav-link:hover,
 .custom-tabs.variant3 .nav-link:focus {
     background: #fff;
     color: #495057;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transform: translateY(-1px);
 }
 
 .custom-tabs.variant3 .nav-link.active {
-    background: #007bff;
+    background: #2384c1;
     color: white;
 }
 
-.auction-table {
-}
 .auction-table tr th,
-.auction-table table tr td {
+.auction-table  tr td {
     padding: 10px;
     white-space: nowrap;
     font-size: 1em;
     color: black;
+}
+.auction-table tr td {
+    vertical-align: middle;
 }
 .bid-time .chip {
     display: inline-block;
@@ -2468,6 +2465,9 @@ table.dataTable > tbody > tr.child span.dtr-title {
 }
 .chip--rejected {
     background: #d02d2d;
+}
+.show-filter{
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
