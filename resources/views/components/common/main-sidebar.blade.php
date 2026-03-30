@@ -86,6 +86,17 @@
                     <li onclick="window.location.href='/sold-cars'"><a> Sold Cars Info </a></li>
                 </ul>
             </div>
+            <li class="dashboard-list-item" onclick="window.location.href='/auction-dashboard'">
+                <a>
+                    <svg width="24" height="24" class="dashborad-icons">
+                        <use href="#reserve_icon"></use>
+                    </svg>
+
+                    <span>
+                        Auction Dashboard
+                    </span>
+                </a>
+            </li>
             <li class="dashboard-list-item" onclick="window.location.href='/auction'">
                 <a>
                     <svg width="24" height="24" class="dashborad-icons">

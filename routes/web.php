@@ -37,6 +37,9 @@ Route::get('/', function () {
 Route::get('/sold-cars', function () {
     return view('pages.sold-cars-dashboard');
 });
+Route::get('/auction-dashboard', function () {
+    return view('pages.auction-dashboard-page');
+});
 Route::get('/auction', function () {
     return view('pages.auction-dashboard');
 });
