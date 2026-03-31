@@ -20,6 +20,7 @@
     --color-blue-light: #3882de24;
 
     --color-white: #ffffff;
+    --color-white-secondary: #f6f6f8;
 
     --color-red: #cd3636;
     --color-red-light: #f7e4e4;
@@ -101,6 +102,12 @@
     border-color: var(--color-grey);
     color: var(--color-black);
 }
+.modal-manual-status {
+    background-color: var(--color-white-secondary);
+    border-color: var(--color-grey-border);
+    color: #5d6370;
+    padding: 3px 10px;
+}
 .rejected-status {
     background-color: var(--color-red-light);
     border-color: var(--color-red-light);
@@ -181,6 +188,7 @@
     font-size: 12px !important;
     line-height: 16px !important;
     padding: 6px 10px !important;
+    gap: 4px;
 }
 /* main btn */
 .sat-btn.primary {
@@ -229,6 +237,11 @@
     border-color: var(--color-green) !important;
     color: var(--color-green) !important;
 }
+.sat-btn.secondary-light-outline {
+    background-color: var(--color-white) !important;
+    border-color: var(--color-blue-secondary-light) !important;
+    color: var(--color-blue-secondary-light);
+}
 /* disbaled */
 .sat-btn[disabled] {
     pointer-events: none;
@@ -243,7 +256,7 @@
 /* tabs */
 .tabs--main {
     padding: 2px;
-    background-color: #f6f6f8;
+    background-color: var(--color-white-secondary);
     border: 1px solid var(--color-grey-border);
     border-radius: 8px;
     display: flex;
@@ -351,7 +364,7 @@
 .auction--table {
     max-width: 100%;
     overflow: auto;
-    height: calc(100vh - 341px);
+    height: calc(100vh - 413px);
     scrollbar-width: thin;
 }
 .auction--table table {
@@ -392,3 +405,282 @@
     border-right: 1px solid var(--color-grey-border);
 }
 /* table */
+/* pagination */
+.txn-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.375rem;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* PAGE BUTTON BASE */
+.page-btn {
+    min-width: 1.75rem;
+    height: 1.75rem;
+    padding: 0 0.375rem;
+    border-radius: 0.375rem;
+    border: 0.0625rem solid var(--color-grey);
+    background: var(--color-white);
+    color: #0f172a;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.page-btn i {
+    font-size: 0.625rem;
+    pointer-events: none;
+}
+
+/* ACTIVE STATE */
+.page-btn.is-active {
+    background: #0d3b66;
+    color: #fff;
+    border-color: #0d3b66;
+    cursor: default;
+}
+
+/* DISABLED STATE */
+.page-btn.is-disabled {
+    background: #fafafa;
+    color: #00000040;
+    border-color: #d5d5d5;
+    pointer-events: none;
+}
+
+/* HOVER STATES */
+.page-btn:not(.is-active):not(.is-disabled):hover {
+    background: #f1f7ff;
+    border-color: #b2cdf1;
+}
+
+/* FOCUS STATE */
+.page-btn:focus-visible {
+    outline: 0.125rem solid #0d3b66;
+    outline-offset: 0.125rem;
+}
+
+/* ELLIPSIS */
+.page-ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    color: #64748b;
+    font-size: 0.75rem;
+    user-select: none;
+    padding: 0 0.25rem;
+}
+/* pagination */
+/* modal */
+.new_bid .modal-footer {
+    justify-content: space-between;
+}
+.new_bid .modal-header .btn-close {
+    opacity: 1;
+    height: 0.5em;
+    width: 0.5em;
+    background-size: 0.9em;
+}
+.new_bid .modal-header .modal-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-black);
+}
+.new_bid .modal-dialog {
+    max-width: 852px;
+}
+#newbid_tabs {
+    padding-bottom: 9px;
+    border-color: var(--color-grey-border);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#newbid_tabs .nav-link {
+    background-color: var(--color-white);
+    color: var(--color-grey-text);
+    border-radius: 20px;
+    border-color: var(--color-grey-border);
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#newbid_tabs .nav-link .count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+    background-color: var(--color-white-secondary);
+    border-radius: 50%;
+    font-size: 9px;
+}
+#newbid_tabs .nav-link.active {
+    background-color: #1c6a9b;
+    border-color: #1c6a9b;
+    color: var(--color-white);
+}
+#newbid_tabs .nav-link.active .count {
+    background-color: #d4ecfa;
+    color: #1c6a9b;
+}
+#newbid_tabs_items .tab-pane {
+    padding-block: 20px;
+}
+#newbid_tabs_items .tab-pane .tab--title {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-black);
+    margin-bottom: 0px;
+}
+#newbid_tabs_items .search--item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    margin-top: 14px;
+}
+#newbid_tabs_items .search--item .form-control {
+    padding-left: 34px;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 10px;
+    line-height: 24px;
+    color: var(--color-black);
+}
+#newbid_tabs_items .search--item img {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+#newbid_tabs_items .customer--listing {
+    list-style-type: none;
+    background-color: var(--color-white);
+    padding: 0px;
+    margin: 0px;
+    margin-top: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--color-grey-border);
+}
+#newbid_tabs_items .customer--listing li {
+    padding: 14px;
+    cursor: pointer;
+}
+#newbid_tabs_items .customer--listing .list--item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    font-weight: 400;
+}
+#newbid_tabs_items .customer--listing .list--item .title {
+    font-size: 14px;
+    color: var(--color-black);
+    margin-bottom: 4px;
+}
+#newbid_tabs_items .customer--listing .list--item .para {
+    font-size: 14px;
+    color: var(--color-grey-text);
+}
+#newbid_tabs_items .customer--listing .list--item .value {
+    font-size: 14px;
+    color: var(--color-grey-text);
+}
+#newbid_tabs_items .selected--customer {
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-white-secondary);
+    border: 1px solid var(--color-grey-border);
+}
+#newbid_tabs_items .selected--customer .title {
+    font-size: 14px;
+    color: var(--color-black);
+}
+#newbid_tabs_items .selected--customer .para {
+    font-size: 14px;
+    color: var(--color-grey-text);
+}
+#newbid_tabs_items .selected--customer .value {
+    font-size: 14px;
+    color: var(--color-grey-text);
+}
+#newbid_tabs_items .selected--customer .sat--balance {
+    font-size: 14px;
+    color: var(--color-blue);
+}
+.bid--type-selection {
+    position: relative;
+}
+#bid-type-pane .btn-check {
+    position: absolute;
+    clip: unset;
+    pointer-events: none;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+#bid-type-pane label.btn {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--color-grey-border);
+    padding: 14px 16px;
+    padding-left: 48px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+}
+#bid-type-pane label.btn .title {
+    font-size: 14px;
+    color: var(--color-blue);
+    margin-bottom: 4px;
+}
+#bid-type-pane label.btn .para {
+    font-size: 14px;
+    color: var(--color-grey-text);
+}
+#bid-type-pane .btn-check:checked + .btn {
+    border-color: var(--color-blue);
+    background-color: #f2f9ff;
+}
+.car--detail-card {
+    padding: 14px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-border);
+    margin-bottom: 10px;
+}
+.title--detail-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.title--detail-card .form-check-input {
+    padding: 10px;
+    padding-inline: 20px;
+}
+.title--detail-card .stock-number {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--color-black);
+}
+/* modal */
