@@ -5,6 +5,7 @@
 
     --color-green: #22b675;
     --color-green-light: #abe6cc;
+    --color-green-secondary: #e0faf0;
 
     --color-yellow: #e28e05;
     --color-yellow-secondary: #f7eee4;
@@ -112,6 +113,9 @@
     background-color: var(--color-red-light);
     border-color: var(--color-red-light);
     color: var(--color-red);
+}
+.border--status {
+    border-color: inherit !important;
 }
 
 /* card--statuses */
@@ -479,16 +483,16 @@
 }
 /* pagination */
 /* modal */
-.new_bid .modal-footer {
+.cmn--modal .modal-footer {
     justify-content: space-between;
 }
-.new_bid .modal-header .btn-close {
+.cmn--modal .modal-header .btn-close {
     opacity: 1;
     height: 0.5em;
     width: 0.5em;
     background-size: 0.9em;
 }
-.new_bid .modal-header .modal-title {
+.cmn--modal .modal-header .modal-title {
     font-weight: 700;
     font-size: 18px;
     color: var(--color-black);
@@ -525,15 +529,38 @@
     border-radius: 50%;
     font-size: 9px;
 }
+#newbid_tabs .nav-link.done {
+    background-color: var(--color-green-secondary);
+    border-color: var(--color-green-secondary);
+    color: var(--color-green);
+}
+#newbid_tabs .nav-link.done .count {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    font-size: 0;
+    position: relative;
+}
+#newbid_tabs .nav-link.done .count::after {
+    content: "✓";
+    font-size: 14px;
+    font-weight: bold;
+}
+
 #newbid_tabs .nav-link.active {
     background-color: #1c6a9b;
     border-color: #1c6a9b;
     color: var(--color-white);
 }
+
 #newbid_tabs .nav-link.active .count {
     background-color: #d4ecfa;
     color: #1c6a9b;
+    font-size: 9px;
 }
+#newbid_tabs .nav-link.active .count::after {
+    display: none;
+}
+
 #newbid_tabs_items .tab-pane {
     padding-block: 20px;
 }
@@ -682,5 +709,86 @@
     font-weight: 600;
     font-size: 13px;
     color: var(--color-black);
+}
+.bids--detail-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-border);
+    padding: 14px;
+}
+.bids--detail-card .title {
+    font-weight: 600;
+    font-size: 14px;
+}
+.bids--detail-card .para {
+    font-weight: 700;
+    font-size: 18px;
+}
+.submit--review-card {
+    padding: 14px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-border);
+    border-radius: 10px;
+}
+.submit--review-card .title {
+    font-weight: 400;
+    font-size: 14px;
+}
+.submit--review-card .para {
+    font-weight: 700;
+    font-size: 14px;
+}
+.payment--proof-card {
+    border-radius: 10px;
+    border: 1px solid var(--color-grey-border);
+    background-color: var(--color-white);
+}
+.upload--textarea {
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.upload--textarea:hover {
+    background-color: #f8f9fa;
+}
+
+.upload--textarea.dragover {
+    border: 2px dashed #4a90e2;
+    background-color: #eef6ff;
+}
+.upload--textarea .uploaded--img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+/*  */
+.cmn--card {
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-grey-border);
+}
+.cmn--modal .modal-dialog {
+    max-width: 984px;
+}
+.grid-cmn-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.fs-14 {
+    font-size: 14px;
 }
 /* modal */

@@ -338,7 +338,7 @@
                                     <td>PayPal</td>
                                     <td class="text--blue-secondary-light">$800</td>
                                     <td>
-                                        <span class="sat-status lost-status">LOST</span>
+                                        <span class="sat-status lost-status cursor-pointer" data-bs-target="#single_lost" data-bs-toggle="modal">LOST</span>
                                     </td>
                                     <td>
                                         Ended 3d ago
@@ -419,7 +419,47 @@
                                     <td>SAT Balance</td>
                                     <td class="text--blue-secondary-light">$800</td>
                                     <td>
-                                        <span class="sat-status won-status">Won</span>
+                                        <span class="sat-status won-status cursor-pointer" data-bs-target="#single_won" data-bs-toggle="modal">Won</span>
+                                    </td>
+                                    <td>
+                                        Ended 3d ago
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center flex-column gap-2">
+                                            <button class="sat-btn btn--sm success">Create Order</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-nowrap">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="BID-106">
+                                            <label class="form-check-label mb-0 ms-1" for="BID-106">
+                                                BID-106
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Oceania Exports Ltd</td>
+                                    <td><span class="sat-status bundle-status">BUNDLE</span></td>
+                                    <td>
+                                        <span class="text--blue-secondary-light">STK-3310</span>
+                                        <br>
+                                        <span class="text--grey">LOT-7741</span>
+                                    </td>
+                                    <td>USS Nagoya</td>
+                                    <td>1</td>
+                                    <td>$12,500</td>
+                                    <td>$42,000</td>
+                                    <td>
+                                        <span class="text--green">Paid</span>
+                                        <br>
+                                        <span>$4,200</span>
+                                    </td>
+                                    <td>SAT Balance</td>
+                                    <td class="text--blue-secondary-light">$800</td>
+                                    <td>
+                                        <span class="sat-status lost-status cursor-pointer" data-bs-target="#bundle_lost" data-bs-toggle="modal">Lost</span>
                                     </td>
                                     <td>
                                         Ended 3d ago
@@ -543,7 +583,8 @@
                                     <td>SAT Balance</td>
                                     <td class="text--blue-secondary-light">$800</td>
                                     <td>
-                                        <span class="sat-status rejected-status">Rejected</span>
+                                        <span class="sat-status rejected-status cursor-pointer"
+                                            data-bs-target="#single_rejected" data-bs-toggle="modal">Rejected</span>
                                     </td>
                                     <td>
                                         Ended 20h ago
@@ -590,8 +631,8 @@
         mobile sidebar
     @endcomponent
     {{-- new bid modal --}}
-    <div class="modal fade new_bid" id="new_bid" tabindex="-1" aria-labelledby="new_bidLabel"
-        aria-hidden="true">
+    <div class="modal fade new_bid cmn--modal" id="new_bid" tabindex="-1" aria-labelledby="new_bidLabel"
+        data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -831,8 +872,8 @@
                                 <div class="row mt-3">
                                     <div class="col-md-6">
                                         <div class="bid--type-selection">
-                                            <input type="radio" class="btn-check" name="bid_type" id="single_bid"
-                                                autocomplete="off">
+                                            <input type="radio" class="btn-check bid-type-toggle" name="bid_type"
+                                                id="single_bid" data-type="single" checked />
                                             <label class="btn mb-0" for="single_bid">
                                                 <h3 class="title">Single Bid</h3>
                                                 <p class="para">Bid on one specific vehicle</p>
@@ -841,8 +882,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="bid--type-selection">
-                                            <input type="radio" class="btn-check" name="bid_type" id="bundle_bid"
-                                                checked autocomplete="off">
+                                            <input type="radio" class="btn-check bid-type-toggle" name="bid_type"
+                                                id="bundle_bid" data-type="bundle">
                                             <label class="btn mb-0" for="bundle_bid">
                                                 <h3 class="title">Bundle Bid</h3>
                                                 <p class="para">Bid on multiple vehicles as a package</p>
@@ -857,7 +898,7 @@
                             aria-labelledby="car-details-pane" tabindex="0">
                             <div class="d-flex align-items-center justify-content-between">
                                 <h2 class="tab--title">Car Details</h2>
-                                <button class="sat-btn btn--sm secondary-light-outline"><img
+                                <button class="sat-btn btn--sm secondary-light-outline bundle-only d-none"><img
                                         src="{{ asset('assets/images/icons/plus-icon.svg') }}"
                                         style="filter: brightness(0%);" loading="lazy" height="16" width="16"
                                         alt="icon">Add Another Car</button>
@@ -868,7 +909,6 @@
                                     <div class="title--detail-card mb-3">
                                         <div class="d-flex align-items-center gap-2">
                                             <span class="sat-status approved-status car--count">Car 1</span>
-                                            <span class="stock-number">STK-4421</span>
                                         </div>
                                         <div class="form-check form-switch d-flex align-items-center gap-2">
                                             <input class="form-check-input" type="checkbox" role="switch" checked>
@@ -881,8 +921,7 @@
                                         <div class="row g-3">
                                             <div class="col-md-6">
                                                 <label class="text--grey fw-normal">Lot Number *</label>
-                                                <input type="text" class="form-control"
-                                                    placeholder="LOT-8832">
+                                                <input type="text" class="form-control" placeholder="LOT-8832">
                                             </div>
                                             <div class="col-md-6">
                                                 <label class="text--grey fw-normal">Auction Site *</label>
@@ -896,7 +935,7 @@
                                     </div>
                                     {{-- not manual entry --}}
                                     <div class="manual--entry d-none">
-                                          <div class="row g-3">
+                                        <div class="row g-3">
                                             <div class="col-12">
                                                 <label class="text--grey fw-normal">Stock ID *</label>
                                                 <input type="text" class="form-control" placeholder="STK-4421">
@@ -908,21 +947,550 @@
                         </div>
                         {{-- bid details --}}
                         <div class="tab-pane" id="bid-details-pane" role="tabpanel"
-                            aria-labelledby="bid-details-pane" tabindex="0">Bid Details</div>
+                            aria-labelledby="bid-details-pane" tabindex="0">
+                            <h2 class="tab--title mb-2">BID DETAILS</h2>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="text--grey fw-normal">Bid Price*</label>
+                                    <input type="text" class="form-control" placeholder="e.g. $8,500" />
+                                </div>
+                                <div class="col-md-4 bundle-only d-none">
+                                    <label class="text--grey fw-normal">Quantity *</label>
+                                    <input type="text" class="form-control" placeholder="e.g. 2" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="text--grey fw-normal">CURRENCY</label>
+                                    <select class="form-select">
+                                        <option value="" selected>¥ JPY / USD</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="text--grey fw-normal">Auction Date (optional)</label>
+                                    <input type="date" class="form-control" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="bids--detail-card">
+                                        <div class="d-flex align-items-center flex-column gap-1">
+                                            <h2 class="title text--grey">Price/Car</h2>
+                                            <p class="para text--black">$8,500</p>
+                                        </div>
+                                        <div class="d-flex align-items-center flex-column gap-1">
+                                            <h2 class="title text--grey">Qty</h2>
+                                            <p class="para text--black">2</p>
+                                        </div>
+                                        <div class="d-flex align-items-center flex-column gap-1">
+                                            <h2 class="title text--grey">Total Bid</h2>
+                                            <p class="para text--blue-secondary-light">$1,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         {{-- deposit --}}
                         <div class="tab-pane" id="deposit-pane" role="tabpanel" aria-labelledby="deposit-pane"
-                            tabindex="0">Deposit</div>
+                            tabindex="0">
+                            <h2 class="tab--title mb-2">DEPOSIT</h2>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="submit--review-card">
+                                        <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                            <h2 class="title text--grey">Deposit per car (10%)</h2>
+                                            <p class="para text--black">$525.2</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                            <h2 class="title text--grey">Quantity</h2>
+                                            <p class="para text--black">1</p>
+                                        </div>
+
+                                        <div class="w-10 border mb-2"></div>
+
+                                        <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                            <h2 class="title text--black">Total Deposit</h2>
+                                            <p class="para text--blue">$525.2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="text--grey fw-normal">Payment Method</label>
+                                    <select class="form-select text--black">
+                                        <option value="" selected>Card</option>
+                                        <option value="">Card</option>
+                                        <option value="">Card</option>
+                                        <option value="">Card</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="text--grey fw-normal">Payment Method</label>
+                                    <div class="d-flex align-items-center gap-3 justify-content-start">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="Payment_method"
+                                                id="Payment Received">
+                                            <label class="form-check-label mb-0" for="Payment Received">
+                                                Payment Received
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="Payment_method"
+                                                id="Payment Pending" checked>
+                                            <label class="form-check-label mb-0" for="Payment Pending">
+                                                Payment Pending
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="text--grey fw-normal mb-2">PAYMENT PROOF</label>
+
+                                    <div class="payment--proof-card" id="uploadBox">
+                                        <input type="file" id="fileInput" accept="image/png, image/jpeg" hidden>
+
+                                        <div class="upload--textarea" id="dropArea">
+                                            <div class="upload--img">
+                                                <img src="{{ asset('assets/images/icons/upload_image.svg') }}"
+                                                    height="40" width="40" alt="upload icon"
+                                                    id="previewImage">
+                                            </div>
+                                            <div class="payment--upload-text">
+                                                <p class="upload_para text--blue-secondary-light">
+                                                    Click to upload
+                                                    <span class="ms-1 text--grey">or drag and drop</span>
+                                                </p>
+                                                <p class="upload_restriction text--grey">
+                                                    PNG, JPG (max. 800x400px)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         {{-- notes --}}
                         <div class="tab-pane" id="notes-pane" role="tabpanel" aria-labelledby="notes-pane"
-                            tabindex="0">Notes</div>
+                            tabindex="0">
+                            <h2 class="tab--title mb-2">NOTES & INSTRUCTIONS</h2>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="text--grey fw-normal">INTERNAL NOTES (OPTIONAL)</label>
+                                    <textarea rows="4" class="form-control h-100"
+                                        placeholder="e.g. Repeat customer, priority bidding, special instructions…"></textarea>
+                                </div>
+                            </div>
+                        </div>
                         {{-- submit --}}
                         <div class="tab-pane" id="submit-pane" role="tabpanel" aria-labelledby="submit-pane"
-                            tabindex="0">Submit</div>
+                            tabindex="0">
+                            <h2 class="tab--title mb-2">REVIEW & SUBMIT</h2>
+                            {{-- for single --}}
+                            <div class="submit--review-card single-only">
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Customer</h2>
+                                    <p class="para text--black">Tanaka Motors</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Bid Type</h2>
+                                    <p class="para text--black">Single Bid</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Vehicle</h2>
+                                    <p class="para text--black">STK-4421 — Toyota Aqua S (2019)</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Auction</h2>
+                                    <p class="para text--black">LOT-8832 · USS Tokyo · ×1</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Bid Amount</h2>
+                                    <p class="para text--black">$8,500</p>
+                                </div>
+
+                                <div class="w-10 border mb-2"></div>
+
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Deposit</h2>
+                                    <p class="para text--black">$850 · Card</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Notes</h2>
+                                    <p class="para text--black">Repeat customer, priority bidding</p>
+                                </div>
+
+                                <div class="w-10 border mb-2"></div>
+
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">TOTAL BID</h2>
+                                    <p class="para text--blue">$8,500</p>
+                                </div>
+                            </div>
+                            {{-- for bundle --}}
+                            <div class="submit--review-card bundle-only d-none">
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Customer</h2>
+                                    <p class="para text--black">Tanaka Motors</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Bid Type</h2>
+                                    <p class="para text--black">Single Bid</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Cars</h2>
+                                    <p class="para text--black">STK-4421 · STK-6601 (2 cars)</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Auction</h2>
+                                    <p class="para text--black">TAA Yokohama · LOT-8832, LOT-2210</p>
+                                </div>
+
+                                <div class="w-10 border mb-2"></div>
+
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Price/Car</h2>
+                                    <p class="para text--black">$45,453</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Quantity</h2>
+                                    <p class="para text--black">2</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--black">Total Bid</h2>
+                                    <p class="para text--black">$90,906</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--black">Total Deposit</h2>
+                                    <p class="para text--black">$90,906</p>
+                                </div>
+
+                                <div class="w-10 border mb-2"></div>
+
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <h2 class="title text--grey">Payment</h2>
+                                    <p class="para text--black">Card · Pending</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="sat-btn grey text--blue" data-bs-dismiss="modal">Back</button>
-                    <button type="button" class="sat-btn primary">Next</button>
+                    <button type="button" id="prevBtn" class="sat-btn grey text--blue">
+                        <img src="{{ asset('assets/images/icons/chevron-blue-left.svg') }}" width="16"
+                            height="16" loading="lazy" alt="arrow right">
+                        Back
+                    </button>
+                    <button type="button" id="nextBtn" class="sat-btn primary">Next
+                        <img src="{{ asset('assets/images/icons/arrow-white-right.svg') }}" width="12"
+                            height="12" loading="lazy" alt="arrow right">
+                    </button>
+                    <div id="last_step_btn" class="d-none">
+                        <div class="d-flex align-items-center gap-3">
+                            <button type="button" class="sat-btn grey text--blue">
+                                <img src="{{ asset('assets/images/icons/file-list-icon.svg') }}" width="20"
+                                    height="20" loading="lazy" alt="arrow right">
+                                Save as Draft
+                            </button>
+                            <button type="button" class="sat-btn primary">Submit Bid</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- Single Rejected --}}
+    <div class="modal fade cmn--modal" id="single_rejected" tabindex="-1" aria-labelledby="single_rejectedLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <h1 class="modal-title fs-5" id="new_bidLabel">BID-101 — Tanaka Motors</h1>
+                        <span class="sat-status rejected-status border--status">Rejected</span>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">CUSTOMER</label>
+                            <div class="cmn--card">
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td class="pb-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="fs-14 fw-noraml text--grey">Name:</div>
+                                                    <div class="fs-14 fw-noraml text--black">Tanaka Motors</div>
+                                                </div>
+                                            </td>
+                                            <td class="pb-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="fs-14 fw-noraml text--grey">Email:</div>
+                                                    <div class="fs-14 fw-noraml text--black">tanaka@motors.jp</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                 <div class="d-flex align-items-center gap-2">
+                                                    <div class="fs-14 fw-noraml text--grey">Total Bids:</div>
+                                                    <div class="fs-14 fw-noraml text--black">18</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="fs-14 fw-noraml text--grey">Win Rate:</div>
+                                                    <div class="fs-14 fw-noraml text--black">72%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">VEHICLE</label>
+                            <div class="cmn--card">
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="fs-14 fw-noraml text--blue">STK-4421</div>
+                                        <div class="fs-14 fw-noraml text--black">Toyota Aqua S (2019)</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="fs-14 fw-noraml text--grey">Lot:</div>
+                                        <div class="fs-14 fw-noraml d-flex align-items-center gap-2"><span
+                                                class="text--black">LOT-8832</span> <span class="text--grey">USS
+                                                Tokyo</span> <span class="sat-status approved-status">x1</span></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="fs-14 fw-noraml text--grey">Total Bids:</div>
+                                        <div class="fs-14 fw-noraml text--black">$8,500</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">FINANCIAL</label>
+                            <div class="grid-cmn-4">
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">BID AMOUNT</label>
+                                    <p class="fs-6 fw-bold text--black">$8,500</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">DEPOSIT (10%)</label>
+                                    <p class="fs-6 fw-bold text--black">$850</p>
+                                    <span class="sat-status pending-status">Pending</span>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">PAYMENT</label>
+                                    <p class="fs-6 fw-bold text--black">Bank Transfer</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">SAT BALANCE</label>
+                                    <p class="fs-6 fw-bold text--blue">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--grey">NOTES</label>
+                            <div class="cmn--card">
+                                <p class="text--grey">Payment proof was blurry, could not verify</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- Single bid lost --}}
+    <div class="modal fade cmn--modal" id="single_lost" tabindex="-1" aria-labelledby="single_lostLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <h1 class="modal-title fs-5" id="new_bidLabel">BID-101 — Tanaka Motors</h1>
+                        <span class="sat-status rejected-status border--status">Lost</span>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">CUSTOMER</label>
+                            <div class="cmn--card">
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td class="pb-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="fs-14 fw-noraml text--grey">Name:</div>
+                                                    <div class="fs-14 fw-noraml text--black">Tanaka Motors</div>
+                                                </div>
+                                            </td>
+                                            <td class="pb-2">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="fs-14 fw-noraml text--grey">Email:</div>
+                                                    <div class="fs-14 fw-noraml text--black">tanaka@motors.jp</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                 <div class="d-flex align-items-center gap-2">
+                                                    <div class="fs-14 fw-noraml text--grey">Total Bids:</div>
+                                                    <div class="fs-14 fw-noraml text--black">18</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="fs-14 fw-noraml text--grey">Win Rate:</div>
+                                                    <div class="fs-14 fw-noraml text--black">72%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">VEHICLE</label>
+                            <div class="cmn--card">
+                                <div class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="fs-14 fw-noraml text--blue">STK-4421</div>
+                                        <div class="fs-14 fw-noraml text--black">Toyota Aqua S (2019)</div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="fs-14 fw-noraml text--grey">Lot:</div>
+                                        <div class="fs-14 fw-noraml d-flex align-items-center gap-2"><span
+                                                class="text--black">LOT-8832</span> <span class="text--grey">USS
+                                                Tokyo</span> <span class="sat-status approved-status">x1</span></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-between">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="fs-14 fw-noraml text--grey">Total Bids:</div>
+                                        <div class="fs-14 fw-noraml text--black">$8,500</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">FINANCIAL</label>
+                            <div class="grid-cmn-4">
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">BID AMOUNT</label>
+                                    <p class="fs-6 fw-bold text--black">$8,500</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">DEPOSIT (10%)</label>
+                                    <p class="fs-6 fw-bold text--black">$850</p>
+                                    <span class="sat-status won-status">Paid</span>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">PAYMENT</label>
+                                    <p class="fs-6 fw-bold text--black">Card</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">SAT BALANCE</label>
+                                    <p class="fs-6 fw-bold text--blue">$1,500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">Lost Details</label>
+                            <div class="grid-cmn-4">
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">YOUR BID</label>
+                                    <p class="fs-6 fw-bold text--black">$8,500</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">WON PRICE</label>
+                                    <p class="fs-6 fw-bold text--red">$16,200</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">Gap</label>
+                                    <p class="fs-6 fw-bold text--red">+8%</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">DEPOSIT</label>
+                                    <p class="fs-6 fw-bold text--black">Refunded to SAT Balance</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--grey">NOTES</label>
+                            <div class="cmn--card">
+                                <p class="text--grey">Competitive auction, high demand model</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- bundle bid lost --}}
+    <div class="modal fade cmn--modal" id="bundle_lost" tabindex="-1" aria-labelledby="bundle_lostLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <h1 class="modal-title fs-5" id="new_bidLabel">BID-101 — Tanaka Motors</h1>
+                        <span class="sat-status rejected-status border--status">Lost</span>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">BUNDLE SUMMARY</label>
+                            <div class="grid-cmn-4">
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">BID AMOUNT</label>
+                                    <p class="fs-6 fw-bold text--black">$8,500</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">DEPOSIT (10%)</label>
+                                    <p class="fs-6 fw-bold text--black">$850</p>
+                                    <span class="sat-status won-status">Paid</span>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">PAYMENT</label>
+                                    <p class="fs-6 fw-bold text--black">Card</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">SAT BALANCE</label>
+                                    <p class="fs-6 fw-bold text--blue">$1,500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">CAR RESULTS — 2 VEHICLES</label>
+
+                        </div>
+                        <div class="col-12">
+                            <label class="fw-noraml text--black">RESULTS SUMMARY</label>
+                            <div class="grid-cmn-4">
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">BID AMOUNT</label>
+                                    <p class="fs-6 fw-bold text--black">$8,500</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">DEPOSIT (10%)</label>
+                                    <p class="fs-6 fw-bold text--black">$850</p>
+                                    <span class="sat-status won-status">Paid</span>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">PAYMENT</label>
+                                    <p class="fs-6 fw-bold text--black">Card</p>
+                                </div>
+                                <div class="cmn--card">
+                                    <label class="text--grey fw-normal">SAT BALANCE</label>
+                                    <p class="fs-6 fw-bold text--blue">$1,500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -969,7 +1537,7 @@
     </script>
     {{-- manual entry cardetail + new cards --}}
     <script>
-        document.addEventListener('change', function (e) {
+        document.addEventListener('change', function(e) {
             if (e.target.matches('.form-check-input')) {
                 const card = e.target.closest('.car--detail-card');
                 const sections = card.querySelectorAll('.manual--entry');
@@ -979,7 +1547,7 @@
                 });
             }
         });
-        document.querySelector('.secondary-light-outline').addEventListener('click', function () {
+        document.querySelector('.secondary-light-outline').addEventListener('click', function() {
             const container = document.querySelector('.cardetail_listing');
             const count = container.querySelectorAll('.car--detail-card').length + 1;
 
@@ -988,11 +1556,14 @@
                     <div class="title--detail-card mb-3">
                         <div class="d-flex align-items-center gap-2">
                             <span class="sat-status approved-status car--count">Car ${count}</span>
-                            <span class="stock-number">STK-XXXX</span>
                         </div>
-                        <div class="form-check form-switch d-flex align-items-center gap-2">
-                            <input class="form-check-input" type="checkbox" role="switch" checked>
-                            <label class="form-check-label mb-0">Manual Entry</label>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="form-check form-switch d-flex align-items-center gap-2">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                                <label class="form-check-label mb-0" for="Manual Entry">Manual
+                                    Entry</label>
+                            </div>
+                            <img src="{{ asset('assets/images/icons/delete-icon.svg') }}" class="cursor-pointer delete-card" loading="lazy" height="18" width="18" alt="delete">
                         </div>
                     </div>
 
@@ -1025,6 +1596,187 @@
             `;
 
             container.insertAdjacentHTML('beforeend', card);
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector('.cardetail_listing');
+            container.addEventListener('click', function(e) {
+                if (e.target.classList.contains('delete-card')) {
+                    const card = e.target.closest('.car--detail-card');
+                    if (card) {
+                        card.remove();
+                    }
+                    updateCarCount();
+                }
+            });
+
+            function updateCarCount() {
+                const cards = container.querySelectorAll('.car--detail-card');
+                cards.forEach((card, index) => {
+                    const countEl = card.querySelector('.car--count');
+                    if (countEl) {
+                        countEl.textContent = `Car ${index + 1}`;
+                    }
+                });
+            }
+        });
+    </script>
+    {{-- image upload --}}
+    <script>
+        const dropArea = document.getElementById("dropArea");
+        const fileInput = document.getElementById("fileInput");
+        const previewImage = document.getElementById("previewImage");
+
+        // Click to open file picker
+        dropArea.addEventListener("click", () => {
+            fileInput.click();
+        });
+
+        // File selected via click
+        fileInput.addEventListener("change", (e) => {
+            handleFile(e.target.files[0]);
+        });
+
+        // Drag over
+        dropArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropArea.style.border = "2px dashed #4A90E2";
+        });
+
+        // Drag leave
+        dropArea.addEventListener("dragleave", () => {
+            dropArea.style.border = "1px solid var(--color-grey-border)";
+        });
+
+        // Drop file
+        dropArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dropArea.style.border = "1px solid var(--color-grey-border)";
+
+            const file = e.dataTransfer.files[0];
+            handleFile(file);
+        });
+
+        // Main handler
+        function handleFile(file) {
+            if (!file) return;
+
+            const validTypes = ["image/png", "image/jpeg"];
+            if (!validTypes.includes(file.type)) {
+                alert("Only PNG and JPG files are allowed.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+
+                previewImage.classList.add("uploaded--img");
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+    {{-- navigation b/w tabs --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const tabs = document.querySelectorAll('#newbid_tabs .nav-link');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const last_step_btn = document.getElementById('last_step_btn');
+
+            function getActiveIndex() {
+                return Array.from(tabs).findIndex(tab => tab.classList.contains('active'));
+            }
+
+            function showTab(index) {
+                if (tabs[index]) {
+                    let tabTrigger = new bootstrap.Tab(tabs[index]);
+                    tabTrigger.show();
+                }
+            }
+
+            // ✅ NEW: Handle button visibility
+            function updateButtons() {
+                let currentIndex = getActiveIndex();
+
+                if (currentIndex === tabs.length - 1) {
+                    nextBtn.classList.add('d-none');
+                    last_step_btn.classList.remove('d-none');
+                } else {
+                    nextBtn.classList.remove('d-none');
+                    last_step_btn.classList.add('d-none');
+                }
+
+                // Optional: disable prev on first tab
+                prevBtn.disabled = currentIndex === 0;
+            }
+
+            // NEXT BUTTON
+            nextBtn.addEventListener('click', function() {
+                let currentIndex = getActiveIndex();
+
+                if (currentIndex < tabs.length - 1) {
+
+                    let currentLi = tabs[currentIndex].closest('li.nav-item .nav-link');
+                    if (currentLi) currentLi.classList.add('done');
+
+                    showTab(currentIndex + 1);
+
+                    setTimeout(updateButtons, 100); // wait for tab change
+                }
+            });
+
+            // PREVIOUS BUTTON
+            prevBtn.addEventListener('click', function() {
+                let currentIndex = getActiveIndex();
+
+                if (currentIndex > 0) {
+
+                    let prevLi = tabs[currentIndex - 1].closest('li.nav-item .nav-link');
+                    if (prevLi) prevLi.classList.remove('done');
+
+                    showTab(currentIndex - 1);
+
+                    setTimeout(updateButtons, 100);
+                }
+            });
+
+            // ✅ ALSO: when user clicks tabs manually
+            tabs.forEach(tab => {
+                tab.addEventListener('shown.bs.tab', updateButtons);
+            });
+
+            // ✅ Initial state
+            updateButtons();
+        });
+    </script>
+    {{-- single bundle divs --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const radios = document.querySelectorAll(".bid-type-toggle");
+
+            function toggleBidType(type) {
+                document.querySelectorAll(".single-only").forEach(el => {
+                    el.classList.toggle("d-none", type !== "single");
+                });
+
+                document.querySelectorAll(".bundle-only").forEach(el => {
+                    el.classList.toggle("d-none", type !== "bundle");
+                });
+            }
+
+            radios.forEach(radio => {
+                radio.addEventListener("change", function() {
+                    toggleBidType(this.dataset.type);
+                });
+            });
+
+            // Run on page load (for default checked)
+            const checked = document.querySelector(".bid-type-toggle:checked");
+            if (checked) {
+                toggleBidType(checked.dataset.type);
+            }
         });
     </script>
 </body>
