@@ -20,6 +20,8 @@
     --color-blue-secondary: #2384c1;
     --color-blue-secondary-light: #2a9fe8;
     --color-blue-light: #3882de24;
+    --color-bg-blue-light: #ecf5ff;
+    --color-bg-blue-light2: #d4ecfa;
 
     --color-white: #ffffff;
     --color-white-secondary: #f6f6f8;
@@ -27,6 +29,7 @@
     --color-red: #cd3636;
     --color-red-light: #f7e4e4;
     --color-red-secondary: #fef8f8;
+    --color-bg-red-light: #fef2f2;
 
     --color-disabled: #c1c1c1;
 }
@@ -39,9 +42,20 @@
 }
 /* background */
 .bg--white-secondary {
-    background-color: var(--color-white-secondary);
+    background-color: var(--color-white-secondary) !important;
 }
-
+.bg--blue-light {
+    background-color: var(--color-bg-blue-light) !important;
+}
+.bg--red-light {
+    background-color: var(--color-bg-red-light) !important;
+}
+.bg--red {
+    background-color: var(--color-red) !important;
+}
+.bg--red-warning {
+    background-color: #F34141 !important;
+}
 /* sibbar */
 .menu--bar1,
 .menu--bar2,
@@ -124,7 +138,7 @@
 }
 .rejected-status {
     background-color: var(--color-red-light);
-    border-color: var(--color-red-light);
+    border-color: var(--color-red);
     color: var(--color-red);
 }
 .border--status {
@@ -146,7 +160,6 @@
 /* card--statuses */
 .card--statuses {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -167,6 +180,14 @@
     font-size: 18px;
     letter-spacing: 0%;
     margin-bottom: 0px;
+}
+.card--statuses .card--item .icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
 }
 
 /* text colors */
@@ -442,6 +463,65 @@
 .auction--table table tr td:last-of-type {
     border-right: 1px solid var(--color-grey-border);
 }
+/*  */
+.table--sat-balance {
+    max-width: 100%;
+    overflow: auto;
+    scrollbar-width: thin;
+    border-radius: 10px;
+    border-top: 1px solid #e2e8f0;
+    height: calc(100vh - 270px);
+}
+.table--sat-balance table {
+    width: 100%;
+    min-width: 1352px;
+}
+.table--sat-balance table tbody tr {
+    transition: background-color 0.3s ease;
+}
+.table--sat-balance table tbody > tr:hover > * {
+    background-color: rgb(244, 244, 245) !important;
+    border-radius: 0;
+}
+.table--sat-balance table tr th {
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #64748b;
+    background-color: #f9fafb;
+}
+.table--sat-balance table tr th {
+    border-top: 0;
+}
+.table--sat-balance table tr th:first-of-type {
+    border-left: 1px solid #e2e8f0;
+}
+.table--sat-balance table tr th:last-of-type {
+    border-right: 1px solid #e2e8f0;
+}
+
+.table--sat-balance table tr td {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 16px 20px;
+    background-color: var(--color-white);
+    border-block: 1px solid var(--color-grey-border);
+}
+.table--sat-balance table tr td:first-of-type {
+    border-left: 1px solid var(--color-grey-border);
+}
+.table--sat-balance table tr td:last-of-type {
+    border-right: 1px solid var(--color-grey-border);
+}
+.table--sat-balance table tr.danger td {
+    background-color: #fef2f2;
+}
+.table--sat-balance table tr.success td {
+    background-color: #f2fef7;
+}
+/*  */
 /* table */
 /* pagination */
 .txn-pagination {
@@ -870,5 +950,25 @@
 .balance--summary {
     border: 1px solid var(--color-grey-border);
     border-radius: 10px;
+}
+.title--balance {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 6px;
+    line-height: normal;
+}
+.subtitle--balance {
+    font-weight: 600;
+    font-size: 14px;
+    color: #707071;
+    margin-bottom: 4px;
+    line-height: normal;
+}
+.value--balance {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: normal;
+    margin-bottom: 0px;
 }
 /* modal */

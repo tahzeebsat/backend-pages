@@ -52,6 +52,12 @@ Route::get('/auction/auction-bids', function () {
 Route::get('/auction/auction-completed', function () {
     return view('pages.completed-auction');
 });
+Route::get('/sat-balance', function () {
+    return view('pages.sat-balance-dashboard');
+});
+Route::get('/sat-balance-status', function () {
+    return view('pages.sat-balance-status');
+});
 
 
 

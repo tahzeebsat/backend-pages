@@ -108,6 +108,17 @@
                     </span>
                 </a>
             </li>
+            <li class="dashboard-list-item" onclick="window.location.href='/sat-balance'">
+                <a>
+                    <svg width="24" height="24" class="dashborad-icons">
+                        <use href="#dashboard_operations"></use>
+                    </svg>
+
+                    <span>
+                        SAT Balance
+                    </span>
+                </a>
+            </li>
         </ul>
         <ul class="dashboard-list pt-0 pb-c24">
             <li class="dashboard-list-item" onclick="window.location.href='/settings'">
