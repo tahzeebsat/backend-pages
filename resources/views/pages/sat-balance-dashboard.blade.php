@@ -110,131 +110,146 @@
                             <thead>
                                 <tr>
                                     <th>Customer </th>
-                                    <th>Status</th>
                                     <th>Email</th>
                                     <th>Phone</th>
                                     <th>Balance</th>
                                     <th>Total Added</th>
                                     <th>Total Used</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="success">
+                                <tr>
                                     <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Acme Corporation </a></td>
-                                    <td class="text--green">Positive balance</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
                                     <td class="text--green">$18,000.00</td>
-                                    <td class="text--grey">$6,900.00</td>
-                                    <td>$3,400.00</td>
+                                    <td class="text--black">$6,900.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status won-status">Positive balance</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Stark Industries </a></td>
-                                    <td class="text--yellow">Withdrawal Pending</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
                                     <td class="text--green">$18,000.00</td>
-                                    <td class="text--grey">$18,000.00</td>
-                                    <td>$3,400.00</td>
+                                    <td class="text--black">$18,000.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status pending-status">Withdrawal Pending</span>
+                                    </td>
                                 </tr>
                                 <tr class="danger">
                                     <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Wayne Enterprises </a></td>
-                                    <td class="text--red">Outstanding</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
                                     <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$15,000.00</td>
-                                    <td>$3,400.00</td>
+                                    <td class="text--black">$15,000.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status rejected-status">Outstanding</span>
+                                    </td>
                                 </tr>
-                                <tr class="success">
+                                <tr>
                                     <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Umbrella Corp </a></td>
-                                    <td class="text--green">Positive balance</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
                                     <td class="text--red fw-bold">-$350.00</td>
-                                    <td class="text--grey">$2,200.00</td>
-                                    <td>$3,400.00</td>
+                                    <td class="text--black">$2,200.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status won-status">Positive balance</span>
+                                    </td>
                                 </tr>
                                 <tr class="danger">
                                     <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Cyberdyne Systems </a></td>
-                                    <td class="text--red">Outstanding</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
                                     <td class="text--red fw-bold">-$2,802.00</td>
-                                    <td class="text--grey">$30,000.00</td>
-                                    <td>$3,400.00</td>
+                                    <td class="text--black">$30,000.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status rejected-status">Outstanding</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Initech LLC </a></td>
-                                    <td class="text--grey">Neutral</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
                                     <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$4,500.00</td>
-                                    <td>$3,400.00</td>
+                                    <td class="text--black">$4,500.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status modal-manual-status">Neutral</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Acme Corporation </a></td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
+                                    <td class="text--green">$18,000.00</td>
+                                    <td class="text--black">$6,900.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status won-status">Positive balance</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Stark Industries </a></td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
+                                    <td class="text--green">$18,000.00</td>
+                                    <td class="text--black">$18,000.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status pending-status">Withdrawal Pending</span>
+                                    </td>
+                                </tr>
+                                <tr class="danger">
+                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Wayne Enterprises </a></td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
+                                    <td class="text--red fw-bold">-$1,200.00</td>
+                                    <td class="text--black">$15,000.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status rejected-status">Outstanding</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Umbrella Corp </a></td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
+                                    <td class="text--red fw-bold">-$350.00</td>
+                                    <td class="text--black">$2,200.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status won-status">Positive balance</span>
+                                    </td>
+                                </tr>
+                                <tr class="danger">
+                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Cyberdyne Systems </a></td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
+                                    <td class="text--red fw-bold">-$2,802.00</td>
+                                    <td class="text--black">$30,000.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status rejected-status">Outstanding</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Initech LLC </a></td>
-                                    <td class="text--grey">Neutral</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
+                                    <td class="text--black">billing@acmecorp.com</td>
+                                    <td class="text--black">+1 (555) 012-3456</td>
                                     <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$4,500.00</td>
-                                    <td>$3,400.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Initech LLC </a></td>
-                                    <td class="text--grey">Neutral</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
-                                    <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$4,500.00</td>
-                                    <td>$3,400.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Initech LLC </a></td>
-                                    <td class="text--grey">Neutral</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
-                                    <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$4,500.00</td>
-                                    <td>$3,400.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Initech LLC </a></td>
-                                    <td class="text--grey">Neutral</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
-                                    <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$4,500.00</td>
-                                    <td>$3,400.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Initech LLC </a></td>
-                                    <td class="text--grey">Neutral</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
-                                    <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$4,500.00</td>
-                                    <td>$3,400.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Initech LLC </a></td>
-                                    <td class="text--grey">Neutral</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
-                                    <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$4,500.00</td>
-                                    <td>$3,400.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold"><a href="/sat-balance-status" class="text--black">Initech LLC </a></td>
-                                    <td class="text--grey">Neutral</td>
-                                    <td class="text--grey">billing@acmecorp.com</td>
-                                    <td class="text--grey">+1 (555) 012-3456</td>
-                                    <td class="text--red fw-bold">-$1,200.00</td>
-                                    <td class="text--grey">$4,500.00</td>
-                                    <td>$3,400.00</td>
+                                    <td class="text--black">$4,500.00</td>
+                                    <td class="text--green">$3,400.00</td>
+                                    <td class="text--green">
+                                        <span class="sat-status modal-manual-status">Neutral</span>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
