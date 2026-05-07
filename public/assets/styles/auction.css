@@ -16,7 +16,7 @@
     --color-grey-generic: #aeb1b8;
     --color-grey-border: #ededf1;
 
-    --color-blue: #1C6A9B;
+    --color-blue: #1c6a9b;
     --color-blue-secondary: #2384c1;
     --color-blue-secondary-light: #2a9fe8;
     --color-blue-light: #3882de24;
@@ -54,7 +54,7 @@
     background-color: var(--color-red) !important;
 }
 .bg--red-warning {
-    background-color: #F34141 !important;
+    background-color: #f34141 !important;
 }
 /* sibbar */
 .menu--bar1,
@@ -317,7 +317,7 @@
     gap: 10px;
 }
 
-.tabs--main label {
+.tabs--main .btn {
     margin-bottom: 0px;
     font-weight: 400;
     font-size: 14px;
@@ -325,7 +325,7 @@
     padding: 8px 14px;
     color: var(--color-grey-text);
 }
-.tabs--main label span {
+.tabs--main .btn span {
     margin-left: 5px;
     display: flex;
     align-items: center;
@@ -340,11 +340,11 @@
 .tabs--main .btn-check:checked + .btn span {
     background-color: var(--color-black);
     color: var(--color-white);
-    border-radius: 10px;
-    padding-inline: 4px;
+    border-radius: 100px;
     font-size: 11px;
+    padding: 1px 10px;
 }
-.tabs--main label.btn:hover {
+.tabs--main .btn:hover {
     border-color: var(--color-white);
     background-color: var(--color-white);
     color: var(--color-black);
@@ -356,7 +356,7 @@
     align-items: center;
     gap: 8px;
 }
-.tabs--sub label.btn {
+.tabs--sub .btn {
     margin-bottom: 0px;
     font-weight: 400;
     font-size: 14px;
@@ -372,7 +372,7 @@
     border-color: var(--color-black);
     background-color: var(--color-black);
 }
-.tabs--sub label.btn:hover {
+.tabs--sub .btn:hover {
     color: var(--color-white);
     border-color: var(--color-black);
     background-color: var(--color-black);
@@ -892,8 +892,8 @@
     background-color: #eef6ff;
 }
 .upload--textarea .uploaded--img {
-    width: 100px;
-    height: 100px;
+    width: 800px;
+    height: 400px;
     object-fit: contain;
 }
 /*  */
@@ -971,4 +971,19 @@
     line-height: normal;
     margin-bottom: 0px;
 }
+.won {
+    background-color: var(--color-green-secondary-light);
+}
+.lost {
+    background-color: var(--color-red-secondary);
+}
 /* modal */
+.drop--chevron {
+    transition: all 0.4ms ease-in-out;
+}
+.drop--chevron[aria-expanded="false"] i {
+    transform: rotate(0deg);
+}
+.drop--chevron[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
