@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="{{ asset('assets/styles/root.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/auction.css') }}">
+    <script>
+         if (localStorage.getItem("sidebarState") === "closed") {
+          document.documentElement.classList.add("sidebar-preclosed");
+        }
+    </script>
     <title>Order</title>
 </head>
 
@@ -133,11 +138,42 @@
     <script>
         const menu = document.querySelector('.main-content');
         const sidebar = document.querySelector('.sidebar-dashboard');
+        const burger = document.querySelector('.menu--burger');
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const closed = localStorage.getItem("sidebarState") === "closed";
+
+            if (closed) {
+                sidebar.classList.add("closed");
+                menu.classList.add("ms-0");
+
+                // IMPORTANT
+                burger.classList.add("open");
+            } else {
+                sidebar.classList.remove("closed");
+                menu.classList.remove("ms-0");
+                burger.classList.remove("open");
+            }
+        });
 
         function handleMenu(x) {
+
             x.classList.toggle("open");
             menu.classList.toggle("ms-0");
             sidebar.classList.toggle("closed");
+
+            const closed = sidebar.classList.contains("closed");
+
+            localStorage.setItem(
+                "sidebarState",
+                closed ? "closed" : "open"
+            );
+
+            document.documentElement.classList.toggle(
+                "sidebar-preclosed",
+                closed
+            );
         }
     </script>
     {{-- customer show hide --}}
