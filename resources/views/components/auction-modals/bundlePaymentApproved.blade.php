@@ -139,6 +139,15 @@
                             </div>
                         </div>
                         <div class="col-12">
+                        <div class="uploaded--image-proof">
+                            <h4 class="text--black fw-bold fs-6 mb-3">Uploaded Proof</h4>
+                            <img src="https://d36dyyw8x5qpnf.cloudfront.net/photos/alphard_hybrid/2026-06-04/0_95507200_1780550772/1.jpeg"
+                                style="max-width: 100%;max-height: 250px;cursor: zoom-in"
+                                class="img-fluid object-fit-contain proof-img"
+                                height="250" width="100%" loading="eager" alt="Uploaded proof">
+                            </div>
+                        </div>  
+                        <div class="col-12">
                             <button class="sat-btn primary" data-bs-target="#bundle_deposithandling" data-bs-toggle="modal">
                                 Save Results
                             </button>

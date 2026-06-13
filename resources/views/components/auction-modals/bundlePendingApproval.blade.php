@@ -59,27 +59,46 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <label class="fw-noraml text--black">PAYMENT PROOF</label>
-                            <div class="payment--proof-card image-upload">
-                                <input type="file" class="file-input" accept="image/png, image/jpeg" hidden>
-                                <div class="upload--textarea drop-area">
-                                    <div class="upload--img">
-                                        <img src="{{ asset('assets/images/icons/upload_image.svg') }}" height="40"
-                                            width="40" alt="upload icon" class="preview-image">
-                                    </div>
-                                    <div class="payment--upload-text">
-                                        <p class="upload_para text--blue-secondary-light">
-                                            Click to upload
-                                            <span class="ms-1 text--grey">or drag and drop</span>
-                                        </p>
-                                        <p class="upload_restriction text--grey">
-                                            PNG, JPG (max. 800x400px)
-                                        </p>
+                            <div class="col-12">
+                                <div class="swap--wrapper-img">
+                                <!-- Uploaded preview (hidden until a file is chosen) -->
+                                <div class="uploaded--image-proof" style="display: none;">
+                                    <h4 class="text--black fw-bold fs-6 mb-3">Uploaded Proof</h4>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="proof--img-wrap">
+                                            <img src=""
+                                                style="max-width: 100%;max-height: 200px;cursor: zoom-in"
+                                                class="img-fluid object-fit-contain proof-img"
+                                                height="200" width="100%" loading="eager" alt="Uploaded proof">
+                                            <button type="button" class="proof--remove-btn" aria-label="Remove image">&times;</button>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- Upload dropzone -->
+                                <div class="payment--proof-upload">
+                                    <label class="fw-noraml text--black">PAYMENT PROOF</label>
+                                    <div class="payment--proof-card image-upload">
+                                        <input type="file" class="file-input" accept="image/png, image/jpeg" hidden>
+                                        <div class="upload--textarea drop-area">
+                                            <div class="upload--img">
+                                                <img src="{{ asset('assets/images/icons/upload_image.svg') }}" height="40"
+                                                    width="40" alt="upload icon" class="preview-image">
+                                            </div>
+                                            <div class="payment--upload-text">
+                                                <p class="upload_para text--blue-secondary-light">
+                                                    Click to upload
+                                                    <span class="ms-1 text--grey">or drag and drop</span>
+                                                </p>
+                                                <p class="upload_restriction text--grey">
+                                                    PNG, JPG (max. 800x400px)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                        </div>
                         <div class="col-12">
                             <label class="fw-noraml text--black">Cars in Bundle — 3 vehicles</label>
                             <div class="cmn--card mb-2">

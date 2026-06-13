@@ -132,6 +132,10 @@
     @component('components.auction-modals.bundleSubmitted')
         bundle submitted
     @endcomponent
+    <div class="img-lightbox" id="imgLightbox">
+        <span class="img-lightbox__close" id="imgLightboxClose">&times;</span>
+        <img src="" alt="Full screen proof" id="imgLightboxImg">
+    </div>
     <script src="{{ asset('assets/js/bootstrapver5/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery/jquery.js') }}"></script>
     {{-- menu show hide --}}
@@ -291,59 +295,70 @@
     </script>
     {{-- image upload --}}
     <script>
-        document.querySelectorAll('.image-upload').forEach(upload => {
-            const dropArea = upload.querySelector('.drop-area');
-            const fileInput = upload.querySelector('.file-input');
-            const previewImage = upload.querySelector('.preview-image');
+    document.addEventListener("DOMContentLoaded", function () {
 
-            // Click to open file picker
-            dropArea.addEventListener("click", () => {
-                fileInput.click();
-            });
+    document.querySelectorAll('.swap--wrapper-img').forEach(wrapper => {
+        const upload        = wrapper.querySelector('.image-upload');
+        const dropArea      = wrapper.querySelector('.drop-area');
+        const fileInput     = wrapper.querySelector('.file-input');
+        const uploadSection = wrapper.querySelector('.payment--proof-upload');
+        const proofSection  = wrapper.querySelector('.uploaded--image-proof');
 
-            // File selected
-            fileInput.addEventListener("change", (e) => {
-                handleFile(e.target.files[0], previewImage);
-            });
+        if (!upload || !proofSection) return; // wrapper missing required parts
 
-            // Drag over
-            dropArea.addEventListener("dragover", (e) => {
-                e.preventDefault();
-                dropArea.style.border = "2px dashed #4A90E2";
-            });
+        const proofImg  = proofSection.querySelector('.proof-img');
+        const removeBtn = proofSection.querySelector('.proof--remove-btn');
 
-            // Drag leave
-            dropArea.addEventListener("dragleave", () => {
-                dropArea.style.border = "1px solid var(--color-grey-border)";
-            });
+        dropArea.addEventListener("click", () => fileInput.click());
 
-            // Drop
-            dropArea.addEventListener("drop", (e) => {
-                e.preventDefault();
-                dropArea.style.border = "1px solid var(--color-grey-border)";
-
-                const file = e.dataTransfer.files[0];
-                handleFile(file, previewImage);
-            });
+        fileInput.addEventListener("change", (e) => {
+            handleFileImage(e.target.files[0], proofSection, proofImg, uploadSection);
         });
 
-        // reusable handler
-        function handleFile(file, previewImage) {
-            if (!file) return;
+        dropArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropArea.style.border = "2px dashed #4A90E2";
+        });
 
-            const validTypes = ["image/png", "image/jpeg"];
-            if (!validTypes.includes(file.type)) {
-                alert("Only PNG and JPG files are allowed.");
-                return;
-            }
+        dropArea.addEventListener("dragleave", () => {
+            dropArea.style.border = "1px solid var(--color-grey-border)";
+        });
 
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                previewImage.src = e.target.result;
-                previewImage.classList.add("uploaded--img");
-            };
-            reader.readAsDataURL(file);
+        dropArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dropArea.style.border = "1px solid var(--color-grey-border)";
+            handleFileImage(e.dataTransfer.files[0], proofSection, proofImg, uploadSection);
+        });
+
+        if (removeBtn) {
+            removeBtn.addEventListener("click", () => {
+                proofImg.src = "";
+                proofSection.style.display = "none";
+                uploadSection.style.display = "";
+                fileInput.value = "";
+            });
         }
+    });
+
+    function handleFileImage(file, proofSection, proofImg, uploadSection) {
+        if (!file) return;
+
+        const validTypes = ["image/png", "image/jpeg"];
+        if (!validTypes.includes(file.type)) {
+            alert("Only PNG and JPG files are allowed.");
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            proofImg.src = e.target.result;
+            proofSection.style.display = "";
+            uploadSection.style.display = "none";
+        };
+        reader.readAsDataURL(file);
+    }
+
+    });
     </script>
 
     {{-- navigation b/w tabs --}}
@@ -531,6 +546,44 @@
 
             });
         });
+    </script>
+    <script>
+        (function () {
+        const lightbox = document.getElementById('imgLightbox');
+        const lightboxImg = document.getElementById('imgLightboxImg');
+        const closeBtn = document.getElementById('imgLightboxClose');
+
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || 'Full screen image';
+            lightbox.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        // Works for one or many .proof-img images on the page
+        document.querySelectorAll('.proof-img').forEach(function (img) {
+            img.addEventListener('click', function () {
+                openLightbox(this.src, this.alt);
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Close when clicking the dark backdrop (but not the image itself)
+        lightbox.addEventListener('click', function (e) {
+            if (e.target !== lightboxImg) closeLightbox();
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        })();
     </script>
 </body>
 
