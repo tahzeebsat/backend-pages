@@ -28,9 +28,9 @@ Route::get('/bank-transfer', function () {
 Route::get('/reserve-car', function () {
     return view('pages.reserve-car-dashboard');
 });
-Route::get('/order-dashboard', function () {
-    return view('pages.order-dashboard');
-});
+// Route::get('/order-dashboard', function () {
+//     return view('pages.order-dashboard');
+// });
 Route::get('/', function () {
     return view('pages.dashboard');
 });
@@ -57,6 +57,30 @@ Route::get('/sat-balance', function () {
 });
 Route::get('/sat-balance-status', function () {
     return view('pages.sat-balance-status');
+});
+Route::get('/order-dashboard', function () {
+    return view('pages.orders.page');
+});
+Route::get('/order-dashboard/create', function () {
+    return view('pages.orders.newOrder');
+});
+Route::get('/order-dashboard/create-order-invoice', function () {
+    return view('pages.orders.createOrderInvoice');
+});
+Route::get('/order-dashboard/create-reservation-invoice', function () {
+    return view('pages.orders.createReservationInvoice');
+});
+Route::get('/order-dashboard/change-car-order', function () {
+    return view('pages.orders.changeCarOrder');
+});
+Route::get('/order-dashboard/create-reservation', function () {
+    return view('pages.orders.createReservation');
+});
+Route::get('/order-dashboard/order-details', function () {
+    return view('pages.orders.orderDetails');
+});
+Route::get('/order-dashboard/order-details-ver2', function () {
+    return view('pages.orders.orderDetails-ver2');
 });
 
 
