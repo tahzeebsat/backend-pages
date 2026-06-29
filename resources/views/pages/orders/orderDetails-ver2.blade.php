@@ -66,7 +66,7 @@
                             <div class="d-flex align-items-center gap-2">
                                 <button class="sat-btn primary btn--sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 18px;width:18px;"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg> Confirm Payment</button>
                                 <button class="sat-btn danger btn--sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 18px;width:18px;"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>Rejected</button>
-                                <button class="sat-btn primary-outline btn--sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 18px;width:18px;"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add Payment</button>
+                                <button class="sat-btn primary-outline btn--sm" data-bs-toggle="modal" data-bs-target="#add_payment"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height: 18px;width:18px;"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add Payment</button>
                             </div>
                         </div>
                     </div>

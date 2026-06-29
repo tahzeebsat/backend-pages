@@ -213,9 +213,12 @@
                     </div>
                 </div>
                 {{-- Payment Proof / Payment History /Selected Services --}}
-                <div class="col-md-12">
+              <div class="col-md-12">
                     <div class="sat--sheet h-100 px-4">
-                        <h5 class="fs-5 fw-semibold mb-0">Payment Proof</h5>
+                        <div class="d-flex align-items-center gap-2 justify-content-between">
+                            <h5 class="fs-5 fw-semibold mb-0">Payment Proof</h5>
+                            <button class="sat-btn light px-4 py-2" data-bs-target="#upload_payment_proof" data-bs-toggle="modal"><img src="{{asset('/assets/images/icons/upload-line-black.svg')}}" height="18" width="18" alt="desktop"> Upload</button>
+                        </div>
                         <div class="d-flex align-items-center justify-content-center">
                             <p class="fs-6 text--black-light mb-3">No Proof uploaded yet</p>
                         </div>
@@ -503,6 +506,9 @@
     @endcomponent
     @component('components.order-modals.upload-doc-modal')
         upload doc modal
+    @endcomponent
+    @component('components.order-modals.upload-payment-proof')
+        upload payment proof
     @endcomponent
     <div class="img-lightbox" id="imgLightbox">
         <span class="img-lightbox__close" id="imgLightboxClose">&times;</span>

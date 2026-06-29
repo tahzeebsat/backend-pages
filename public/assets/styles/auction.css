@@ -9,7 +9,7 @@
     --color-green-secondary-light: #f2fef7;
 
     --color-yellow: #e28e05;
-    --color-yellow-secondary: #FFF3DF;
+    --color-yellow-secondary: #fff3df;
 
     --color-grey-text: #868a94;
     --color-grey: #e8e8e8;
@@ -716,18 +716,19 @@
 .cmn--modal .modal-footer {
     justify-content: space-between;
 }
-.cmn--modal .modal-header .btn-close {
+.cmn--modal .btn-close {
     opacity: 1;
     height: 0.5em;
     width: 0.5em;
     background-size: 0.9em;
+    cursor: pointer;
 }
 .cmn--modal .modal-header .modal-title {
     font-weight: 700;
     font-size: 18px;
     color: var(--color-black);
 }
-.cmn--modal.sm--modal .modal-dialog{
+.cmn--modal.sm--modal .modal-dialog {
     max-width: 488px;
 }
 .new_bid .modal-dialog {
