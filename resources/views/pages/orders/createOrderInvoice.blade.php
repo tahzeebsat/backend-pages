@@ -28,7 +28,7 @@
             {{-- heading --}}
             <div class="row my-3">
                 <div class="col-12">
-                    <div class="d-flex align-items-center gap-2 justify-content-between">
+                    <div class="d-flex align-items-center gap-2 justify-content-between sat--sheet h-100">
                         <div class="d-flex align-items-center gap-2">
                             <div onclick="handleMenu(this)" class="menu--burger">
                                 <div class="menu--bar1"></div>
@@ -56,37 +56,37 @@
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Order ID">Order ID</label>
-                                <input type="text" placeholder="Order ID" class="form-control">
+                                <input type="text" placeholder="Order ID" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Stock ID">Stock ID</label>
-                                <input type="text" placeholder="Stock ID" class="form-control">
+                                <input type="text" placeholder="Stock ID" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Customer">Customer</label>
-                                <input type="text" placeholder="Customer" class="form-control">
+                                <input type="text" placeholder="Customer" class="form-control fs-14">
                             </div>
                         </div>
 
                         <div class="row g-3 mt-3">
                             <div class="col-12">
-                                <h5 class="fs-6 text--grey fw-normal mb-0">Order selection</h5>
+                                <h5 class="fs-6 text--grey fw-normal mb-0">Invoice information</h5>
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Invoice Number">Invoice Number</label>
-                                <input type="text" placeholder="Invoice Number" class="form-control">
+                                <input type="text" placeholder="Invoice Number" class="form-control fs-14">
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Order Number">Order Number</label>
-                                <input type="text" placeholder="Order Number" class="form-control">
+                                <input type="text" placeholder="Order Number" class="form-control fs-14">
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Invoice Date">Invoice Date</label>
-                                <input type="date" placeholder="Invoice Date" class="form-control">
+                                <input type="date" placeholder="Invoice Date" class="form-control fs-14">
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Due">Due</label>
-                                <input type="date" placeholder="Due" class="form-control">
+                                <input type="date" placeholder="Due" class="form-control fs-14">
                             </div>
                         </div>
 
@@ -96,23 +96,23 @@
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Name">Name</label>
-                                <input type="text" placeholder="Name" class="form-control">
+                                <input type="text" placeholder="Name" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Name Company">Name Company</label>
-                                <input type="text" placeholder="Name Company" class="form-control">
+                                <input type="text" placeholder="Name Company" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Email">Email</label>
-                                <input type="email" placeholder="Email" class="form-control">
+                                <input type="email" placeholder="Email" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Address">Address</label>
-                                <input type="text" placeholder="Address" class="form-control">
+                                <input type="text" placeholder="Address" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Country">Country</label>
-                                <select class="form-select">
+                                <select class="form-select fs-14">
                                     <option value="">Pakistan</option>
                                     <option value="">Pakistan</option>
                                     <option value="">Pakistan</option>
@@ -121,7 +121,7 @@
                             </div>
                              <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Phone">Phone</label>
-                                <input type="number" placeholder="Phone" class="form-control">
+                                <input type="number" placeholder="Phone" class="form-control fs-14">
                             </div>
                         </div>
 
@@ -132,11 +132,11 @@
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Departure Location">Departure Location</label>
-                                <input type="text" placeholder="Departure Location" class="form-control">
+                                <input type="text" placeholder="Departure Location" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Destination">Destination</label>
-                                 <select class="form-select">
+                                 <select class="form-select fs-14">
                                     <option value="">Pakistan</option>
                                     <option value="">Pakistan</option>
                                     <option value="">Pakistan</option>
@@ -145,7 +145,7 @@
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Port of Loading">Port of Loading</label>
-                                 <select class="form-select">
+                                 <select class="form-select fs-14">
                                     <option value="">Pakistan</option>
                                     <option value="">Pakistan</option>
                                     <option value="">Pakistan</option>
@@ -160,40 +160,102 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Car Price">Car Price</label>
-                                <input type="number" placeholder="Car Price" class="form-control">
+                                <input type="number" placeholder="Car Price" class="form-control fs-14">
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Shipping">Shipping</label>
-                                <input type="text" placeholder="Shipping" class="form-control">
+                                <input type="text" placeholder="Shipping" class="form-control fs-14">
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Insurance">Insurance</label>
-                                <input type="text" placeholder="Insurance" class="form-control">
+                                <input type="text" placeholder="Insurance" class="form-control fs-14">
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Warranty">Warranty</label>
-                                <input type="text" placeholder="Warranty" class="form-control">
+                                <input type="text" placeholder="Warranty" class="form-control fs-14">
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Additional">Additional</label>
-                                <input type="text" placeholder="Additional" class="form-control">
+                                <input type="text" placeholder="Additional" class="form-control fs-14">
                             </div>
                             <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Handling Fee">Handling Fee</label>
-                                <input type="text" placeholder="Handling Fee" class="form-control">
+                                <input type="text" placeholder="Handling Fee" class="form-control fs-14">
                             </div>
-                            <div class="col-md-6 col-sm-6 col-12">
+                            <div class="col-md-3 col-sm-6 col-12">
                                 <label class="fs-6 text--black mb-2 fw-medium" for="Tax (%)">Tax (%)</label>
-                                <input type="text" placeholder="Tax (%)" class="form-control">
+                                <input type="text" placeholder="Tax (%)" class="form-control fs-14">
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-12">
+                                <label class="fs-6 text--black mb-2 fw-medium" for="Tax Amount">Tax Amount</label>
+                                <input type="text" placeholder="Tax Amount" class="form-control fs-14">
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-6 text--black mb-2 fw-medium text-center w-100" for="Insurance">Insurance</label>
+                                <div class="sat--sheet text-center fs-4 fw-semibold">
+                                    1000
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-6 text--black mb-2 fw-medium text-center w-100" for="Warranty">Warranty</label>
+                                <div class="sat--sheet text-center fs-4 fw-semibold">
+                                    1000
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-6 text--black mb-2 fw-medium text-center w-100" for="Additional">Additional</label>
+                                <div class="sat--sheet text-center fs-4 fw-semibold bg--blue-light2 border--blue">
+                                    1000
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-6 text--black mb-2 fw-medium" for="Payment Status">Payment Status</label>
+                                <select class="form-select fs-14">
+                                    <option value="">UnPaid</option>
+                                    <option value="">Partial</option>
+                                    <option value="">Paid</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-6 text--black mb-2 fw-medium" for="Payment Method">Payment Method</label>
+                                <select class="form-select fs-14">
+                                    <option value="">Bank Transfer</option>
+                                    <option value="">Card</option>
+                                    <option value="">Crypto</option>
+                                    <option value="">SAT Balance</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-6 text--black mb-2 fw-medium" for="Currency">Currency</label>
+                                <select class="form-select fs-14">
+                                    <option value="">USD</option>
+                                    <option value="">USD</option>
+                                    <option value="">USD</option>
+                                </select>
                             </div>
                             <div class="col-md-6 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Tax Amount">Tax Amount</label>
-                                <input type="text" placeholder="Tax Amount" class="form-control">
+                                <label class="fs-6 text--black mb-2 fw-medium" for="Notes">Notes</label>
+                                <textarea class="form-control fs-14" placeholder="Optional Notes..." style="height: auto" rows="6"></textarea>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <label class="fs-6 text--black mb-2 fw-medium" for="Terms & Conditions">Terms & Conditions</label>
+                                <textarea class="form-control fs-14" placeholder="Payment Terms, delivery terms..." style="height: auto" rows="6"></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {{-- action buttons --}}
+            <div class="row g-3 pb-3">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <button class="sat-btn grey-light text--red">Cancel</button>
+                        <button class="sat-btn grey-light gap-2" data-bs-target="#preview_order_invoice" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px;width:16px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg> Preview Invoice</button>
+                        <button class="sat-btn primary gap-1"><svg xmlns="http://www.w3.org/2000/svg" style="height: 16px;width:16px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Generate Invoice</button>
+                    </div>
+                </div>
+            </div>
+    </div>
     </div>
     @component('components.common.svgs-Icons')
         Svgs for project
@@ -222,6 +284,9 @@
     @endcomponent
     @component('components.order-modals.add-payment')
         add payment
+    @endcomponent
+    @component('components.order-modals.preview-order-invoice')
+        preview-order-invoice
     @endcomponent
 
     <div class="img-lightbox" id="imgLightbox">
@@ -270,107 +335,6 @@
                 closed
             );
         }
-    </script>
-    <script>
-        document.querySelectorAll('.swap--wrapper-img').forEach(wrapper => {
-        const upload        = wrapper.querySelector('.image-upload');
-        const dropArea      = wrapper.querySelector('.drop-area');
-        const fileInput     = wrapper.querySelector('.file-input');
-        const uploadSection = wrapper.querySelector('.payment--proof-upload');
-        const proofSection  = wrapper.querySelector('.uploaded--image-proof');
-
-        if (!upload || !proofSection) return; // wrapper missing required parts
-
-        const proofImg  = proofSection.querySelector('.proof-img');
-        const removeBtn = proofSection.querySelector('.proof--remove-btn');
-
-        dropArea.addEventListener("click", () => fileInput.click());
-
-        fileInput.addEventListener("change", (e) => {
-            handleFileImage(e.target.files[0], proofSection, proofImg, uploadSection);
-        });
-
-        dropArea.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            dropArea.style.border = "2px dashed #4A90E2";
-        });
-
-        dropArea.addEventListener("dragleave", () => {
-            dropArea.style.border = "1px solid var(--color-grey-border)";
-        });
-
-        dropArea.addEventListener("drop", (e) => {
-            e.preventDefault();
-            dropArea.style.border = "1px solid var(--color-grey-border)";
-            handleFileImage(e.dataTransfer.files[0], proofSection, proofImg, uploadSection);
-        });
-
-        if (removeBtn) {
-            removeBtn.addEventListener("click", () => {
-                proofImg.src = "";
-                proofSection.style.display = "none";
-                uploadSection.style.display = "";
-                fileInput.value = "";
-            });
-        }
-    });
-
-    function handleFileImage(file, proofSection, proofImg, uploadSection) {
-        if (!file) return;
-
-        const validTypes = ["image/png", "image/jpeg"];
-        if (!validTypes.includes(file.type)) {
-            alert("Only PNG and JPG files are allowed.");
-            return;
-        }
-
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            proofImg.src = e.target.result;
-            proofSection.style.display = "";
-            uploadSection.style.display = "none";
-        };
-        reader.readAsDataURL(file);
-    }
-
-    </script>
-      <script>
-        (function () {
-        const lightbox = document.getElementById('imgLightbox');
-        const lightboxImg = document.getElementById('imgLightboxImg');
-        const closeBtn = document.getElementById('imgLightboxClose');
-
-        function openLightbox(src, alt) {
-            lightboxImg.src = src;
-            lightboxImg.alt = alt || 'Full screen image';
-            lightbox.classList.add('is-open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('is-open');
-            document.body.style.overflow = '';
-        }
-
-        // Works for one or many .proof-img images on the page
-        document.querySelectorAll('.proof-img').forEach(function (img) {
-            img.addEventListener('click', function () {
-                openLightbox(this.src, this.alt);
-            });
-        });
-
-        closeBtn.addEventListener('click', closeLightbox);
-
-        // Close when clicking the dark backdrop (but not the image itself)
-        lightbox.addEventListener('click', function (e) {
-            if (e.target !== lightboxImg) closeLightbox();
-        });
-
-        // Close on Escape
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeLightbox();
-        });
-        })();
     </script>
 </body>
 

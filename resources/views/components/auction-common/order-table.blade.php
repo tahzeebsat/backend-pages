@@ -50,7 +50,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                             <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                            <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                             <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                            <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                         </ul>
                         </div>
                         </td>
@@ -86,7 +88,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item text--black" href="/order-dashboard/order-details-ver2">View Details</a></li>
                             <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                            <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                             <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                            <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                         </ul>
                         </div>
                         </td>
@@ -122,7 +126,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                             <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                            <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                             <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                            <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                         </ul>
                         </div>
                         </td>
@@ -155,15 +161,17 @@
                         <td>
                         <div class="d-flex align-items-center gap-1">
                             <img src="{{asset('/assets/images/icons/check-circle-green.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
-                            <img src="{{asset('/assets/images/icons/cancel-cross.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
-                            <img src="{{asset('/assets/images/icons/circle-plus-grey.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
+                            <img src="{{asset('/assets/images/icons/cancel-cross.svg')}}" data-bs-target="#reject_payment" data-bs-toggle="modal" height="18" width="18" alt="icon" class="cursor-pointer">
+                            <img src="{{asset('/assets/images/icons/circle-plus-grey.svg')}}" data-bs-toggle="modal" data-bs-target="#add_payment" height="18" width="18" alt="icon" class="cursor-pointer">
                             <img src="{{asset('/assets/images/icons/doc-list-grey.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
                             <div class="dropdown cmn--dropdown-menu">
                             <img src="{{asset('/assets/images/icons/three-dots.svg')}}" class="cursor-pointer" height="18" width="18" alt="icon" data-bs-toggle="dropdown" aria-expanded="false"/>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                                 <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                                <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                                 <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                                <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                             </ul>
                             </div>
                             </div>
@@ -197,15 +205,17 @@
                         <td>
                         <div class="d-flex align-items-center gap-1">
                             <img src="{{asset('/assets/images/icons/check-circle-green.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
-                            <img src="{{asset('/assets/images/icons/cancel-cross.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
-                            <img src="{{asset('/assets/images/icons/circle-plus-grey.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
+                            <img src="{{asset('/assets/images/icons/cancel-cross.svg')}}" data-bs-target="#reject_payment" data-bs-toggle="modal" height="18" width="18" alt="icon" class="cursor-pointer">
+                            <img src="{{asset('/assets/images/icons/circle-plus-grey.svg')}}" data-bs-toggle="#add_payment" data-bs-target="#add_payment" height="18" width="18" alt="icon" class="cursor-pointer">
                             <img src="{{asset('/assets/images/icons/doc-list-grey.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
                             <div class="dropdown cmn--dropdown-menu">
                             <img src="{{asset('/assets/images/icons/three-dots.svg')}}" class="cursor-pointer" height="18" width="18" alt="icon" data-bs-toggle="dropdown" aria-expanded="false"/>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                                 <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                                <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                                 <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                                <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                             </ul>
                             </div>
                             </div>
@@ -242,7 +252,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                             <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                            <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                             <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                            <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                         </ul>
                         </div>
                         </td>
@@ -278,7 +290,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                             <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                            <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                             <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                            <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                         </ul>
                         </div>
                         </td>
@@ -315,7 +329,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                             <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                            <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                             <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                            <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                         </ul>
                         </div>
                         </td>
@@ -352,7 +368,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                             <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                            <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                             <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                            <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                         </ul>
                         </div>
                         </td>
@@ -388,7 +406,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                             <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                            <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                             <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                            <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                         </ul>
                         </div>
                         </td>
@@ -420,13 +440,15 @@
                         <td>Apr 24-08:45</td>
                         <td>
                             <div class="d-flex align-items-center gap-1">
-                                <img src="{{asset('/assets/images/icons/circle-plus-grey.svg')}}" height="18" width="18" alt="icon" class="cursor-pointer">
+                                <img src="{{asset('/assets/images/icons/circle-plus-grey.svg')}}" data-bs-toggle="#add_payment" data-bs-target="#add_payment" height="18" width="18" alt="icon" class="cursor-pointer">
                                 <div class="dropdown cmn--dropdown-menu">
                                 <img src="{{asset('/assets/images/icons/three-dots.svg')}}" class="cursor-pointer" height="18" width="18" alt="desktop" data-bs-toggle="dropdown" aria-expanded="false"/>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                                     <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                                    <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                                     <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                                    <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                                 </ul>
                                 </div>
                             </div>
@@ -465,7 +487,9 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item text--black" href="/order-dashboard/order-details">View Details</a></li>
                                     <li><a class="dropdown-item text--black" href="#">Download Receipt</a></li>
+                                    <li><a class="dropdown-item text--black" href="#">Complete</a></li>
                                     <li><a class="dropdown-item text--red" href="#">Flag for fraud</a></li>
+                                    <li><a class="dropdown-item text--red" href="#">Cancel</a></li>
                                 </ul>
                                 </div>
                             </div>

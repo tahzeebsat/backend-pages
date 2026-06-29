@@ -203,6 +203,12 @@
     @component('components.common.mobile-sidebar')
         mobile sidebar
     @endcomponent
+    @component('components.order-modals.add-payment')
+        add payment
+    @endcomponent
+    @component('components.order-modals.reject-payment')
+        reject payment
+    @endcomponent
     <div class="img-lightbox" id="imgLightbox">
         <span class="img-lightbox__close" id="imgLightboxClose">&times;</span>
         <img src="" alt="Full screen proof" id="imgLightboxImg">

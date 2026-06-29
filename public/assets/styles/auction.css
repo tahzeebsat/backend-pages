@@ -67,6 +67,9 @@
 .bg--blue-light {
     background-color: var(--color-bg-blue-light) !important;
 }
+.bg--blue-light2 {
+    background-color: var(--color-bg-blue-light2) !important;
+}
 .bg--red-light {
     background-color: var(--color-bg-red-light) !important;
 }
@@ -369,7 +372,7 @@
 }
 .cmn--dropdown-menu .dropdown-menu .dropdown-item {
     border-radius: 8px;
-    padding: 8px 12px;
+    padding: 5px 12px;
     font-weight: 400;
     font-size: 12px;
 }
