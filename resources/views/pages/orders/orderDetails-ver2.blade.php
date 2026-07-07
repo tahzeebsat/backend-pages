@@ -75,7 +75,7 @@
                  <div class="col-md-7">
                     <div class="sat--sheet h-100 px-4">
                         <div class="d-flex align-items-center gap-2 justify-content-between">
-                            <h5 class="fs-5 fw-semibold mb-0">Customer Information</h5>
+                            <h5 class="fs-18 fw-semibold mb-0">Customer Information</h5>
                             <select class="form-select wm-content">
                                 <option value="" selected>Dealer</option>
                                 <option value="">Individual</option>
@@ -116,7 +116,7 @@
                 </div>
                  <div class="col-md-5">
                     <div class="sat--sheet h-100 px-4">
-                        <h5 class="fs-5 fw-semibold mb-0">Financial Breakdown</h5>
+                        <h5 class="fs-18 fw-semibold mb-0">Financial Breakdown</h5>
                         <div class="mt-2 pt-1">
                             <div class="d-flex align-items-center gap-2 justify-content-between mb-2 pb-1">
                                 <span class="fs-16 fw-normal text--black-light">Car Price</span>
@@ -164,7 +164,7 @@
                 {{-- Vehicle information / Status --}}
                    <div class="col-md-7">
                      <div class="sat--sheet h-100 px-4">
-                        <h5 class="fs-5 fw-semibold mb-0">Vehicle information</h5>
+                        <h5 class="fs-18 fw-semibold mb-0">Vehicle information</h5>
                         <div class="mt-2 pt-1">
                             <div class="grid-cmn-2">
                                 <div class="d-flex flex-column gap-1">
@@ -204,7 +204,7 @@
                   </div>
                  <div class="col-md-5">
                     <div class="sat--sheet h-100 px-4">
-                        <h5 class="fs-5 fw-semibold mb-0">Status</h5>
+                        <h5 class="fs-18 fw-semibold mb-0">Status</h5>
                         <div class="mt-2 pt-1">
                            <div class="sat--sheet">
                                 <h4 class="text--black-light fw-semibold fs-14 mb-2">Payment Status</h4>
@@ -228,7 +228,7 @@
                 <div class="col-md-12">
                     <div class="sat--sheet h-100 px-4">
                         <div class="d-flex align-items-center gap-2 justify-content-between">
-                            <h5 class="fs-5 fw-semibold mb-0">Payment Proof</h5>
+                            <h5 class="fs-18 fw-semibold mb-0">Payment Proof</h5>
                             <button class="sat-btn light px-4 py-2" data-bs-target="#upload_payment_proof" data-bs-toggle="modal"><img src="{{asset('/assets/images/icons/upload-line-black.svg')}}" height="18" width="18" alt="desktop"> Upload</button>
                         </div>
                         <div class="d-flex align-items-center justify-content-center">
@@ -238,8 +238,8 @@
                 </div>
                 <div class="col-md-12">
                     <div class="sat--sheet h-100 px-4">
-                        <h5 class="fs-5 fw-semibold mb-0">Selected Services</h5>
-                        <div class="d-flex align-items-center gap-2 mt-2">
+                        <h5 class="fs-18 fw-semibold mb-0">Selected Services</h5>
+                        <div class="d-flex align-items-center flex-wrap gap-2 mt-2">
                             <span class="sat-status approved-status">Insurance service</span>
                             <span class="sat-status approved-status">Pre export inspection</span>
                         </div>
@@ -297,10 +297,10 @@
                 </div>
                   {{-- Consignee / Notify Party / Team / Notes --}}
                   <div class="col-md-6">
-                    <div class="grid-cmn-2">
+                    <div class="grid-cmn-2 mb-3">
                         <div class="sat--sheet px-4">
                             <div class="d-flex align-items-center justify-content-between gap-2">
-                           <h5 class="fs-5 fw-semibold mb-0">Consignee</h5>
+                           <h5 class="fs-18 fw-semibold mb-0">Consignee</h5>
                              <img src="{{asset('/assets/images/icons/edit-pencil-black.svg')}}" class="cursor-pointer" height="24" width="24" alt="icon" data-bs-toggle="modal" data-bs-target="#consignee">
                             </div>
                               <div class="mt-2 pt-1">
@@ -309,21 +309,96 @@
                                 <a href="" class="fs-6 d-block fw-normal text--black-light">+3254643464354</a>
                                 <a href="" class="fs-6 d-block fw-normal text--black-light">UAE</a>
                               </div>
+                              <div class="mt-2 pt-1 d-none">
+                                <p class="mb-3 fs-6 text--black-light">Not set</p>
+                            </div>
                         </div>
                         <div class="sat--sheet px-4">
                             <div class="d-flex align-items-center justify-content-between gap-2">
-                                <h5 class="fs-5 fw-semibold mb-0">Notify Party</h5>
+                                <h5 class="fs-18 fw-semibold mb-0">Notify Party</h5>
                                 <img src="{{asset('/assets/images/icons/edit-pencil-black.svg')}}" class="cursor-pointer" height="24" width="24" alt="icon" data-bs-toggle="modal" data-bs-target="#notify_party">
                             </div>
-                            <div class="mt-2 pt-1">
+                             <div class="mt-2 pt-1">
+                                <p class="fs-6 fw-semibold mb-1 text--black">Ahmad Rashid Trading</p>
+                                <a href="" class="fs-6 d-block fw-normal text--black-light">Ahmad.com</a>
+                                <a href="" class="fs-6 d-block fw-normal text--black-light">+3254643464354</a>
+                                <a href="" class="fs-6 d-block fw-normal text--black-light">UAE</a>
+                              </div>
+                            <div class="mt-2 pt-1 d-none">
                                 <p class="mb-3 fs-6 text--black-light">Not set</p>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="grid-cmn-2">
+                         <div class="sat--sheet px-4">
+                            <div class="d-flex align-items-center justify-content-between gap-2">
+                                <h5 class="fs-18 fw-semibold mb-0">Shipment</h5>
+                                <button class="sat-btn light px-4 py-2" data-bs-target="#add_shipment" data-bs-toggle="modal">Add</button>
+                            </div>
+                             <div class="mt-2 pt-1">
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                                    <span class="text--black-light fw-medium fs-14">Carrier</span>
+                                    <span class="text--black fw-semibold fs-14">Maersk Shipping</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                                    <span class="text--black-light fw-medium fs-14">Vessel</span>
+                                    <span class="text--black fw-semibold fs-14">Maersk Sealand</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                                    <span class="text--black-light fw-medium fs-14">Voyage</span>
+                                    <span class="text--black fw-semibold fs-14">V-2026-112</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                                    <span class="text--black-light fw-medium fs-14">Type</span>
+                                    <span class="sat-status manual-status">RORO</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                                    <span class="text--black-light fw-medium fs-14">From</span>
+                                    <span class="text--black fw-semibold fs-14">Yokohama, Japan</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                                    <span class="text--black-light fw-medium fs-14">To</span>
+                                    <span class="text--black fw-semibold fs-14">Shanghai, China</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex flex-column gap-2">
+                                        <span class="text--black-light fw-medium fs-14">ETD</span>
+                                        <span class="text--black fw-semibold fs-14">2026-03-17</span>
+                                    </div>
+                                    <div class="d-flex flex-column gap-2">
+                                        <span class="text--black-light fw-medium fs-14">ETA</span>
+                                        <span class="text--black fw-semibold fs-14">2026-03-17</span>
+                                    </div>
+                                </div>
+                              </div>
+                            <div class="mt-2 pt-1 d-none">
+                                <p class="fs-6 text--black-light mb-3 text-center">Not Shipment yet</p>
+                            </div>
+                        </div>
+                        <div class="sat--sheet px-4 h-100">
+                            <div class="d-flex align-items-center justify-content-between gap-2">
+                                <h5 class="fs-18 fw-semibold mb-0">Courier</h5>
+                                <button class="sat-btn light px-4 py-2" data-bs-target="#courier_modal" data-bs-toggle="modal">Add</button>
+                            </div>
+                            <div class="mt-2 pt-1">
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                                    <span class="text--black-light fw-medium fs-14">Name</span>
+                                    <span class="text--black fw-semibold fs-14">DHL Express</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                                    <span class="text--black-light fw-medium fs-14">Tracking</span>
+                                    <span class="text--black fw-semibold fs-14">DHL-99283746</span>
+                                </div>
+                              </div>
+                            <div class="mt-2 pt-1 d-none">
+                                <p class="fs-6 text--black-light mb-3 text-center">Not Courier yet</p>
                             </div>
                        </div>
                     </div>
                   </div>
                   <div class="col-md-6">
                         <div class="sat--sheet px-4 mb-3">
-                            <h5 class="fs-5 fw-semibold mb-0">Team</h5>
+                            <h5 class="fs-18 fw-semibold mb-0">Team</h5>
                             <div class="mt-2 pt-1">
                                 <div class="sat--sheet mb-3">
                                     <p class="fs-14 fw-semibold mb-2 text--black-light">Created by</p>
@@ -339,41 +414,18 @@
                             </div>
                        </div>
                         <div class="sat--sheet px-4">
-                            <h5 class="fs-5 fw-semibold mb-0">Notes</h5>
+                            <h5 class="fs-18 fw-semibold mb-0">Notes</h5>
                            <div class="mt-2 pt-1">
                             <textarea class="form-control bg--grey" placeholder="Add internal notes" style="height: auto" rows="6"></textarea>
                             <button class="sat-btn primary w-100 mt-3">Save Notes</button>
                         </div>
                        </div>
                   </div>
-                  {{-- Shipment / Courier --}}
-                  <div class="col-md-6">
-                        <div class="sat--sheet px-4">
-                            <div class="d-flex align-items-center justify-content-between gap-2">
-                                <h5 class="fs-5 fw-semibold mb-0">Shipment</h5>
-                                <button class="sat-btn light px-4 py-2" data-bs-target="#add_shipment" data-bs-toggle="modal">Add</button>
-                            </div>
-                            <div class="mt-2 pt-1">
-                                <p class="fs-6 text--black-light mb-3 text-center">Not Shipment yet</p>
-                            </div>
-                        </div>
-                  </div>
-                  <div class="col-md-6">
-                        <div class="sat--sheet px-4">
-                            <div class="d-flex align-items-center justify-content-between gap-2">
-                                <h5 class="fs-5 fw-semibold mb-0">Courier</h5>
-                                <button class="sat-btn light px-4 py-2" data-bs-target="#courier_modal" data-bs-toggle="modal">Add</button>
-                            </div>
-                            <div class="mt-2 pt-1">
-                                <p class="fs-6 text--black-light mb-3 text-center">Not Courier yet</p>
-                            </div>
-                       </div>
-                  </div>
                     {{-- Documents --}}
                     <div class="col-md-12">
                         <div class="sat--sheet h-100 px-4">
                             <div class="d-flex align-items-center justify-content-between gap-2">
-                                <h5 class="fs-5 fw-semibold mb-0">Documents</h5>
+                                <h5 class="fs-18 fw-semibold mb-0">Documents</h5>
                                 <button class="sat-btn light px-4 py-2" data-bs-target="#upload_doc_modal" data-bs-toggle="modal"><img src="{{asset('/assets/images/icons/upload-line-black.svg')}}" height="18" width="18" alt="desktop"/> Upload</button>
                             </div>
                              <div class="mt-2 pt-1">
@@ -446,7 +498,7 @@
                     {{-- Activity Log --}}
                     <div class="col-md-12">
                         <div class="sat--sheet h-100 px-4">
-                            <h5 class="fs-5 fw-semibold mb-0">Activity Log</h5>
+                            <h5 class="fs-18 fw-semibold mb-0">Activity Log</h5>
                             <div class="mt-2 pt-1">
                                 <ul class="activity-log list-unstyled mb-0">
 

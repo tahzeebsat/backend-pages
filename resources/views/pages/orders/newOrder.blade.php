@@ -50,6 +50,17 @@
             <div class="row g-3 pb-3">
                 <div class="col-12">
                     <div class="sat--sheet h-100">
+                        <div class="d-flex align-items-center gap-2 justify-content-center">
+                            <button class="sat-btn primary gap-1"><svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Manual Order</button>
+                            <button class="sat-btn grey-light gap-1"><svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>From reservation</button>
+                            <button class="sat-btn grey-light gap-1"><svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"></path><path d="m16 16 6-6"></path><path d="m8 8 6-6"></path><path d="m9 7 8 8"></path><path d="m21 11-8-8"></path></svg>From Bid</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 pb-3">
+                <div class="col-12">
+                    <div class="sat--sheet h-100">
                         <div class="row g-3">
                             <div class="col-12">
                                 <h5 class="fs-6 text--grey fw-normal mb-0">Customer Information</h5>
@@ -328,17 +339,49 @@
                             <div class="col-12">
                                 <h5 class="fs-6 text--grey fw-normal mb-0">Add-on services</h5>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Created By">Created By</label>
-                                <input type="text" placeholder="Created By" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Support Agent">Support Agent</label>
-                                <select class="form-select">
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                </select>
+                            <div class="col-12">
+                                <div class='d-flex align-items-center gap-3 flex-wrap'>
+                                    
+                                        <label class="form-check-label add--onservices" for="insurance_service">
+                                        <input class="form-check-input" type="checkbox" value="" id="insurance_service">
+                                           Insurance service
+                                        </label>
+                                    
+                                        <label class="form-check-label add--onservices" for="storage_service">
+                                        <input class="form-check-input" type="checkbox" value="" id="storage_service">
+                                            Storage service
+                                        </label>
+                                    
+                                        <label class="form-check-label add--onservices" for="finance_service">
+                                        <input class="form-check-input" type="checkbox" value="" id="finance_service">
+                                            Finance service
+                                        </label>
+                                    
+                                        <label class="form-check-label add--onservices" for="car_carrier">
+                                        <input class="form-check-input" type="checkbox" value="" id="car_carrier">
+                                            Car Carrier
+                                        </label>
+                                    
+                                        <label class="form-check-label add--onservices" for="custom_clearance">
+                                        <input class="form-check-input" type="checkbox" value="" id="custom_clearance">
+                                            Custom Clearance
+                                        </label>
+                                    
+                                        <label class="form-check-label add--onservices" for="pre_export_inspection">
+                                        <input class="form-check-input" type="checkbox" value="" id="pre_export_inspection">
+                                            Custom Clearance
+                                        </label>
+                                    
+                                        <label class="form-check-label add--onservices" for="marine_insurance">
+                                        <input class="form-check-input" type="checkbox" value="" id="marine_insurance">
+                                            Marine Insurance
+                                        </label>
+                                    
+                                        <label class="form-check-label add--onservices" for="non_stolen_check">
+                                        <input class="form-check-input" type="checkbox" value="" id="non_stolen_check">
+                                            Non Stolen Check
+                                        </label>
+                                </div>
                             </div>
                         </div>
 
@@ -373,8 +416,8 @@
             <div class="row g-3 pb-3">
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-center gap-2">
-                        <button class="sat-btn grey-light text--red">Cancel</button>
-                        <button class="sat-btn primary gap-1">Save Order</button>
+                        <button class="sat-btn grey-light text--red gap-1">Cancel</button>
+                        <button class="sat-btn primary gap-1"><svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Save Order</button>
                     </div>
                 </div>
             </div>

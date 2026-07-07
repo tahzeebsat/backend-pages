@@ -39,6 +39,12 @@
     --color-disabled: #c1c1c1;
 }
 /* fonts */
+.fs-10 {
+    font-size: 10px !important;
+}
+.fs-12 {
+    font-size: 12px;
+}
 .fs-14 {
     font-size: 14px;
 }
@@ -84,6 +90,14 @@
     width: 0;
     padding: 0;
     overflow: hidden;
+}
+/* shadow */
+.shadow--sm {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+/* border radius */
+.br-8 {
+    border-radius: 8px !important;
 }
 /* table status */
 .sat-status {
@@ -1214,15 +1228,36 @@
 
 .activity-title {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #040404;
 }
 .activity-meta {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: #626262;
     line-height: 1.6;
 }
 /* activity log */
+/* add--onservices */
+.add--onservices {
+    border: 1px solid #ededf1;
+    border-radius: 42px;
+    padding: 16px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #868a94;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+/* add--onservices */
+/* vertical tr */
+.valign-baseline {
+    vertical-align: baseline;
+}
