@@ -278,6 +278,9 @@
 .border--blue {
     border-color: var(--color-blue) !important;
 }
+.border--blue-light {
+    border-color: var(--color-blue-light) !important;
+}
 .order--separator {
     margin-bottom: 12px;
     border-bottom: 1px solid #aeb1b89a;
@@ -1260,4 +1263,23 @@
 /* vertical tr */
 .valign-baseline {
     vertical-align: baseline;
+}
+.previous-orders-list {
+    margin: 0;
+}
+
+.previous-orders-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.previous-orders-list li a {
+    text-decoration: none;
+    color: #007bff; /* or your .text--blue color */
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.previous-orders-list li a:hover {
+    text-decoration: underline;
 }

@@ -24,11 +24,11 @@
     </aside>
 
     <div class="main-content">
-        <div class="main-section w-100 vh-100">
+        <div class="main-section w-100 bg--grey">
             {{-- heading --}}
             <div class="row my-3">
                 <div class="col-12">
-                    <div class="d-flex align-items-center gap-2 justify-content-between sat--sheet h-100">
+                    <div class="d-flex align-items-center gap-2 justify-content-between sat--sheet shadow--sm p-4 br-8">
                         <div class="d-flex align-items-center gap-2">
                             <div onclick="handleMenu(this)" class="menu--burger">
                                 <div class="menu--bar1"></div>
@@ -39,7 +39,7 @@
                                 <svg class="cursor-pointer" onclick="window.location.href='/order-dashboard'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
                                 <div>
                                     <h2 class="cmn-heading-title">Create Order Invoice</h2>
-                                    <p>Generate invoice for this order</p>
+                                    <p class="fs-14 text--grey">Generate invoice for this order</p>
                                 </div>
                             </div>
                         </div>
@@ -47,71 +47,50 @@
                 </div>
             </div>
             {{-- order details --}}
-            <div class="row g-3 pb-3">
-                <div class="col-12">
-                    <div class="sat--sheet h-100">
+            <div class="row g-4 pb-3">
+                <div class="col-md-6">
+                    <div class="sat--sheet shadow--sm p-4 br-8 mb-4">
                         <div class="row g-3">
                             <div class="col-12">
-                                <h5 class="fs-6 text--grey fw-normal mb-0">Order selection</h5>
+                                <h5 class="fs-6 text--grey fw-semibold mb-0">Order selection</h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Order ID">Order ID</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Order ID">Order ID</label>
                                 <input type="text" placeholder="Order ID" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Stock ID">Stock ID</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Stock ID">Stock ID</label>
                                 <input type="text" placeholder="Stock ID" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Customer">Customer</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Customer">Customer</label>
                                 <input type="text" placeholder="Customer" class="form-control fs-14">
                             </div>
                         </div>
-
-                        <div class="row g-3 mt-3">
+                    </div>
+                    <div class="sat--sheet shadow--sm p-4 br-8 mb-4">
+                           <div class="row g-3">
                             <div class="col-12">
-                                <h5 class="fs-6 text--grey fw-normal mb-0">Invoice information</h5>
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Invoice Number">Invoice Number</label>
-                                <input type="text" placeholder="Invoice Number" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Order Number">Order Number</label>
-                                <input type="text" placeholder="Order Number" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Invoice Date">Invoice Date</label>
-                                <input type="date" placeholder="Invoice Date" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Due">Due</label>
-                                <input type="date" placeholder="Due" class="form-control fs-14">
-                            </div>
-                        </div>
-
-                        <div class="row g-3 mt-3">
-                            <div class="col-12">
-                                <h5 class="fs-6 text--grey fw-normal mb-0">Customer Information</h5>
+                                <h5 class="fs-6 text--grey fw-semibold mb-0">Customer Information</h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Name">Name</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Name">Name</label>
                                 <input type="text" placeholder="Name" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Name Company">Name Company</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Name Company">Name Company</label>
                                 <input type="text" placeholder="Name Company" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Email">Email</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Email">Email</label>
                                 <input type="email" placeholder="Email" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Address">Address</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Address">Address</label>
                                 <input type="text" placeholder="Address" class="form-control fs-14">
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Country">Country</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Country">Country</label>
                                 <select class="form-select fs-14">
                                     <option value="">Pakistan</option>
                                     <option value="">Pakistan</option>
@@ -120,96 +99,69 @@
                                 </select>
                             </div>
                              <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Phone">Phone</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Phone">Phone</label>
                                 <input type="number" placeholder="Phone" class="form-control fs-14">
                             </div>
                         </div>
-
-
-                        <div class="row g-3 mt-3">
+                    </div>
+                    <div class="sat--sheet shadow--sm p-4 br-8 mb-4">
+                        <div class="row g-3">
                             <div class="col-12">
-                                <h5 class="fs-6 text--grey fw-normal mb-0">Shipping Information</h5>
+                                <h5 class="fs-6 text--grey fw-semibold mb-0">Financial Breakdown</h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Departure Location">Departure Location</label>
-                                <input type="text" placeholder="Departure Location" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Destination">Destination</label>
-                                 <select class="form-select fs-14">
-                                    <option value="">Pakistan</option>
-                                    <option value="">Pakistan</option>
-                                    <option value="">Pakistan</option>
-                                    <option value="">Pakistan</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Port of Loading">Port of Loading</label>
-                                 <select class="form-select fs-14">
-                                    <option value="">Pakistan</option>
-                                    <option value="">Pakistan</option>
-                                    <option value="">Pakistan</option>
-                                    <option value="">Pakistan</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row g-3 mt-3">
-                            <div class="col-12">
-                                <h5 class="fs-6 text--grey fw-normal mb-0">Financial Breakdown</h5>
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Car Price">Car Price</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Car Price">Car Price</label>
                                 <input type="number" placeholder="Car Price" class="form-control fs-14">
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Shipping">Shipping</label>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Shipping">Shipping</label>
                                 <input type="text" placeholder="Shipping" class="form-control fs-14">
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Insurance">Insurance</label>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Insurance">Insurance</label>
                                 <input type="text" placeholder="Insurance" class="form-control fs-14">
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Warranty">Warranty</label>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Warranty">Warranty</label>
                                 <input type="text" placeholder="Warranty" class="form-control fs-14">
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Additional">Additional</label>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Additional">Additional</label>
                                 <input type="text" placeholder="Additional" class="form-control fs-14">
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Handling Fee">Handling Fee</label>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Handling Fee">Handling Fee</label>
                                 <input type="text" placeholder="Handling Fee" class="form-control fs-14">
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Tax (%)">Tax (%)</label>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Tax (%)">Tax (%)</label>
                                 <input type="text" placeholder="Tax (%)" class="form-control fs-14">
                             </div>
-                            <div class="col-md-3 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Tax Amount">Tax Amount</label>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Tax Amount">Tax Amount</label>
                                 <input type="text" placeholder="Tax Amount" class="form-control fs-14">
                             </div>
+                  
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium text-center w-100" for="Insurance">Insurance</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold text-center w-100" for="Insurance">Insurance</label>
                                 <div class="sat--sheet text-center fs-4 fw-semibold">
                                     1000
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium text-center w-100" for="Warranty">Warranty</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold text-center w-100" for="Warranty">Warranty</label>
                                 <div class="sat--sheet text-center fs-4 fw-semibold">
                                     1000
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium text-center w-100" for="Additional">Additional</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold text-center w-100" for="Additional">Additional</label>
                                 <div class="sat--sheet text-center fs-4 fw-semibold bg--blue-light2 border--blue">
                                     1000
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Payment Status">Payment Status</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Payment Status">Payment Status</label>
                                 <select class="form-select fs-14">
                                     <option value="">UnPaid</option>
                                     <option value="">Partial</option>
@@ -217,7 +169,7 @@
                                 </select>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Payment Method">Payment Method</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Payment Method">Payment Method</label>
                                 <select class="form-select fs-14">
                                     <option value="">Bank Transfer</option>
                                     <option value="">Card</option>
@@ -226,19 +178,107 @@
                                 </select>
                             </div>
                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Currency">Currency</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Currency">Currency</label>
                                 <select class="form-select fs-14">
                                     <option value="">USD</option>
                                     <option value="">USD</option>
                                     <option value="">USD</option>
                                 </select>
                             </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                       <div class="sat--sheet shadow--sm p-4 br-8 mb-4">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <h5 class="fs-6 text--grey fw-semibold mb-0">Invoice Information</h5>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Invoice Number">Invoice Number</label>
+                                <input type="text" placeholder="Invoice Number" class="form-control fs-14">
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Order Number">Order Number</label>
+                                <input type="text" placeholder="Order Number" class="form-control fs-14">
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Invoice Date">Invoice Date</label>
+                                <input type="date" placeholder="Invoice Date" class="form-control fs-14">
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--grey fw-medium" for="Due">Due Date</label>
+                                <input type="date" placeholder="Due" class="form-control fs-14">
+                            </div>
+                        </div>
+                       </div>
+                       <div class="sat--sheet shadow--sm p-4 br-8 mb-4">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <h5 class="fs-6 text--grey fw-semibold mb-0">Shipping Information</h5>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Departure Location">Departure Location</label>
+                                <input type="text" placeholder="Departure Location" class="form-control fs-14">
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Destination">Destination</label>
+                                 <select class="form-select fs-14">
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Port of Loading">Port of Loading</label>
+                                 <select class="form-select fs-14">
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Port of Destination">Port of Destination</label>
+                                 <select class="form-select fs-14">
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                    <option value="">Pakistan</option>
+                                </select>
+                            </div>
+                        </div>
+                     </div>
+                       <div class="sat--sheet shadow--sm p-4 br-8 mb-4">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="d-flex align-items-center gap-3">
+                                    <h5 class="fs-6 text--grey fw-semibold mb-0">Letter of Credit (LC)</h5>
+                                    <div class="form-check form-switch mb-0">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="switchLC">
+                                        <label class="form-check-label" for="switchLC">Use LC</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12 lc-input">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="HS Code">HS Code</label>
+                                <input type="text" placeholder="HS Code" class="form-control fs-14">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12 lc-input">
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Date of Shipment">Date of Shipment</label>
+                                <input type="date" class="form-control fs-14">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="sat--sheet shadow--sm p-4 br-8">
+                        <div class="row g-3">
                             <div class="col-md-6 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Notes">Notes</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Notes">Notes</label>
                                 <textarea class="form-control fs-14" placeholder="Optional Notes..." style="height: auto" rows="6"></textarea>
                             </div>
                             <div class="col-md-6 col-sm-6 col-12">
-                                <label class="fs-6 text--black mb-2 fw-medium" for="Terms & Conditions">Terms & Conditions</label>
+                                <label class="fs-14 text--black mb-2 fw-semibold" for="Terms & Conditions">Terms & Conditions</label>
                                 <textarea class="form-control fs-14" placeholder="Payment Terms, delivery terms..." style="height: auto" rows="6"></textarea>
                             </div>
                         </div>
@@ -336,6 +376,22 @@
             );
         }
     </script>
+    <script>
+    const switchLC = document.getElementById('switchLC');
+    const lcInputs = document.querySelectorAll('.lc-input');
+
+    function toggleLCInputs() {
+        lcInputs.forEach(input => {
+            input.classList.toggle('d-none', !switchLC.checked);
+        });
+    }
+
+    // Run on switch change
+    switchLC.addEventListener('change', toggleLCInputs);
+
+    // Run once on page load
+    toggleLCInputs();
+</script>
 </body>
 
 </html>

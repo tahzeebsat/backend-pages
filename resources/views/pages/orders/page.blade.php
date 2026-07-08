@@ -24,7 +24,7 @@
     </aside>
 
     <div class="main-content">
-        <div class="main-section w-100 vh-100">
+        <div class="main-section w-100">
             {{-- heading --}}
             <div class="row my-3">
                 <div class="col-12">
@@ -47,6 +47,78 @@
                         <a href="/order-dashboard/create-reservation" target="_blank" class="sat-btn grey-light opacity-100"><img src="{{asset('/assets/images/icons/bookmark-blue.svg')}}" width="20" height="20" loading="lazy" alt="icon sat"> Create Reservation</a>
                         <a href="/order-dashboard/create" target="_blank" class="sat-btn primary opacity-100"><img src="{{asset('/assets/images/icons/plus-icon.svg')}}" width="20" height="20" loading="lazy" alt="icon sat"> New Order</a>
                     </div>
+                    </div>
+                </div>
+            </div>
+            {{-- values --}}
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="card--statuses">
+                        <div class="card--item white--variant border--blue-light shadow--sm">
+                            <div class="text--wrapper">
+                                <h3 class="fs-12 fw-medium text--black-light">Total Orders</h3>
+                                <p class="value text--black fs-2 lh-1 mt-2">23</p>
+                            </div>
+                            <div class="img--wrapper">
+                                <img src="{{asset('assets/images/icons/shopping-cart-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
+                            </div>
+                        </div>
+                        <div class="card--item white--variant shadow--sm border--red">
+                            <div class="text--wrapper">
+                                <h3 class="fs-12 fw-medium text--black-light">Pending Payment</h3>
+                                <p class="value text--black fs-2 lh-1 mt-2">23</p>
+                                <p class="action--text text--red mt-1">Need Action</p>
+                            </div>
+                            <div class="img--wrapper">
+                                <img src="{{asset('assets/images/icons/time-bg-red.svg')}}" width="27" height="27" loading="lazy" alt="icon">
+                            </div>
+                        </div>
+                        <div class="card--item white--variant shadow--sm border--yellow">
+                            <div class="text--wrapper">
+                                <h3 class="fs-12 fw-medium text--black-light">Awaiting proof</h3>
+                                <p class="value text--black fs-2 lh-1 mt-2">23</p>
+                                <p class="action--text text--red mt-1">Review Required</p>
+                            </div>
+                             <div class="img--wrapper">
+                                <img src="{{asset('assets/images/icons/doc-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
+                            </div>
+                        </div>
+                        <div class="card--item white--variant shadow--sm border--blue-light">
+                            <div class="text--wrapper">
+                                <h3 class="fs-12 fw-medium text--black-light">Confirmed</h3>
+                                <p class="value text--black fs-2 lh-1 mt-2">23</p>
+                            </div>
+                             <div class="img--wrapper">
+                                <img src="{{asset('assets/images/icons/task-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
+                            </div>
+                        </div>
+                        <div class="card--item white--variant shadow--sm border--blue-light">
+                            <div class="text--wrapper">
+                                <h3 class="fs-12 fw-medium text--black-light">Ready for shipment</h3>
+                                <p class="value text--black fs-2 lh-1 mt-2">23</p>
+                            </div>
+                             <div class="img--wrapper">
+                                <img src="{{asset('assets/images/icons/time-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
+                            </div>
+                        </div>
+                        <div class="card--item white--variant shadow--sm border--blue-light">
+                            <div class="text--wrapper">
+                                <h3 class="fs-12 fw-medium text--black-light">Shipped</h3>
+                                <p class="value text--black fs-2 lh-1 mt-2">23</p>
+                            </div>
+                             <div class="img--wrapper">
+                                <img src="{{asset('assets/images/icons/plan-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
+                            </div>
+                        </div>
+                        <div class="card--item white--variant shadow--sm border--green">
+                            <div class="text--wrapper">
+                                <h3 class="fs-12 fw-medium text--black-light">Completed</h3>
+                                <p class="value text--black fs-2 lh-1 mt-2">23</p>
+                            </div>
+                             <div class="img--wrapper">
+                                <img src="{{asset('assets/images/icons/delivery-bg-green.svg')}}" width="27" height="27" loading="lazy" alt="icon">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,78 +150,6 @@
     
                             <input type="radio" class="btn-check" name="tabs_sub" id="Rejected" autocomplete="off">
                             <label class="btn" for="Rejected">Rejected</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- values --}}
-            <div class="row mb-3">
-                <div class="col-12">
-                    <div class="card--statuses">
-                        <div class="card--item white--variant">
-                            <div class="text--wrapper">
-                                <h3 class="title text--grey">Total Orders</h3>
-                                <p class="value text--black">23</p>
-                            </div>
-                            <div class="img--wrapper">
-                                <img src="{{asset('assets/images/icons/shopping-cart-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
-                            </div>
-                        </div>
-                        <div class="card--item white--variant border--red">
-                            <div class="text--wrapper">
-                                <h3 class="title text--grey">Pending Payment</h3>
-                                <p class="value text--black">23</p>
-                                <p class="action--text text--red">Need Action</p>
-                            </div>
-                            <div class="img--wrapper">
-                                <img src="{{asset('assets/images/icons/time-bg-red.svg')}}" width="27" height="27" loading="lazy" alt="icon">
-                            </div>
-                        </div>
-                        <div class="card--item white--variant border--yellow">
-                            <div class="text--wrapper">
-                                <h3 class="title text--grey">Awaiting proof</h3>
-                                <p class="value text--black">23</p>
-                                <p class="action--text text--red">Review Required</p>
-                            </div>
-                             <div class="img--wrapper">
-                                <img src="{{asset('assets/images/icons/doc-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
-                            </div>
-                        </div>
-                        <div class="card--item white--variant">
-                            <div class="text--wrapper">
-                                <h3 class="title text--grey">Confirmed</h3>
-                                <p class="value text--black">23</p>
-                            </div>
-                             <div class="img--wrapper">
-                                <img src="{{asset('assets/images/icons/task-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
-                            </div>
-                        </div>
-                        <div class="card--item white--variant">
-                            <div class="text--wrapper">
-                                <h3 class="title text--grey">Ready for shipment</h3>
-                                <p class="value text--black">23</p>
-                            </div>
-                             <div class="img--wrapper">
-                                <img src="{{asset('assets/images/icons/time-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
-                            </div>
-                        </div>
-                        <div class="card--item white--variant">
-                            <div class="text--wrapper">
-                                <h3 class="title text--grey">Shipped</h3>
-                                <p class="value text--black">23</p>
-                            </div>
-                             <div class="img--wrapper">
-                                <img src="{{asset('assets/images/icons/plan-bg-blue.svg')}}" width="27" height="27" loading="lazy" alt="icon">
-                            </div>
-                        </div>
-                        <div class="card--item white--variant border--green">
-                            <div class="text--wrapper">
-                                <h3 class="title text--grey">Completed</h3>
-                                <p class="value text--black">23</p>
-                            </div>
-                             <div class="img--wrapper">
-                                <img src="{{asset('assets/images/icons/delivery-bg-green.svg')}}" width="27" height="27" loading="lazy" alt="icon">
-                            </div>
                         </div>
                     </div>
                 </div>

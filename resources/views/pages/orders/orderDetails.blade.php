@@ -24,7 +24,7 @@
     </aside>
 
     <div class="main-content">
-        <div class="main-section w-100 bg-grey">
+        <div class="main-section w-100 bg--grey">
             {{-- heading --}}
             <div class="row my-3">
                 <div class="col-12">
@@ -295,7 +295,10 @@
                                                 height="18"
                                                 width="18"
                                                 alt="confirm"
-                                                class="cursor-pointer">
+                                                class="cursor-pointer"
+                                                data-bs-target="#confirm_model"
+                                                data-bs-toggle="modal"
+                                                >
 
                                             <img src="{{ asset('/assets/images/icons/cancel-cross.svg') }}"
                                                 data-bs-target="#reject_payment"
@@ -403,13 +406,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="d-flex flex-column gap-1 mt-2 pt-1">
-                                <div class="fs-14 fw-normal text--black-light">Previous Orders <span class="text--blue">(2)</span> </div>
-                                <div class="d-flex gap-1">
-                                    <a href="/" class="fs-14 fw-normal text--blue">ORD-1001</a>
-                                    <a href="/" class="fs-14 fw-normal text--blue">Ored-1002</a>
-                                </div>
-                            </div>
+                       
                     </div>
                     {{-- selected services --}}
                     <div class="sat--sheet p-4 br-8 shadow--sm br-8 mb-4">
@@ -668,11 +665,28 @@
                             </div>
                         </div>
                        </div>
-                        <div class="sat--sheet p-4 br-8">
+                        <div class="sat--sheet p-4 br-8 mb-3">
                             <h5 class="fs-16 fw-semibold mb-0">Notes</h5>
                            <div class="mt-2 pt-1">
                             <textarea class="form-control bg--grey py-2 px-3 fs-14" placeholder="Add internal notes" style="height: auto" rows="6"></textarea>
                             <button class="sat-btn primary w-100 mt-3">Save Notes</button>
+                        </div>
+                       </div>
+                        <div class="sat--sheet p-4 br-8 mb-3">
+                            <div class="d-flex flex-column gap-1">
+                                <h3 class="fs-16 fw-semibold mb-0">
+                                    Previous Orders <span class="text--blue">(2)</span>
+                                </h3>
+
+                                <ul class="previous-orders-list gap-2">
+                                    <li>
+                                        <a href="/" class="fs-14 fw-normal text--blue">ORD-1001</a>
+                                    </li>
+                                    <li>
+                                        <a href="/" class="fs-14 fw-normal text--blue">Ored-1002</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                        </div>
                 </div>
@@ -720,6 +734,9 @@
     @endcomponent
     @component('components.order-modals.add-new-charge')
         add_new_charge
+    @endcomponent
+    @component('components.order-modals.confirm-payment')
+        confirm_model
     @endcomponent
     <div class="img-lightbox" id="imgLightbox">
         <span class="img-lightbox__close" id="imgLightboxClose">&times;</span>
