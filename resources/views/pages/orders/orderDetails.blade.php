@@ -646,6 +646,9 @@
                                 <select class="form-select bg--grey">
                                     <option value="" selected>Preparing</option>
                                 </select>
+                                <div class="d-flex align-items-center justify-content-end mt-4">
+                                    <button class="sat-btn primary py-1 px-4">Save</button>
+                                </div>
                            </div>
                         </div>
                     </div>

@@ -1247,15 +1247,16 @@
 .add--onservices {
     border: 1px solid #ededf1;
     border-radius: 42px;
-    padding: 16px;
+    padding: 12px;
     margin-bottom: 0px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 9px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
-    color: #868a94;
+    font-weight: 600;
+    color: #353c4d;
     margin-bottom: 0px;
     cursor: pointer;
 }
