@@ -48,17 +48,8 @@
             </div>
             {{-- order details --}}
             <div class="row g-3 pb-3">
-                <div class="col-12">
-                    <div class="sat--sheet shadow--sm p-4 br-8">
-                        <div class="d-flex align-items-center gap-2 justify-content-center">
-                            <button class="sat-btn primary gap-1"><svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Manual Order</button>
-                            <button class="sat-btn grey-light gap-1"><svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>From reservation</button>
-                            <button class="sat-btn grey-light gap-1"><svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"></path><path d="m16 16 6-6"></path><path d="m8 8 6-6"></path><path d="m9 7 8 8"></path><path d="m21 11-8-8"></path></svg>From Bid</button>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
+                    <div class="sat--sheet shadow--sm p-4 br-8">
                         <div class="row g-3">
                             <div class="col-12">
                                 <h5 class="fs-16 text--black fw-semibold mb-0">Customer Information</h5>
@@ -89,42 +80,75 @@
                             </div>
                         </div>
                         </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
-                     <div class="row g-3">
-                            <div class="col-12">
+                        <div class="sat--sheet shadow--sm p-4 br-8 mt-4">
+                         <div class="row g-3">
+                            <div class="col-12 d-flex align-items-center justify-content-between gap-2">
                                 <h5 class="fs-16 text--black fw-semibold mb-0">Vehicle Information</h5>
+                                <button type="button" id="addVehicleButton" class="sat-btn primary p-2" aria-label="Add vehicle information" title="Add vehicle information">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                                </button>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Stock ID">Stock ID</label>
-                                <input type="text" placeholder="Stock ID" class="form-control fs-14">
+                            <div id="vehicleInformationList" class="col-12 d-grid gap-3">
+                                <div class="vehicle-information-item row g-3 border-bottom pb-3">
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button type="button" class="remove-vehicle-button sat-btn grey-light text--red p-2" aria-label="Remove vehicle information" title="Remove vehicle information">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path></svg>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <label class="fs-14 text--black-light mb-2 fw-medium">Stock ID</label>
+                                        <input type="text" placeholder="Stock ID" class="form-control fs-14">
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <label class="fs-14 text--black-light mb-2 fw-medium">Vehicle</label>
+                                        <input type="text" placeholder="Vehicle" class="form-control fs-14">
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <label class="fs-14 text--black-light mb-2 fw-medium">Chassis</label>
+                                        <input type="text" placeholder="Chassis" class="form-control fs-14">
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <label class="fs-14 text--black-light mb-2 fw-medium">Inspection</label>
+                                        <input type="text" placeholder="Inspection" class="form-control fs-14">
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <label class="fs-14 text--black-light mb-2 fw-medium">Availability</label>
+                                        <input type="text" placeholder="Availability" class="form-control fs-14">
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <label class="fs-14 text--black-light mb-2 fw-medium">Quantity</label>
+                                        <input type="text" placeholder="Quantity" class="form-control fs-14">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Vehicle">Vehicle</label>
-                                <input type="text" placeholder="Vehicle" class="form-control fs-14">
+                        </div>
+                    </div>
+                    <div class="sat--sheet shadow--sm p-4 br-8 mt-4">
+                         <div class="row g-3">
+                            <div class="col-12">
+                                <h5 class="fs-16 text--black fw-semibold mb-0">Shipping Information</h5>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Chassis">Chassis</label>
-                                <input type="text" placeholder="Chassis" class="form-control fs-14">
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Destination Country">Destination Country</label>
+                                 <select class="form-select">
+                                    <option value="">A</option>
+                                    <option value="">B</option>
+                                    <option value="">C</option>
+                                </select>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Inspection">Inspection</label>
-                                <input type="text" placeholder="Inspection" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Availability">Availability</label>
-                                <input type="text" placeholder="Availability" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Quantity">Quantity</label>
-                                <input type="text" placeholder="Quantity" class="form-control fs-14">
+                             <div class="col-md-6 col-sm-6 col-12">
+                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Destination Country">Destination Country</label>
+                                 <select class="form-select">
+                                    <option value="">A</option>
+                                    <option value="">B</option>
+                                    <option value="">C</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
+                    <div class="sat--sheet shadow--sm p-4 br-8">
                         <div class="row g-3">
                             <div class="col-12">
                                 <h5 class="fs-16 text--black fw-semibold mb-0">Financial Breakdown</h5>
@@ -153,24 +177,6 @@
                                 <label class="fs-14 text--black-light mb-2 fw-medium" for="Handling Fee">Handling Fee</label>
                                 <input type="text" placeholder="Handling Fee" class="form-control fs-14">
                             </div>
-                              <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium text-center w-100" for="Insurance">Insurance</label>
-                                <div class="sat--sheet text-center fs-18 fw-semibold">
-                                    1000
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium text-center w-100" for="Warranty">Warranty</label>
-                                <div class="sat--sheet text-center fs-18 fw-semibold">
-                                    1000
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium text-center w-100" for="Additional">Additional</label>
-                                <div class="sat--sheet text-center fs-18 fw-semibold bg--blue-light2 border--blue">
-                                    1000
-                                </div>
-                            </div>
                              <div class="col-md-4 col-sm-6 col-12">
                                 <label class="fs-14 text--black-light mb-2 fw-medium" for="Paid Amount">Paid Amount</label>
                                 <input type="text" placeholder="Paid Amount" class="form-control fs-14">
@@ -194,253 +200,75 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                      <div class="sat--sheet shadow--sm p-4 br-8">
-                        <div class="d-flex align-items-center gap-2 justify-content-between">
-                            <h5 class="fs-16 text--black fw-semibold mb-0">Payment Proof</h5>
-                            <button class="sat-btn light px-4 py-2" data-bs-target="#upload_payment_proof" data-bs-toggle="modal"><img src="http://127.0.0.1:8000/assets/images/icons/upload-line-black.svg" height="18" width="18" alt="desktop"> Upload</button>
-                        </div>
-                        <table class="w-100">
-                            <thead>
-                                <tr>
-                                    <th class="border-bottom fs-6 fw-semibole p-2">
-                                        Date
-                                    </th>
-                                    <th class="border-bottom fs-6 fw-semibole p-2">
-                                        Amount
-                                    </th>
-                                    <th class="border-bottom fs-6 fw-semibole p-2">
-                                        Method
-                                    </th>
-                                    <th class="border-bottom fs-6 fw-semibole p-2">
-                                        Reference
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="p-2 border-bottom fs-6 fw-normal">
-                                        Mar 18.2026
-                                    </td>
-                                    <td class="p-2 border-bottom fs-6 fw-normal">
-                                        $82,000
-                                    </td>
-                                    <td class="p-2 border-bottom fs-6 fw-normal">
-                                        Card
-                                    </td>
-                                    <td class="p-2 border-bottom fs-6 fw-normal">
-                                        Txn-card-88
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                     <div class="sat--sheet shadow--sm p-4 br-8 mt-4">
-                         <div class="d-flex flex-column gap-1">
-                                <h3 class="fs-16 fw-semibold mb-0">
-                                    Previous Orders <span class="text--blue">(2)</span>
-                                </h3>
-
-                                <ul class="previous-orders-list gap-2">
-                                    <li>
-                                        <a href="/" class="fs-14 fw-normal text--blue">ORD-1001</a>
-                                    </li>
-                                    <li>
-                                        <a href="/" class="fs-14 fw-normal text--blue">Ored-1002</a>
-                                    </li>
-                                </ul>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
-                         <div class="row g-3">
-                            <div class="col-12">
-                                <h5 class="fs-16 text--black fw-semibold mb-0">Shipping Information</h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Shipping Type">Shipping Type</label>
-                                <select class="form-select">
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Shipping">Shipping</label>
-                                <input type="text" placeholder="Shipping" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Departure">Departure</label>
-                                <input type="text" placeholder="Departure" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Destination Country">Destination Country</label>
-                                <input type="text" placeholder="Destination Country" class="form-control fs-14">
-                            </div>
-                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Destination Country">Destination Country</label>
-                                <input type="text" placeholder="Destination Country" class="form-control fs-14">
-                            </div>
-                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Handling Fee">Handling Fee</label>
-                                <input type="text" placeholder="Handling Fee" class="form-control fs-14">
-                            </div>
-                        </div>
-                    </div>                </div>
-                <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
-                         <div class="row g-3">
-                            <div class="col-12">
-                                <h5 class="fs-16 text--black fw-semibold mb-0">Consignee</h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Shipping Type">Shipping Type</label>
-                                <select class="form-select">
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Name">Name</label>
-                                <input type="text" placeholder="Name" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Phone">Phone</label>
-                                <input type="number" placeholder="Phone" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Address">Address</label>
-                                <input type="text" placeholder="Address" class="form-control fs-14">
-                            </div>
-                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Country">Country</label>
-                                <input type="text" placeholder="Country" class="form-control fs-14">
-                            </div>
-                        </div>
-                    </div>                </div>
-                <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <h5 class="fs-16 text--black fw-semibold mb-0">Notify Party (Optional)</h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Shipping Type">Shipping Type</label>
-                                <select class="form-select">
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Name">Name</label>
-                                <input type="text" placeholder="Name" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Phone">Phone</label>
-                                <input type="number" placeholder="Phone" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Address">Address</label>
-                                <input type="text" placeholder="Address" class="form-control fs-14">
-                            </div>
-                             <div class="col-md-4 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Country">Country</label>
-                                <input type="text" placeholder="Country" class="form-control fs-14">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <h5 class="fs-16 text--black fw-semibold mb-0">Add-on services</h5>
-                            </div>
-                            <div class="col-12">
-                                <div class='d-flex align-items-center gap-3 flex-wrap'>
-                                    
-                                        <label class="form-check-label add--onservices" for="insurance_service">
-                                        <input class="form-check-input" type="checkbox" value="" id="insurance_service">
-                                           Insurance service
-                                        </label>
-                                    
-                                        <label class="form-check-label add--onservices" for="storage_service">
-                                        <input class="form-check-input" type="checkbox" value="" id="storage_service">
-                                            Storage service
-                                        </label>
-                                    
-                                        <label class="form-check-label add--onservices" for="finance_service">
-                                        <input class="form-check-input" type="checkbox" value="" id="finance_service">
-                                            Finance service
-                                        </label>
-                                    
-                                        <label class="form-check-label add--onservices" for="car_carrier">
-                                        <input class="form-check-input" type="checkbox" value="" id="car_carrier">
-                                            Car Carrier
-                                        </label>
-                                    
-                                        <label class="form-check-label add--onservices" for="custom_clearance">
-                                        <input class="form-check-input" type="checkbox" value="" id="custom_clearance">
-                                            Custom Clearance
-                                        </label>
-                                    
-                                        <label class="form-check-label add--onservices" for="pre_export_inspection">
-                                        <input class="form-check-input" type="checkbox" value="" id="pre_export_inspection">
-                                            Custom Clearance
-                                        </label>
-                                    
-                                        <label class="form-check-label add--onservices" for="marine_insurance">
-                                        <input class="form-check-input" type="checkbox" value="" id="marine_insurance">
-                                            Marine Insurance
-                                        </label>
-                                    
-                                        <label class="form-check-label add--onservices" for="non_stolen_check">
-                                        <input class="form-check-input" type="checkbox" value="" id="non_stolen_check">
-                                            Non Stolen Check
-                                        </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
-                         <div class="row g-3">
-                            <div class="col-12">
-                                <h5 class="fs-16 text--black fw-semibold mb-0">Created By</h5>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Created By">Created By</label>
-                                <input type="text" placeholder="Created By" class="form-control fs-14">
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-12">
-                                <label class="fs-14 text--black-light mb-2 fw-medium" for="Support Agent">Support Agent</label>
-                                <select class="form-select">
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
                         <div class="row g-3">
                             <div class="col-md-12 col-sm-6 col-12">
                                 <label class="fs-16 text--black fw-semibold mb-3" for="Notes">Notes</label>
                                 <textarea class="form-control fs-14" placeholder="Optional Notes..." style="height: auto" rows="6"></textarea>
                             </div>
                         </div>
-                    </div>  
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="sat--sheet shadow--sm p-4 br-8">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <h5 class="fs-16 text--black fw-semibold mb-0">Add-on services</h5>
+                            </div>
+                            <div class="col-12">
+                                <div class='d-flex align-items-center gap-3 flex-wrap' id="addonServicesList">
+
+                                        <label class="form-check-label add--onservices" for="insurance_service">
+                                        <input class="form-check-input" type="checkbox" value="" id="insurance_service">
+                                           Insurance service
+                                        </label>
+
+                                        <label class="form-check-label add--onservices" for="storage_service">
+                                        <input class="form-check-input" type="checkbox" value="" id="storage_service">
+                                            Storage service
+                                        </label>
+
+                                        <label class="form-check-label add--onservices" for="finance_service">
+                                        <input class="form-check-input" type="checkbox" value="" id="finance_service">
+                                            Finance service
+                                        </label>
+
+                                        <label class="form-check-label add--onservices" for="car_carrier">
+                                        <input class="form-check-input" type="checkbox" value="" id="car_carrier">
+                                            Car Carrier
+                                        </label>
+
+                                        <label class="form-check-label add--onservices" for="custom_clearance">
+                                        <input class="form-check-input" type="checkbox" value="" id="custom_clearance">
+                                            Custom Clearance
+                                        </label>
+
+                                        <label class="form-check-label add--onservices" for="pre_export_inspection">
+                                        <input class="form-check-input" type="checkbox" value="" id="pre_export_inspection">
+                                            Custom Clearance
+                                        </label>
+
+                                        <label class="form-check-label add--onservices" for="marine_insurance">
+                                        <input class="form-check-input" type="checkbox" value="" id="marine_insurance">
+                                            Marine Insurance
+                                        </label>
+
+                                        <label class="form-check-label add--onservices" for="non_stolen_check">
+                                        <input class="form-check-input" type="checkbox" value="" id="non_stolen_check">
+                                            Non Stolen Check
+                                        </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row g-3" id="addonServicesFields"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 {{-- action buttons --}}
                 <div class="col-md-12">
-                    <div class="sat--sheet h-100 shadow--sm p-4 br-8">
+                    <div class="sat--sheet shadow--sm p-4 br-8">
                         <div class="row g-3 mt-3">
                             <div class="col-12">
                                 <div class="d-flex align-items-center justify-content-center gap-2">
@@ -460,13 +288,7 @@
     @component('components.common.mobile-sidebar')
         mobile sidebar
     @endcomponent
-    {{-- modals --}}
-    @component('components.order-modals.consignee')
-        consignee
-    @endcomponent
-    @component('components.order-modals.notify-party')
-        notify party
-    @endcomponent
+
     @component('components.order-modals.add-shipment')
         add shipment
     @endcomponent
@@ -532,6 +354,83 @@
                 closed
             );
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const vehicleList = document.getElementById("vehicleInformationList");
+            const addVehicleButton = document.getElementById("addVehicleButton");
+            const vehicleTemplate = vehicleList.querySelector(".vehicle-information-item").cloneNode(true);
+
+            const updateRemoveButtons = () => {
+                const vehicleItems = vehicleList.querySelectorAll(".vehicle-information-item");
+
+                vehicleItems.forEach((vehicleItem, index) => {
+                    vehicleItem.querySelector(".remove-vehicle-button").classList.toggle("d-none", index === 0);
+                });
+            };
+
+            addVehicleButton.addEventListener("click", () => {
+                const vehicleItem = vehicleTemplate.cloneNode(true);
+
+                vehicleItem.querySelectorAll("input").forEach((input) => {
+                    input.value = "";
+                });
+
+                vehicleList.appendChild(vehicleItem);
+                updateRemoveButtons();
+            });
+
+            vehicleList.addEventListener("click", (event) => {
+                const removeButton = event.target.closest(".remove-vehicle-button");
+
+                if (removeButton) {
+                    removeButton.closest(".vehicle-information-item").remove();
+                    updateRemoveButtons();
+                }
+            });
+
+            updateRemoveButtons();
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const addonServicesList = document.getElementById("addonServicesList");
+            const addonServicesFields = document.getElementById("addonServicesFields");
+
+            if (!addonServicesList || !addonServicesFields) {
+                return;
+            }
+
+            addonServicesList.addEventListener("change", (event) => {
+                const checkbox = event.target.closest('input[type="checkbox"]');
+
+                if (!checkbox) {
+                    return;
+                }
+
+                const fieldId = `addon-field-${checkbox.id}`;
+                const existingField = document.getElementById(fieldId);
+
+                if (checkbox.checked) {
+                    if (existingField) {
+                        return;
+                    }
+
+                    const label = addonServicesList.querySelector(`label[for="${checkbox.id}"]`);
+                    const serviceName = label ? label.textContent.trim() : checkbox.id;
+
+                    const field = document.createElement("div");
+                    field.className = "col-md-4 col-sm-6 col-12";
+                    field.id = fieldId;
+                    field.innerHTML = `
+                        <label class="fs-14 text--black-light mb-2 fw-medium" for="${checkbox.id}_value">${serviceName}</label>
+                        <input type="text" id="${checkbox.id}_value" name="${checkbox.id}_value" placeholder="${serviceName}" class="form-control fs-14">
+                    `;
+
+                    addonServicesFields.appendChild(field);
+                } else if (existingField) {
+                    existingField.remove();
+                }
+            });
+        });
     </script>
 </body>
 

@@ -480,6 +480,11 @@
     border-color: var(--color-blue);
     background-color: var(--color-blue);
 }
+.order--filter-tab .tabs--sub .btn.active {
+    color: var(--color-white);
+    border-color: var(--color-blue);
+    background-color: var(--color-blue);
+}
 /* tabs */
 /* search filters */
 .search--filters {

@@ -665,6 +665,9 @@
                                 <p class="fs-14 fw-semibold mb-1 text--black-light">Support agent</p>
                                 <p class="fs-14 fw-semibold mb-1 text--black">Admin</p>
                                 <p class="fs-12 fw-semibold mb-0 text--grey">Admin@company.com</p>
+                                <div class="d-flex align-items-center justify-content-end mt-4">
+                                    <button class="sat-btn primary py-1 px-4" data-bs-target="#support_agent" data-bs-toggle="modal">Add Agent</button>
+                                </div>
                             </div>
                         </div>
                        </div>
@@ -740,6 +743,9 @@
     @endcomponent
     @component('components.order-modals.confirm-payment')
         confirm_model
+    @endcomponent
+    @component('components.order-modals.support-agent')
+        support_agent
     @endcomponent
     <div class="img-lightbox" id="imgLightbox">
         <span class="img-lightbox__close" id="imgLightboxClose">&times;</span>
